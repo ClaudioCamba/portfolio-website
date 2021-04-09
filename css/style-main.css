@@ -1,43 +1,204 @@
-.scene {
+/* All Style ----- */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+div {
+    display: block;
+}
+
+body * {
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.cld-hide {
+    display: none;
+}
+
+
+/* Intro Styling ----- */
+
+.cld-main-header {
+    width: 100%;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cld-main-header-inner {
+    width: 100%;
+}
+
+
+/* Intro top */
+
+.cld-header-top {
     max-width: 1440px;
-    height: 500px;
-    border: 1px solid #CCC;
     margin: 0 auto;
-    perspective: 600px;
 }
 
-.card {
+.cld-text-wrap {
+    overflow: hidden;
+    text-overflow: clip;
+    height: 69px;
+    text-align: left;
+}
+
+.cld-top-text {
+    margin: 0;
+    font-size: 75px;
+    text-transform: uppercase;
+    color: #1abc9c;
+    line-height: 70%;
+    display: inline-block;
+    text-shadow: 5px 5px #0b5852;
+    margin-left: 220px;
+    opacity: 1;
+    padding-top: 17px;
+}
+
+
+/* Intro mid */
+
+.cld-bar {
+    width: 100%;
+    height: 100px;
+    background-color: #1abc9c;
+    z-index: 0;
     position: relative;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 5s;
+    box-shadow: 0px 10px #0b5852;
+    animation: cld-bar 2s ease-out;
+    display: inline-block;
 }
 
-.card.is-flipped {
-    transform: translateX(-100%) rotateY(-180deg);
+.cld-bar-inner {
+    max-width: 1440px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    text-align: right;
 }
 
-.card__face {
+.cld-top-name {
+    margin: 0;
+    font-size: 125px;
+    text-transform: uppercase;
+    color: #1abc9c;
+    line-height: 70%;
+    display: inline-block;
+    text-shadow: 10px 7.5px #ffffff;
+    z-index: 1;
+    position: relative;
+    top: -42px;
+    font-weight: 900;
+    margin-right: 220px;
+    animation: cld-top-name s ease-out;
+}
+
+.cld-top-name:after {
+    content: "Claudio";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 260px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    backface-visibility: hidden;
-    border-radius: 25px;
+    left: 0;
+    color: #0b5852;
+    clip: rect(42px, 572px, 95px, 0px);
 }
 
-.card__face--front {
-    background: red;
+
+/* Intro mid */
+
+.cld-frame img {
+    max-width: 500px;
+    height: auto;
 }
 
-.card__face--back {
-    background: blue;
-    transform: rotateY(180deg);
+
+/* Intro Animations ----- */
+
+.cld-top-text {
+    animation: cld-top-text 1.5s ease-in-out;
+}
+
+.cld-bar {
+    animation: cld-bar 1.5s ease-out;
+}
+
+.cld-top-name {
+    animation: cld-top-name 1.5s ease-out;
+}
+
+.cld-top-name:after {
+    animation: cld-top-name-after 1.5s ease-out;
+}
+
+@keyframes cld-bar {
+    0% {
+        width: 0%;
+        box-shadow: 0px 0px #0b5852;
+    }
+    25% {
+        width: 100%;
+    }
+    80% {
+        box-shadow: 0px 0px #0b5852;
+    }
+    100% {
+        box-shadow: 0px 10px #0b5852;
+    }
+}
+
+@keyframes cld-top-text {
+    0% {
+        padding-top: 75px;
+        text-shadow: 0px 0px #0b5852;
+    }
+    60% {
+        padding-top: 17px;
+    }
+    80% {
+        text-shadow: 0px 0px #0b5852;
+    }
+    100% {
+        text-shadow: 5px 5px #0b5852;
+    }
+}
+
+@keyframes cld-top-name {
+    0% {
+        top: 10px;
+        display: none;
+        text-shadow: none;
+    }
+    59% {
+        display: inline-block;
+    }
+    50% {
+        top: 10px;
+    }
+    75% {
+        top: -42px;
+    }
+    80% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 10px 7.5px #ffffff;
+    }
+}
+
+@keyframes cld-top-name-after {
+    0% {
+        clip: rect(90px, 572px, 95px, 0px);
+    }
+    80% {
+        clip: rect(90px, 572px, 95px, 0px);
+    }
+    100% {
+        clip: rect(42px, 572px, 95px, 0px);
+    }
 }
