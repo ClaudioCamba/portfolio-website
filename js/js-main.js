@@ -78,3 +78,6 @@
 //     }
 // }
 // myMove();
+
+
+var test;

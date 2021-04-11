@@ -1,204 +1,329 @@
-/* All Style ----- */
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif
-}
-
-div {
-    display: block;
-}
-
-body * {
-    font-size: 0;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.cld-hide {
-    display: none;
-}
-
-
-/* Intro Styling ----- */
-
-.cld-main-header {
-    width: 100%;
-    background: #fff;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.cld-main-header-inner {
-    width: 100%;
-}
-
-
-/* Intro top */
-
-.cld-header-top {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.cld-text-wrap {
-    overflow: hidden;
-    text-overflow: clip;
-    height: 69px;
-    text-align: left;
-}
-
-.cld-top-text {
-    margin: 0;
-    font-size: 75px;
-    text-transform: uppercase;
-    color: #1abc9c;
-    line-height: 70%;
-    display: inline-block;
-    text-shadow: 5px 5px #0b5852;
-    margin-left: 220px;
-    opacity: 1;
-    padding-top: 17px;
-}
-
-
-/* Intro mid */
-
-.cld-bar {
-    width: 100%;
-    height: 100px;
-    background-color: #1abc9c;
-    z-index: 0;
-    position: relative;
-    box-shadow: 0px 10px #0b5852;
-    animation: cld-bar 2s ease-out;
-    display: inline-block;
-}
-
-.cld-bar-inner {
-    max-width: 1440px;
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    text-align: right;
-}
-
-.cld-top-name {
-    margin: 0;
-    font-size: 125px;
-    text-transform: uppercase;
-    color: #1abc9c;
-    line-height: 70%;
-    display: inline-block;
-    text-shadow: 10px 7.5px #ffffff;
-    z-index: 1;
-    position: relative;
-    top: -42px;
-    font-weight: 900;
-    margin-right: 220px;
-    animation: cld-top-name s ease-out;
-}
-
-.cld-top-name:after {
-    content: "Claudio";
-    position: absolute;
-    left: 0;
-    color: #0b5852;
-    clip: rect(42px, 572px, 95px, 0px);
-}
-
-
-/* Intro mid */
-
-.cld-frame img {
-    max-width: 500px;
-    height: auto;
-}
-
-
-/* Intro Animations ----- */
-
-.cld-top-text {
-    animation: cld-top-text 1.5s ease-in-out;
-}
-
-.cld-bar {
-    animation: cld-bar 1.5s ease-out;
-}
-
-.cld-top-name {
-    animation: cld-top-name 1.5s ease-out;
-}
-
-.cld-top-name:after {
-    animation: cld-top-name-after 1.5s ease-out;
-}
-
-@keyframes cld-bar {
-    0% {
-        width: 0%;
-        box-shadow: 0px 0px #0b5852;
+    /* All Style ----- */
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif
     }
-    25% {
+    
+    div {
+        display: block;
+    }
+    
+    body * {
+        font-size: 0;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .cld-hide {
+        display: none;
+    }
+    /* Intro Styling ----- */
+    
+    .cld-main-header {
+        width: 100%;
+        background: #fff;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .cld-main-header-inner {
         width: 100%;
     }
-    80% {
-        box-shadow: 0px 0px #0b5852;
+    /* Intro top */
+    
+    .cld-header-top {
+        max-width: 1440px;
+        margin: 0 auto;
     }
-    100% {
-        box-shadow: 0px 10px #0b5852;
+    
+    .cld-text-wrap {
+        overflow: hidden;
+        text-overflow: clip;
+        /* height: 69px; */
+        height: 86px;
+        text-align: left;
     }
-}
-
-@keyframes cld-top-text {
-    0% {
-        padding-top: 75px;
-        text-shadow: 0px 0px #0b5852;
-    }
-    60% {
+    
+    .cld-top-text {
+        margin: 0;
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #EAB32C;
+        line-height: 70%;
+        display: inline-block;
+        text-shadow: 5px 5px #313C4B;
+        /* margin-left: 220px; */
+        margin-left: 100px;
+        opacity: 1;
         padding-top: 17px;
     }
-    80% {
-        text-shadow: 0px 0px #0b5852;
-    }
-    100% {
-        text-shadow: 5px 5px #0b5852;
-    }
-}
-
-@keyframes cld-top-name {
-    0% {
-        top: 10px;
-        display: none;
-        text-shadow: none;
-    }
-    59% {
+    /* Intro mid */
+    
+    .cld-bar {
+        width: 100%;
+        /* height: 100px; */
+        height: 117px;
+        background-color: #EAB32C;
+        z-index: 0;
+        position: relative;
+        box-shadow: 0px 10px #313C4B;
         display: inline-block;
     }
-    50% {
-        top: 10px;
+    
+    .cld-bar-inner {
+        max-width: 1440px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        text-align: right;
     }
-    75% {
+    
+    .cld-top-name {
+        margin: 0;
+        font-size: 150px;
+        text-transform: uppercase;
+        color: #EAB32C;
+        line-height: 70%;
+        display: inline-block;
+        text-shadow: 10px 7.5px #313C4B;
+        z-index: 1;
+        position: relative;
         top: -42px;
+        font-weight: 900;
+        /* margin-right: 220px; */
+        margin-right: 100px;
+        opacity: 1;
     }
-    80% {
-        text-shadow: none;
+    
+    .cld-top-name:after {
+        content: "Claudio";
+        position: absolute;
+        left: 0;
+        color: #fff;
+        clip: rect(42px, 680px, 110px, 0px);
     }
-    100% {
-        text-shadow: 10px 7.5px #ffffff;
+    /* Intro btm */
+    
+    .cld-header-btm {
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
-
-@keyframes cld-top-name-after {
-    0% {
-        clip: rect(90px, 572px, 95px, 0px);
+    
+    .cld-frame img {
+        max-width: 400px;
+        height: auto;
+        background-color: #1abc9c;
     }
-    80% {
-        clip: rect(90px, 572px, 95px, 0px);
+    
+    .cld-frame {
+        display: inline-block;
+        border: 1px solid rgb(20 20 50 / 20%);
+        box-shadow: 20px 20px 1px rgb(20 20 50 / 20%);
+        -ms-transform: rotate(-8deg);
+        -webkit-transform: rotate( -8deg);
+        transform: rotate( -8deg);
+        padding: 20px 20px 20px 20px;
+        background-color: #fff;
+        margin-top: -70px;
     }
-    100% {
-        clip: rect(42px, 572px, 95px, 0px);
+    
+    .cld-kv-portrait {
+        display: inline-block;
+        width: 45%;
+        padding-left: 5%;
+        vertical-align: top;
     }
-}
+    
+    .cld-intro-text {
+        display: inline-block;
+        width: 55%;
+        padding-right: 7%;
+    }
+    
+    .cld-desc-wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-left: 5px solid #313C4B;
+        border-right: 5px solid #313C4B;
+        /* margin-top: 150px; */
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .cld-desc-wrap p {
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #313C4B;
+    }
+    /* .cld-desc-wrap {
+        background: #EAB32C;
+        padding: 25px;
+        box-shadow: 15px 15px #313C4B;
+        border: 5px solid #fff;
+    } */
+    /* .cld-header-top,
+    .cld-header-btm {
+        background: grey;
+    } */
+    /* Intro Animations ----- */
+    
+    .cld-top-text {
+        animation: cld-top-text 1.5s ease-in-out;
+    }
+    
+    .cld-bar {
+        animation: cld-bar 1.5s ease-out;
+    }
+    
+    .cld-top-name {
+        animation: cld-top-name 1.5s ease-out;
+    }
+    
+    .cld-top-name:after {
+        animation: cld-top-name-after 1.5s ease-out;
+    }
+    
+    .cld-header-btm {
+        animation: cld-header-btm 2s ease-out;
+    }
+    /* .cld-desc-wrap p {
+        animation: slide-right 3.5s ease-in;
+        transform: translateX(-110%);
+    } */
+    /* .cld-desc-wrap {
+        animation: cld-desc-wrap 2.5s ease-in-out;
+        height: 56px;
+    } */
+    
+    @keyframes cld-header-btm {
+        0% {
+            margin-top: 170px;
+            opacity: 0;
+        }
+        65% {
+            margin-top: 170px;
+            opacity: 0;
+        }
+        85% {
+            opacity: 1;
+        }
+        100% {
+            margin-top: 0px;
+        }
+    }
+    
+    @keyframes cld-bar {
+        0% {
+            width: 0%;
+            box-shadow: 0px 0px #313C4B;
+        }
+        25% {
+            width: 100%;
+        }
+        80% {
+            box-shadow: 0px 0px #313C4B;
+        }
+        100% {
+            box-shadow: 0px 10px #313C4B;
+        }
+    }
+    
+    @keyframes cld-top-text {
+        0% {
+            padding-top: 90px;
+            text-shadow: 0px 0px #313C4B;
+        }
+        60% {
+            padding-top: 17px;
+        }
+        80% {
+            text-shadow: 0px 0px #313C4B;
+        }
+        100% {
+            text-shadow: 5px 5px #313C4B;
+        }
+    }
+    
+    @keyframes cld-top-name {
+        0% {
+            top: 10px;
+            opacity: 0;
+            text-shadow: none;
+        }
+        50% {
+            opacity: 0;
+        }
+        59% {
+            opacity: 1;
+            top: 10px;
+        }
+        75% {
+            top: -42px;
+        }
+        79% {
+            text-shadow: none;
+        }
+        80% {
+            text-shadow: 0px 0px #313c4b;
+        }
+        100% {
+            text-shadow: 10px 7.5px #313c4b;
+        }
+    }
+    
+    @keyframes cld-top-name-after {
+        0% {
+            clip: rect(110px, 680px, 110px, 0px);
+        }
+        80% {
+            clip: rect(110px, 680px, 110px, 0px);
+        }
+        100% {
+            clip: rect(42px, 680px, 110px, 0px);
+        }
+    }
+    /* @keyframes cld-desc-wrap {
+        0% {
+            height: 0px;
+            margin-top: 0px;
+        }
+        55% {
+            height: 0px;
+            margin-top: 0px;
+        }
+        65% {
+            height: 98px;
+            margin-top: 108px;
+        }
+        75% {
+            height: 0px;
+            margin-top: 206px;
+        }
+        90% {
+            height: 84px;
+            margin-top: 122px;
+        }
+        100% {
+            height: 56px;
+            margin-top: 150px;
+        }
+    } */
+    /* @keyframes slide-right {
+        0% {
+            transform: translateX(-110%);
+        }
+        60% {
+            transform: translateX(-110%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    } */
