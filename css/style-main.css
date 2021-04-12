@@ -120,18 +120,20 @@
         max-width: 400px;
         height: auto;
         background-color: #1abc9c;
+        border-radius: 10px;
     }
     
     .cld-frame {
         display: inline-block;
         border: 1px solid rgb(20 20 50 / 20%);
-        box-shadow: 20px 20px 1px rgb(20 20 50 / 20%);
+        box-shadow: 30px 30px 0px rgb(20 20 50 / 20%);
         -ms-transform: rotate(-8deg);
         -webkit-transform: rotate( -8deg);
         transform: rotate( -8deg);
         padding: 20px 20px 20px 20px;
         background-color: #fff;
         margin-top: -70px;
+        border-radius: 15px;
     }
     
     .cld-kv-portrait {
@@ -155,13 +157,15 @@
         /* margin-top: 150px; */
         width: 100%;
         overflow: hidden;
+        border-radius: 5px;
     }
     
-    .cld-desc-wrap p {
-        font-size: 24px;
+    .cld-desc-wrap h2 {
+        font-size: 22px;
         text-align: center;
         text-transform: uppercase;
         color: #313C4B;
+        font-weight: 100;
     }
     /* .cld-desc-wrap {
         background: #EAB32C;
@@ -194,7 +198,7 @@
     .cld-header-btm {
         animation: cld-header-btm 2s ease-out;
     }
-    /* .cld-desc-wrap p {
+    /* .cld-desc-wrap h2 {
         animation: slide-right 3.5s ease-in;
         transform: translateX(-110%);
     } */
@@ -327,3 +331,46 @@
             transform: translateX(0);
         }
     } */
+    /* Navigation CTA ----- */
+    
+    .cld-main-mid {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: start;
+    }
+    
+    .cld-mid-inner {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+    .cld-intro-cta {
+        text-align: center;
+    }
+    
+    .cld-intro-cta a {
+        background: #313c4b;
+        font-size: 16px;
+        border: 1px solid#1abc9c;
+        padding: 10px 30px;
+        border-radius: 5px;
+        display: inline-block;
+        color: #fff;
+        text-decoration: unset;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: -5px 5px 0px #1abc9c;
+    }
+    /* Projects ----- */
+    
+    .cld-main-proj {
+        width: 100%;
+        background: #fff;
+        height: 100vh;
+    }
+    
+    .cld-proj-inner {
+        max-width: 1440px;
+        margin: 0 auto;
+    }

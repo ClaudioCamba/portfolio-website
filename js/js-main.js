@@ -80,4 +80,23 @@
 // myMove();
 
 
-var test;
+// Navigation Scroll Effect ---- //
+$('.cld-main-mid a').click(function() {
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href'))
+            .offset().top
+    }, 15000);
+    return false;
+});
+
+// $(window).scroll(function() {
+//     var x = $(".cld-main-mid").offset().top;
+//     $("section").each(function(index) {
+//         var z = $(this).attr("id");
+//         if (x > $(this).offset().top && x <= $(this).offset().top + $(this).height()) {
+//             $('a.' + z).css("color", "red");
+//         } else {
+//             $('a.' + z).css("color", "gray")
+//         }
+//     })
+// })
