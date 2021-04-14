@@ -2,7 +2,9 @@
     
     body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; */
+        /* font-family: 'Kanit', sans-serif; */
     }
     
     div {
@@ -365,12 +367,69 @@
     /* Projects ----- */
     
     .cld-main-proj {
-        width: 100%;
-        background: #fff;
-        height: 100vh;
+        width: 95%;
+        background: #F7F7F7;
+        border-radius: 50px;
+        margin: 0 2.5%;
     }
+    /* Title */
+    
+    .cld-title-inner {
+        text-align: center;
+    }
+    
+    .cld-title-inner h1 {
+        margin: 0;
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #EAB32C;
+        line-height: 70%;
+        display: inline-block;
+        text-shadow: 5px 5px #313c4b;
+        margin: 80px 0;
+    }
+    /* Work */
     
     .cld-proj-inner {
         max-width: 1440px;
         margin: 0 auto;
+    }
+    
+    .cld-proj-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    /* Card */
+    
+    .cld-proj-wrap>div:nth-child(1),
+    .cld-proj-wrap>div:nth-child(4),
+    .cld-proj-wrap>div:nth-child(7) {
+        margin-top: 150px;
+        margin-bottom: -120px;
+    }
+    
+    .cld-proj-wrap>div:nth-child(2),
+    .cld-proj-wrap>div:nth-child(5),
+    .cld-proj-wrap>div:nth-child(8) {
+        margin-top: 75px;
+        margin-bottom: -48px;
+    }
+    
+    .cld-proj-card {
+        max-width: 460px;
+        width: 100%;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid rgb(20 20 50 / 20%);
+        box-shadow: 0px 0px 5px rgb(20 20 50 / 20%);
+    }
+    
+    .cld-box-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
