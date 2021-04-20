@@ -89,6 +89,38 @@ $('.cld-main-mid a').click(function() {
     return false;
 });
 
+// Fix Nav bar once scroll past 1/4 of screen ----- //
+
+
+
+// Get viewport height
+let vw = window.innerWidth,
+    vh = window.innerHeight;
+
+// Get cta/nav location
+let box = document.querySelector('.cld-main-mid'),
+    rect = box.getBoundingClientRect();
+
+
+
+window.addEventListener("scroll", navBarLocation);
+
+function navBarLocation() {
+
+    vh = Math.floor(window.innerHeight / 4) * 3;
+    // console.log('vh ' + vh);
+
+    rect = box.getBoundingClientRect();
+    // console.log('nav ' + Math.floor(rect.top));
+
+    if (Math.floor(rect.top) <= vh) {
+        console.log('add class');
+        $('.cta-style1').addClass('test');
+    } else {
+        console.log('remove class');
+        $('.cta-style1').removeClass('test');
+    }
+}
 // Card Flip ----- //
 // var card = document.querySelectorAll('.card');
 // card.forEach(myFunction);
