@@ -81,7 +81,7 @@
 // Mouse control shadow ----- //
 
 // Navigation Scroll Effect ----- //
-$('.cld-main-mid a').click(function() {
+$('.cld-main-nav a').click(function() {
     $('html, body').animate({
         scrollTop: $($(this).attr('href'))
             .offset().top
@@ -95,10 +95,12 @@ $('.cld-main-mid a').click(function() {
 
 // Get viewport height
 let vw = window.innerWidth,
-    vh = window.innerHeight;
+    vh = window.innerHeight,
+    cldNav = document.querySelectorAll('.cld-main-nav')[0],
+    cldNavInner = document.querySelectorAll('.cld-main-nav')[0];
 
 // Get cta/nav location
-let box = document.querySelector('.cld-main-mid'),
+let box = document.querySelector('.cld-main-nav'),
     rect = box.getBoundingClientRect();
 
 
@@ -109,18 +111,38 @@ function navBarLocation() {
 
     vh = Math.floor(window.innerHeight / 4) * 3;
     // console.log('vh ' + vh);
+    console.log(Math.floor(rect.top));
 
     rect = box.getBoundingClientRect();
     // console.log('nav ' + Math.floor(rect.top));
 
     if (Math.floor(rect.top) <= vh) {
-        console.log('add class');
-        $('.cta-style1').addClass('test');
+        // console.log('scrolling');
+        // $('.cld-main-nav').removeClass('cld-nav-intro').addClass('cld-nav-scroll');
+        cldNav.classList.remove("cld-nav-intro");
+        cldNav.classList.add("cld-nav-scroll");
+        cldNavInner.classList.add("blu-bg");
     } else {
-        console.log('remove class');
-        $('.cta-style1').removeClass('test');
-    }
-}
+        // console.log('top of page');
+        // $('.cld-main-nav').addClass('cld-nav-intro').removeClass('cld-nav-scroll');
+        cldNav.classList.add("cld-nav-intro");
+        cldNav.classList.remove("cld-nav-scroll");
+        cldNavInner.classList.remove("blu-bg");
+    };
+
+    if (Math.floor(rect.top) <= 0) {
+        console.log('STICKY');
+        cldNav.classList.add("cld-nav-stick");
+
+    } else {
+        console.log('UNSTUCK');
+        cldNav.classList.remove("cld-nav-stick");
+
+    };
+};
+// Initial 
+navBarLocation();
+
 // Card Flip ----- //
 // var card = document.querySelectorAll('.card');
 // card.forEach(myFunction);
