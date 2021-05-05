@@ -85,7 +85,7 @@ $('.cld-main-nav a').click(function() {
     $('html, body').animate({
         scrollTop: $($(this).attr('href'))
             .offset().top
-    }, 700);
+    }, 800);
     return false;
 });
 
@@ -94,54 +94,54 @@ $('.cld-main-nav a').click(function() {
 
 
 // Get viewport height
-let vw = window.innerWidth,
-    vh = window.innerHeight,
-    cldNav = document.querySelectorAll('.cld-main-nav')[0],
-    cldNavInner = document.querySelectorAll('.cld-main-nav')[0];
+// let vw = window.innerWidth,
+//     vh = window.innerHeight,
+//     cldNav = document.querySelectorAll('.cld-main-nav')[0],
+//     cldNavInner = document.querySelectorAll('.cld-main-nav')[0];
 
-// Get cta/nav location
-let box = document.querySelector('.cld-main-nav'),
-    rect = box.getBoundingClientRect();
+// // Get cta/nav location
+// let box = document.querySelector('.cld-main-nav'),
+//     rect = box.getBoundingClientRect();
 
 
 
-window.addEventListener("scroll", navBarLocation);
+// window.addEventListener("scroll", navBarLocation);
 
-function navBarLocation() {
+// function navBarLocation() {
 
-    vh = Math.floor(window.innerHeight / 4) * 3;
-    // console.log('vh ' + vh);
-    console.log(Math.floor(rect.top));
+//     vh = Math.floor(window.innerHeight / 4) * 3;
+//     // console.log('vh ' + vh);
+//     console.log(Math.floor(rect.top));
 
-    rect = box.getBoundingClientRect();
-    // console.log('nav ' + Math.floor(rect.top));
+//     rect = box.getBoundingClientRect();
+//     // console.log('nav ' + Math.floor(rect.top));
 
-    if (Math.floor(rect.top) <= vh) {
-        // console.log('scrolling');
-        // $('.cld-main-nav').removeClass('cld-nav-intro').addClass('cld-nav-scroll');
-        cldNav.classList.remove("cld-nav-intro");
-        cldNav.classList.add("cld-nav-scroll");
-        cldNavInner.classList.add("blu-bg");
-    } else {
-        // console.log('top of page');
-        // $('.cld-main-nav').addClass('cld-nav-intro').removeClass('cld-nav-scroll');
-        cldNav.classList.add("cld-nav-intro");
-        cldNav.classList.remove("cld-nav-scroll");
-        cldNavInner.classList.remove("blu-bg");
-    };
+//     if (Math.floor(rect.top) <= vh) {
+//         // console.log('scrolling');
+//         // $('.cld-main-nav').removeClass('cld-nav-intro').addClass('cld-nav-scroll');
+//         cldNav.classList.remove("cld-nav-intro");
+//         cldNav.classList.add("cld-nav-scroll");
+//         cldNavInner.classList.add("blu-bg");
+//     } else {
+//         // console.log('top of page');
+//         // $('.cld-main-nav').addClass('cld-nav-intro').removeClass('cld-nav-scroll');
+//         cldNav.classList.add("cld-nav-intro");
+//         cldNav.classList.remove("cld-nav-scroll");
+//         cldNavInner.classList.remove("blu-bg");
+//     };
 
-    if (Math.floor(rect.top) <= 0) {
-        console.log('STICKY');
-        cldNav.classList.add("cld-nav-stick");
+//     if (Math.floor(rect.top) <= 0) {
+//         console.log('STICKY');
+//         cldNav.classList.add("cld-nav-stick");
 
-    } else {
-        console.log('UNSTUCK');
-        cldNav.classList.remove("cld-nav-stick");
+//     } else {
+//         console.log('UNSTUCK');
+//         cldNav.classList.remove("cld-nav-stick");
 
-    };
-};
+//     };
+// };
 // Initial 
-navBarLocation();
+// navBarLocation();
 
 // Card Flip ----- //
 // var card = document.querySelectorAll('.card');

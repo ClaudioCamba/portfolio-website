@@ -1,10 +1,67 @@
     /* Font Style */
     
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap');
-    /* Icons */
+    /* Button style ----- */
+    /* btn colour */
     
-    @import url('https://css.gg/mail.css');
-    /* <i class="gg-mail"></i> */
+    .btn-slide {
+        border: 2px solid #333c4a;
+        background: #333c4a;
+        color: #FFFFFF;
+    }
+    
+    .btn-slide:after {
+        background: #FFF;
+    }
+    
+    .btn-slide:hover {
+        color: #333c4a;
+    }
+    /* btn size */
+    
+    .btn-slide {
+        width: 200px;
+        height: 40px;
+        line-height: 38px;
+    }
+    
+    .btn-slide span {
+        font-size: 16px;
+    }
+    /* btn slide styling */
+    
+    .btn-slide {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        transition: all .35s ease-in-out;
+        border-radius: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    
+    .btn-slide span {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .btn-slide:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: all .35s;
+    }
+    
+    .btn-slide:hover:after {
+        width: 100%;
+    }
     /* All Style ----- */
     
     body {
@@ -74,10 +131,6 @@
         font-size: 16px;
     }
     
-    .terms-txt {
-        font-size: 12px;
-    }
-    
     .cta-style1 {
         background: #ffffff;
         font-size: 16px;
@@ -104,10 +157,13 @@
     .cld-main-header {
         width: 100%;
         background: #fff;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        position: relative;
+        border-top: 10px solid #1cbc9b;
     }
     
     .cld-main-header-inner {
@@ -336,28 +392,75 @@
         }
     }
     /* Navigation CTA ----- */
-    
-    .cld-main-nav {
+    /* .cld-main-nav {
         width: 100%;
         height: 10vh;
+    } */
+    /* .cld-nav-inner {
+        width: 100%;
+        position: absolute;
+        bottom: 100px;
+    } */
+    
+    .cld-nav-inner {
+        z-index: 9;
+        width: 1640px;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
     }
     
     .cld-nav-wrap {
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-        max-width: 1440px;
-        padding: 10px 0;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        background: #FFF;
+        border-radius: 30px;
     }
+    /* .cld-nav-wrap:after {
+        content: " ";
+        border-left: 10px solid #FFF;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 20px;
+        z-index: -1;
+        border-radius: 5px;
+    } */
     
     .cld-nav-wrap>li {
-        display: inline-block;
-        text-align: center;
-        margin: 0 20px;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .cld-nav-wrap>li:nth-child(2) {
+        /* margin: 10px 0; */
+    }
+    
+    .cld-nav-wrap li a {
+        font-size: 0px;
+        text-decoration: none;
+        padding: 20px;
+        /* background: #1CBC9B; */
+        border: 5px solid #FFF;
+        display: block;
+        border-radius: 50px;
+    }
+    
+    .intro-btn {
+        background: #1CBC9B;
+    }
+    
+    .portfolio-btn {
+        background-color: #EAB32C;
+    }
+    
+    .contact-btn {
+        background: #c3644c;
     }
     /* Nav scrolling */
-    
-    .cld-nav-scroll .cld-nav-inner {
+    /* .cld-nav-scroll .cld-nav-inner {
         background-color: #333c4a;
         width: 100%;
     }
@@ -365,20 +468,18 @@
     .cld-nav-scroll .cld-nav-wrap a {
         background: #333c4a;
         color: #FFFFFF;
-    }
+    } */
     /* Nav stick */
-    
-    .cld-nav-stick .cld-nav-inner {
+    /* .cld-nav-stick .cld-nav-inner {
         position: fixed;
         top: 0;
         z-index: 5;
-    }
+    } */
     /* Nav top */
-    
-    .cld-nav-intro .cld-intro,
+    /* .cld-nav-intro .cld-intro,
     .cld-nav-intro .cld-contact {
         display: none;
-    }
+    } */
     /* Projects ----- */
     
     .cld-main-proj {
@@ -386,6 +487,7 @@
         background-color: #333c4a;
         position: relative;
         z-index: 0;
+        border-top: 10px solid #EAB32C;
     }
     /* Title */
     
@@ -493,8 +595,7 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        border-top: 5px solid #c3644c;
-        border-bottom: 5px solid #c3644c;
+        border-top: 10px solid #c3644c;
     }
     /* Title */
     
@@ -544,7 +645,7 @@
     }
     
     .cld-contact-wrap {
-        max-width: 1440px;
+        max-width: 1340px;
         display: inline-block;
         box-shadow: 20px 20px 0px rgb(20 20 50 / 20%);
         -ms-transform: rotate(3deg);
@@ -633,7 +734,7 @@
     }
     
     .cld-title-form-wrap {
-        width: 55%;
+        width: 57%;
         background-color: #fff;
         padding: 30px;
         border-left: 1px solid rgb(20 20 50 / 20%);
@@ -680,7 +781,7 @@
     /* Contact info */
     
     .cld-info-wrap {
-        width: 45%;
+        width: 43%;
         background-color: #333c4a;
         padding: 30px;
         border-right: 1px solid #333c4a;
@@ -692,7 +793,7 @@
     }
     
     .cld-prof-pic {
-        border: 5px solid #c3644c;
+        border: 5px solid #1CBC9B;
         display: block;
         border-radius: 50%;
         width: 250px;
@@ -717,78 +818,117 @@
         /* border-radius: 7.5px; */
         margin-top: 25px;
         /* position: relative; */
-        width: 49%;
+        width: 48%;
         display: inline-block;
     }
     
     .cld-info-wrap ul .cld-info:nth-of-type(1),
     .cld-info-wrap ul .cld-info:nth-of-type(3),
     .cld-info-wrap ul .cld-info:nth-of-type(5) {
-        margin-right: 2%;
+        margin-right: 4%;
     }
     
     .cld-info button {
         width: 100%;
         border-radius: 60px;
-        border: 1px solid #FFFFFF;
-        background: #333c4a;
+        border: 3px solid #FFF;
+        background: #FFF;
         cursor: pointer;
         position: relative;
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+        text-align: left;
     }
     
-    .cld-info a,
-    .cld-info address {
+    .cld-info a {
         font-size: 14px;
-        color: #FFFFFF;
+        color: #333c4a;
         text-decoration: none;
         font-style: unset;
         display: inline-block;
-        padding: 12px 12px 12px 16px;
-        width: 80%;
+        padding: 8px 8px 8px 50px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
     }
     /* .cld-info a:after, */
     
-    span.cld-icon {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: lightblue;
+    .cld-icon {
+        /* display: inline-block; */
+        width: 46px;
+        height: 46px;
+        top: -7px;
+        left: -3px;
+        border-radius: 50px;
+        background-color: #1CBC9B;
         position: absolute;
+        z-index: 1;
+        /* border-bottom-right-radius: 0px; */
+        /* border-top-right-radius: 0px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #FFF;
     }
     
-    .email-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/email.svg') no-repeat center center;
-        background-size: 30px 30px;
+    .cld-icon object {
+        width: 100%;
+        height: auto;
+    }
+    
+    .email-circle object {
+        max-width: 25px;
+    }
+    
+    .linkedin-circle object {
+        max-width: 25px;
+    }
+    
+    .call-circle object {
+        max-width: 25px;
+    }
+    
+    .github-circle object {
+        max-width: 30px;
+    }
+    
+    .resume-circle object {
+        max-width: 30px;
+    }
+    
+    .location-circle object {
+        max-width: 20px;
+    }
+    /* .email-circle {
+        background: url('../assets/icons/email.svg') no-repeat center center;
+        background-size: 25px 25px;
     }
     
     .linkedin-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/linkedin.svg') no-repeat center center;
-        background-size: 30px 30px;
+        background: url('../assets/icons/linkedin.svg') no-repeat center center;
+        background-size: 25px 25px;
     }
     
     .call-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/call.svg') no-repeat center center;
-        background-size: 30px 30px;
+        background: url('../assets/icons/call.svg') no-repeat center center;
+        background-size: 25px 25px;
     }
     
     .github-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/github-icon.svg') no-repeat center center;
+        background: url('../assets/icons/github-icon.svg') no-repeat center center;
         background-size: 30px 30px;
     }
     
     .resume-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/resume-icon.svg') no-repeat center center;
+        background: url('../assets/icons/resume-icon.svg') no-repeat center center;
         background-size: 30px 30px;
     }
     
     .location-circle {
-        background: url('/Users/claudio-camba/Documents/Web Development/portfolio website/assets/icons/location.svg') no-repeat center center;
+        background: url('../assets/icons/location.svg') no-repeat center center;
         background-size: 30px 30px;
-    }
+    } */
     /* .cld-icon:after {
         content: "";
         display: inline-block;
@@ -873,6 +1013,7 @@
     
     .cld-footer-inner p,
     .cld-footer-inner a {
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 200;
         color: #FFF;
     }
