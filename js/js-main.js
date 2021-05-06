@@ -80,14 +80,56 @@
 // myMove();
 // Mouse control shadow ----- //
 
-// Navigation Scroll Effect ----- //
+// Section Variables
+var cldBody = document.querySelector('body'),
+    cldIntroSec = document.getElementById('cld-intro'),
+    cldProjectSec = document.getElementById('cld-projects'),
+    cldContactSec = document.getElementById('cld-contact'),
+    cldIntroBtn = document.querySelectorAll('.intro-btn')[0],
+    cldProjectBtn = document.querySelectorAll('.portfolio-btn')[0],
+    cldContactBtn = document.querySelectorAll('.contact-btn')[0],
+    windowWidth = window.innerWidth,
+    windowHeight = window.innerHeight;
+
+// Main Section
+function cldSecDetect() {
+    if (cldContactSec.getBoundingClientRect().top <= cldContactBtn.getBoundingClientRect().bottom) {
+        cldBody.classList.add("cld-contact-view");
+        cldBody.classList.remove('cld-projects-view', 'cld-intro-view');
+    } else if (cldProjectSec.getBoundingClientRect().top <= cldProjectBtn.getBoundingClientRect().bottom) {
+
+        cldBody.classList.add("cld-projects-view");
+        cldBody.classList.remove('cld-contact-view', 'cld-intro-view');
+    } else {
+        cldBody.classList.add("cld-intro-view");
+        cldBody.classList.remove('cld-contact-view', 'cld-projects-view');
+    };
+};
+
+// Navigation smooth scroll ----- //
 $('.cld-main-nav a').click(function() {
     $('html, body').animate({
         scrollTop: $($(this).attr('href'))
             .offset().top
-    }, 800);
+    }, 700);
     return false;
 });
+
+// Onload functions
+var chkReadyState = setInterval(function() {
+    if (document.readyState == "complete") {
+        // clear the interval
+        clearInterval(chkReadyState);
+        // finally your page is loaded.
+        cldSecDetect();
+    }
+}, 100);
+
+// Scroll eventlistener
+window.addEventListener("scroll", cldSecDetect);
+
+
+
 
 // Fix Nav bar once scroll past 1/4 of screen ----- //
 
