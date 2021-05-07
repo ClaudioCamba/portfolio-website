@@ -4,18 +4,34 @@
     /* Button style ----- */
     /* btn colour */
     
-    .btn-slide {
+    .btn-yel {
         border: 2px solid #333c4a;
         background: #333c4a;
         color: #FFFFFF;
     }
     
-    .btn-slide:after {
-        background: #FFF;
+    .btn-yel:after {
+        background: #EAB32C;
     }
     
-    .btn-slide:hover {
+    .btn-yel:hover {
         color: #333c4a;
+        border: 2px solid #EAB32C;
+    }
+    
+    .btn-red {
+        border: 2px solid #333c4a;
+        background: #333c4a;
+        color: #FFFFFF;
+    }
+    
+    .btn-red:after {
+        background: #c3644c;
+    }
+    
+    .btn-red:hover {
+        color: #FFFFFF;
+        border: 2px solid #c3644c;
     }
     /* btn size */
     
@@ -26,7 +42,8 @@
     }
     
     .btn-slide span {
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 400;
     }
     
     .cld-box-desc .btn-slide:first-of-type {
@@ -46,6 +63,7 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         font-weight: 300;
+        margin: 0;
     }
     
     .btn-slide span {
@@ -814,6 +832,12 @@
     .cld-contact-form input[type="text"]:focus,
     .cld-contact-form textarea:focus {
         border-color: #c3644c;
+    }
+    
+    .cld-contact-form button {
+        display: block;
+        margin-right: 0;
+        margin-left: auto;
     }
     /* Contact info */
     
