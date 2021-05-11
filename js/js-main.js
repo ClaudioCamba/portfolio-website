@@ -91,7 +91,7 @@ var cldBody = document.querySelector('body'),
     windowWidth = window.innerWidth,
     windowHeight = window.innerHeight;
 
-// Main Section
+// Main Section ----- //
 function cldSecDetect() {
     if (cldContactSec.getBoundingClientRect().top <= cldContactBtn.getBoundingClientRect().bottom) {
         cldBody.classList.add("cld-contact-view");
@@ -115,7 +115,7 @@ $('.cld-main-nav a').click(function() {
     return false;
 });
 
-// Onload functions
+// Onload functions ----- //
 var chkReadyState = setInterval(function() {
     if (document.readyState == "complete") {
         // clear the interval
@@ -126,8 +126,13 @@ var chkReadyState = setInterval(function() {
 }, 100);
 
 // Scroll eventlistener
-window.addEventListener("scroll", cldSecDetect);
-
+window.addEventListener("scroll", function() {
+    cldSecDetect();
+});
+// Resize eventlistener
+window.addEventListener('resize', function() {
+    // cldSecDetect();
+});
 
 
 

@@ -30,7 +30,7 @@
     }
     
     .btn-red:hover {
-        color: #FFFFFF;
+        color: #333c4a;
         border: 2px solid #c3644c;
     }
     /* btn size */
@@ -552,7 +552,7 @@
         border-top: 5px solid #c3644c;
         margin-top: -5px;
     }
-    /* Work */
+    /* Project */
     
     .cld-proj-inner {
         max-width: 1400px;
@@ -644,6 +644,39 @@
         color: #fff;
         border-radius: 25px;
     } */
+    /* Modal Section ----- */
+    
+    body {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    
+    .cld-modal-bg {
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        overflow: scroll;
+    }
+    
+    .cld-modal-content {
+        background-color: #888;
+        margin: 0 auto;
+        padding: 250px;
+        width: 100%;
+        max-width: 1440px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .cld-modal-body h2 {
+        font-size: 15px;
+    }
     /* Contact Section ----- */
     
     .cld-main-contact {
