@@ -1,6 +1,7 @@
 // Section Variables
 const cldBody = document.querySelector('body'),
     cldNavLinks = document.querySelectorAll(".cld-nav-wrap li a"),
+    // cldNavLinkWrap = document.querySelectorAll(".cld-nav-wrap"),
     cldIntroSec = document.getElementById('cld-intro'),
     cldProjectSec = document.getElementById('cld-projects'),
     cldContactSec = document.getElementById('cld-contact'),
@@ -103,6 +104,8 @@ var chkReadyState = setInterval(function() {
         cldSmoothScroll();
     }
 }, 100);
+
+// Navigation size ----- //
 
 // Scroll eventlistener ----- // 
 window.addEventListener("scroll", function() {
