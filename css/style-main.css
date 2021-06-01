@@ -301,6 +301,7 @@
             padding-right: 10%;
             padding-left: 5%;
             border-left: 5px solid #333c4a;
+            color: #333c4a;
         }
         /* Intro Animations ----- */
         
@@ -1121,6 +1122,9 @@
                 padding: 1.3559vw;
                 border: 0.3389vw solid #FFF;
             }
+            .cld-projects-view .cld-nav-wrap li a {
+                border: 0.3389vw solid #333c4a;
+            }
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
             .cld-intro-view .intro-btn {
@@ -1264,38 +1268,49 @@
         }
         
         @media only screen and (max-width: 1225px) {
+            /* All */
+            p,
+            .cld-contact-form label span,
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea,
+            .cld-contact-detail li span,
+            .cld-info a {
+                font-size: 14px;
+            }
+            .header1-txt {
+                font-size: 22px;
+            }
+            .cld-sec-title {
+                font-size: 50px;
+            }
             /* Intro Section ----- */
-            .cld-intro-btm>div {
-                display: block;
-                margin: 0 auto;
-            }
-            .cld-name-wrap,
-            .cld-text-wrap {
-                padding-left: 0;
-                text-align: center;
-            }
             .cld-intro-top,
             .cld-bar-inner,
             .cld-intro-btm {
-                margin: 0 auto;
+                margin-left: 50px;
             }
-            .cld-bar {
-                margin-bottom: 125px;
+            .cld-kv-portrait {
+                margin-bottom: 50px;
             }
-            .cld-frame {
-                margin-top: 0;
+            .cld-intro-text {
+                width: 100%;
             }
             .cld-desc-wrap {
+                width: 56%;
                 padding-right: 5%;
                 padding-left: 5%;
-                border-left: 5px solid #333c4a;
-                border-right: 5px solid #333c4a;
+                margin: 0 auto;
                 text-align: center;
-            }
-            .cld-intro-btm>.cld-kv-portrait {
-                margin-bottom: 75px;
+                border-right: 5px solid #333c4a;
             }
             /* Portfolio Section ----- */
+            .cld-proj-inner {
+                width: 90.9183vw;
+                /* max-width: none; */
+                /* margin: 0 auto; */
+                margin-left: 25px;
+                margin-right: auto;
+            }
             .cld-proj-wrap {
                 justify-content: center;
             }
@@ -1307,12 +1322,12 @@
                 margin-left: 15px;
                 margin-right: 15px;
             }
-            .cld-box-desc .header1-txt {
+            /* .cld-box-desc .header1-txt {
                 font-size: 22px;
             }
             .cld-box-desc p {
                 font-size: 14px;
-            }
+            } */
             .cld-box-desc {
                 padding: 18px;
             }
@@ -1320,9 +1335,12 @@
                 margin-right: 18px;
             }
             /* Contact Section ----- */
+            .cld-contact-inner {
+                padding-right: 4vw;
+            }
             .cld-contact-wrap {
                 display: block;
-                width: 732px;
+                width: 800px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -1332,7 +1350,7 @@
                 padding: 30px 40px;
                 display: block;
                 width: 100%;
-                max-width: 652px;
+                max-width: 718px;
             }
             .cld-title-form-wrap {
                 border-right: 1px solid rgb(20, 20, 50);
@@ -1340,6 +1358,33 @@
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
                 border-bottom-left-radius: 0;
+            }
+            .cld-intouch {
+                width: 120px;
+                /* font-size: 22px; */
+            }
+            .cld-form-title p {
+                width: 475px;
+                /* font-size: 16px; */
+                padding-left: 40px;
+            }
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea,
+            .cld-contact-form label:nth-child(1) input[type="text"],
+            .cld-contact-form label:nth-child(2) input[type="text"] {
+                max-width: unset;
+                width: 100%;
+            }
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea {
+                border-radius: 7.5px;
+                margin-bottom: 20px;
+                padding: 10px;
+                margin-top: 15px;
+            }
+            .btn-slide {
+                width: 186px;
+                padding: 10px 0;
             }
             .cld-info-detail {
                 border-top: none;
@@ -1350,7 +1395,7 @@
                 border-bottom: 5px solid #c3644c;
             }
             .cld-prof-pic img {
-                max-width: 200px;
+                max-width: 225px;
                 margin: 0 auto;
                 display: block;
             }
@@ -1362,13 +1407,17 @@
                 width: 50%;
             }
             .cld-info-cta {
-                height: 355px;
                 border-top: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                border-left: 1px solid #D0D0D6;
+            }
+            .cld-info-cta ul {
+                flex-direction: unset;
             }
             .cld-info {
-                width: auto;
+                width: 80px;
             }
             .cld-info a {
                 width: 68px;
@@ -1376,7 +1425,10 @@
             }
         }
         
+        @media only screen and (max-width: 975px) {}
+        
         .cld-intro-top,
-        .cld-proj-wrap {
+        .cld-proj-wrap,
+        .cld-intro-btm {
             background: orange;
         }
