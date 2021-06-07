@@ -1628,6 +1628,16 @@
             }
         }
         
+        @media only screen and (max-width: 675px) and (min-height: 122.9629vw) {
+            .cld-main-header-inner {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 675px) {
             /* All */
             .title1-txt {
@@ -1635,6 +1645,22 @@
             }
             .title2-txt {
                 font-size: 11.1111vw;
+            }
+            .header1-txt {
+                font-size: 2.5vw;
+            }
+            p,
+            .cld-contact-form label span,
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea,
+            .cld-contact-detail li span,
+            .cld-info a {
+                font-size: 1.9259vw;
+            }
+            .btn-slide span,
+            .cld-footer-inner p,
+            .cld-footer-inner a {
+                font-size: 1.6296vw;
             }
             /* Intro Section */
             .cld-main-header-inner {
@@ -1664,6 +1690,7 @@
             .cld-top-name {
                 top: 5.25vw;
                 letter-spacing: 2px;
+                text-shadow: 1.1111vw 1.1111vw #c3644c;
             }
             .cld-top-text {
                 text-shadow: 0.7407vw 0px #c3644c;
@@ -1682,16 +1709,101 @@
                 align-items: center;
             }
             .cld-kv-portrait {
-                margin-bottom: 9.6618vw;
+                margin: 5vw 0 15vw 0;
             }
             .cld-frame {
                 margin-top: 0;
+                padding: 2.2222vw;
+                border-radius: 2.2222vw;
+                box-shadow: 2.9629vw 2.9629vw 0 rgb(20 20 50);
+                box-shadow: 2.9629vw 2.9629vw 0 rgb(20 20 50 / 20%);
+            }
+            .cld-frame img {
+                max-width: 45vw;
+            }
+            .cld-desc-wrap {
+                width: 80%;
             }
             /* Portfolio Section */
+            .cld-sec-title {
+                font-size: 8.0074vw;
+                letter-spacing: 1px;
+            }
+            .cld-proj-title .cld-sec-title {
+                text-shadow: -0.6444vw 0 #c3644c;
+            }
+            .cld-proj-title .cld-title-inner {
+                padding: 8.8888vw 0;
+                margin-right: 40%;
+            }
+            .cld-proj-title hr {
+                height: 1.0814vw;
+                border-top: 0.7407vw solid #c3644c;
+                margin-top: -0.6444vw;
+            }
+            .cld-box-inner {
+                max-width: 45.5vw;
+                margin: 0 0 2.1vw 0;
+            }
+            .cld-proj-card:nth-child(odd) .cld-box-inner {
+                margin-right: 2.1vw;
+            }
+            .cld-proj-card:last-child .cld-box-inner {
+                margin: 0;
+            }
+            .cld-box-desc {
+                padding: 2.2222vw;
+                border-top: 0.7407vw solid #EAB32C;
+            }
+            .cld-used-tech object {
+                max-width: 2.9629vw;
+                max-height: 2.9629vw;
+                margin: 0 0.7407vw;
+            }
+            .cld-used-tech {
+                top: -5.1851vw;
+            }
+            .cld-box-desc p,
+            .cld-card-title {
+                padding-bottom: 2.2222vw;
+            }
+            .cld-proj-wrap {
+                padding-bottom: 8.8888vw;
+            }
             /* Contact Section */
+            .cld-contact-title .cld-sec-title {
+                text-shadow: -0.6444vw 0 #c3644c;
+            }
+            .cld-contact-title .cld-title-inner {
+                padding: 8.8888vw 0;
+                margin-right: 40%;
+            }
+            .cld-contact-title hr {
+                height: 1.0814vw;
+                border-top: 0.7407vw solid #c3644c;
+                margin-top: -0.5444vw;
+            }
+            .cld-contact-wrap {
+                border-radius: 2.2222vw;
+                width: 86.2222vw;
+                -moz-transform: rotate(1deg);
+                -o-transform: rotate(1deg);
+                -ms-transform: rotate(1deg);
+                -webkit-transform: rotate( 1deg);
+                transform: rotate( 1deg);
+                box-shadow: 2.9629vw 2.9629vw 0 rgb(20 20 50);
+                box-shadow: 2.9629vw 2.9629vw 0 rgb(20 20 50 / 20%);
+            }
+            .cld-info-cta,
+            .cld-info-detail,
+            .cld-title-form-wrap {
+                padding: 4.4444vw 5.9259vw;
+                max-width: 74.0740vw;
+            }
         }
-        /* .cld-intro-top,
+        
+        .cld-intro-top,
         .cld-proj-wrap,
         .cld-intro-btm {
             background: orange;
-        } */
+        }
