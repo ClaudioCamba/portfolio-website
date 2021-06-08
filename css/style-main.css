@@ -1628,7 +1628,7 @@
             }
         }
         
-        @media only screen and (max-width: 675px) and (min-height: 122.9629vw) {
+        @media only screen and (max-width: 675px) and (min-height: 121.4814vw) and (max-height:216.5333vw) {
             .cld-main-header-inner {
                 padding-top: 0;
                 padding-bottom: 0;
@@ -1661,6 +1661,10 @@
             .cld-footer-inner p,
             .cld-footer-inner a {
                 font-size: 1.6296vw;
+            }
+            .btn-slide {
+                width: 25.4814vw;
+                padding: 1.3333vw 0;
             }
             /* Intro Section */
             .cld-main-header-inner {
@@ -1781,7 +1785,7 @@
             .cld-contact-title hr {
                 height: 1.0814vw;
                 border-top: 0.7407vw solid #c3644c;
-                margin-top: -0.5444vw;
+                margin-top: -0.6444vw;
             }
             .cld-contact-wrap {
                 border-radius: 2.2222vw;
@@ -1797,13 +1801,107 @@
             .cld-info-cta,
             .cld-info-detail,
             .cld-title-form-wrap {
-                padding: 4.4444vw 5.9259vw;
-                max-width: 74.0740vw;
+                padding: 4.4444vw;
+                max-width: 77.074vw;
+            }
+            .cld-form-title p {
+                width: 59.7179vw;
+                padding-left: 3.1025vw;
+            }
+            .cld-form-title {
+                margin-bottom: 2.9629vw;
+            }
+            .cld-contact-form label span {
+                padding-bottom: 0;
+                top: -0.4444vw;
+            }
+            .cld-contact-detail li p {
+                padding: 1.4814vw;
+            }
+            .cld-prof-pic img {
+                max-width: 26.6296vw;
+                border: 0.7407vw solid #FFF;
+            }
+            .cld-contact-detail li span {
+                top: -2.2740vw;
+            }
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea {
+                border: 1.5px solid #333c4a;
+            }
+            .cld-intouch {
+                width: 11.3076vw;
+                letter-spacing: 0;
+            }
+            .cld-contact-detail li:first-child {
+                margin-bottom: 2.9629vw;
+            }
+            .cld-contact-detail li {
+                border: 1.5px solid #c3644c;
+            }
+            .resume-circle img {
+                max-width: 4.4444vw;
+            }
+            .github-circle img {
+                max-width: 4.4444vw;
+            }
+            .linkedin-circle img {
+                max-width: 3.4074vw;
             }
         }
         
+        @media only screen and (max-width: 475px) {
+            /* All */
+            /* Intro */
+            /* Portfolio */
+            .cld-box-inner {
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .cld-proj-inner {
+                width: 89.4736vw;
+            }
+            .cld-box-inner {
+                margin: 0 0 5.2631vw 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            /* Contact */
+            .cld-contact-wrap {
+                border-radius: 2.1052vw;
+                width: 89.4736vw;
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -webkit-transform: rotate( 0deg);
+                transform: rotate( 0deg);
+            }
+            .cld-info-cta,
+            .cld-info-detail,
+            .cld-title-form-wrap {
+                padding: 5.2631vw;
+                max-width: 78.5263vw;
+            }
+            .cld-form-title {
+                display: block;
+                align-items: unset;
+            }
+            .cld-form-title p {
+                width: 100%;
+                padding-left: 0;
+            }
+            .cld-title-form-wrap form .cld-lemail,
+            .cld-title-form-wrap form .cld-fname {
+                width: 100%;
+            }
+            .cld-contact-form label:nth-child(1) input[type="text"] {
+                margin-right: 0;
+            }
+        }
+        /*         
         .cld-intro-top,
         .cld-proj-wrap,
         .cld-intro-btm {
             background: orange;
-        }
+        } */
