@@ -1848,12 +1848,45 @@
             .linkedin-circle img {
                 max-width: 3.4074vw;
             }
+            /* Footer */
+            .cld-footer-inner {
+                padding: 6.3157vw 5.2631vw 6.3157vw;
+            }
         }
         
         @media only screen and (max-width: 475px) {
             /* All */
+            p,
+            .cld-contact-form label span,
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea,
+            .cld-contact-detail li span,
+            .cld-info a {
+                font-size: 2.9473vw;
+            }
+            .header1-txt {
+                font-size: 3.9vw;
+            }
+            .btn-slide span,
+            .cld-footer-inner p,
+            .cld-footer-inner a {
+                font-size: 2.5263vw;
+            }
+            .btn-slide {
+                padding: 1.5789vw 0;
+                width: 34.5789vw;
+            }
             /* Intro */
+            .cld-frame img {
+                max-width: 50vw;
+            }
+            .cld-main-header {
+                border-top: 2.1052vw solid #1cbc9b;
+            }
             /* Portfolio */
+            .cld-main-proj {
+                border-top: 2.1052vw solid #EAB32C;
+            }
             .cld-box-inner {
                 margin: 0;
                 width: 100%;
@@ -1867,7 +1900,40 @@
                 width: 100%;
                 max-width: 100%;
             }
+            .cld-box-desc p,
+            .cld-card-title {
+                padding-bottom: 3.1578vw;
+            }
+            .cld-proj-title .cld-title-inner {
+                padding: 10.5263vw 0;
+            }
+            .cld-box-desc {
+                padding: 3.7894vw;
+                border-top: 1.5789vw solid #EAB32C;
+            }
+            .cld-used-tech object {
+                max-width: 5.2631vw;
+                max-height: 5.2631vw;
+                margin: 0 1.0526vw;
+            }
+            .cld-used-tech {
+                top: -8.6315vw;
+                padding: 1.5789vw;
+                border-top-left-radius: 3.1578vw;
+            }
+            .cld-cta-wrap .btn-slide {
+                width: 50%;
+            }
+            .cld-box-desc .btn-slide:first-of-type {
+                margin-right: 3.8461vw;
+            }
+            .cld-proj-wrap {
+                padding-bottom: 12.6315vw;
+            }
             /* Contact */
+            .cld-main-contact {
+                border-top: 2.1052vw solid #c3644c;
+            }
             .cld-contact-wrap {
                 border-radius: 2.1052vw;
                 width: 89.4736vw;
@@ -1876,6 +1942,36 @@
                 -ms-transform: rotate(0deg);
                 -webkit-transform: rotate( 0deg);
                 transform: rotate( 0deg);
+            }
+            .cld-contact-wrap {
+                box-shadow: 3.1578vw 2.9629vw 0 rgb(20 20 50);
+                box-shadow: 3.1578vw 2.9629vw 0 rgb(20 20 50 / 20%);
+            }
+            .cld-title-form-wrap {
+                border-top-left-radius: 3.1578vw;
+                border-top-right-radius: 3.1578vw;
+            }
+            .cld-info-cta {
+                border-bottom-right-radius: 3.1578vw;
+                border-bottom-left-radius: 3.1578vw;
+            }
+            .cld-contact-wrap {
+                border-radius: 3.1578vw;
+            }
+            .cld-contact-inner:after {
+                border-top: 25.282vw solid #c3644c;
+            }
+            .cld-intouch {
+                width: 50%;
+                letter-spacing: 1px;
+                border-top-right-radius: 2.1052vw;
+                border-top-left-radius: 2.1052vw;
+                border-bottom-left-radius: 2.1052vw;
+                padding: 2.1052vw;
+                margin-bottom: 4.2105vw;
+            }
+            .cld-form-title {
+                margin-bottom: 4.2105vw;
             }
             .cld-info-cta,
             .cld-info-detail,
@@ -1887,9 +1983,34 @@
                 display: block;
                 align-items: unset;
             }
+            .cld-contact-title .cld-title-inner {
+                padding: 10.5263vw 0;
+            }
             .cld-form-title p {
                 width: 100%;
                 padding-left: 0;
+            }
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea {
+                border: 2px solid #333c4a;
+            }
+            .cld-contact-form input[type="text"],
+            .cld-contact-form textarea {
+                border-radius: 1.5789vw;
+                margin-bottom: 3.1578vw;
+                padding: 2.1052vw;
+                margin-top: 2.1052vw;
+            }
+            .cld-contact-form label span {
+                padding: 1.0526vw;
+                margin-left: 3.1578vw;
+            }
+            .cld-contact-form label span {
+                padding-bottom: 0;
+                top: -0.8421vw;
+            }
+            .cld-contact-form button {
+                margin-top: 2.1052vw;
             }
             .cld-title-form-wrap form .cld-lemail,
             .cld-title-form-wrap form .cld-fname {
@@ -1897,6 +2018,56 @@
             }
             .cld-contact-form label:nth-child(1) input[type="text"] {
                 margin-right: 0;
+            }
+            .linkedin-circle img {
+                padding-left: 1px;
+                padding-bottom: 1px;
+            }
+            .cld-info-detail>div,
+            .cld-info-detail>ul {
+                width: 100%;
+            }
+            .cld-contact-detail li span {
+                top: -3.474vw;
+                left: 3.0256vw;
+            }
+            .cld-prof-pic img {
+                max-width: 36.8421vw;
+                margin-bottom: 5.2631vw;
+            }
+            .cld-contact-detail li:first-child {
+                margin-bottom: 5.2631vw;
+            }
+            .cld-contact-detail li {
+                border: 2px solid #c3644c;
+                border-radius: 1.5789vw;
+            }
+            .cld-contact-detail li p {
+                padding: 2.1052vw;
+            }
+            .cld-info {
+                width: 12.6315vw;
+            }
+            .cld-info a {
+                width: 11.9743vw;
+                height: 11.9743vw;
+                border: 1.0526vw solid #333c4a;
+            }
+            .cld-icon {
+                width: 8.8974vw;
+                height: 8.8974vw;
+            }
+            .github-circle img {
+                max-width: 7.4444vw;
+            }
+            .resume-circle img {
+                max-width: 7.4444vw;
+            }
+            .linkedin-circle img {
+                max-width: 6.4074vw;
+            }
+            footer {
+                border-top: 2.1052vw solid #1CBC9B;
             }
         }
         /*         
