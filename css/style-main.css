@@ -190,7 +190,7 @@
         .cld-main-header {
             width: 100%;
             background: #fff;
-            height: 100vh;
+            /* height: 100vh; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -201,6 +201,7 @@
         
         .cld-main-header-inner {
             width: 100%;
+            padding: 250px 0;
         }
         /* Intro top */
         
@@ -440,11 +441,11 @@
         
         .cld-nav-wrap {
             position: absolute;
-            right: 0;
-            top: 0;
-            padding-right: 25px;
+            right: 25px;
+            top: 25px;
+            /* padding-right: 25px;
             padding-left: 24px;
-            padding-top: 25px;
+            padding-top: 25px; */
             /* height: 100vh; */
         }
         
@@ -1023,6 +1024,12 @@
         }
         /* MEDIA QUERY TABLET ------------------------------ */
         
+        @media only screen and (min-width: 1601px) and (min-height: 900px) {
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 1700px) {
             /* Navigation Section ----- */
             .cld-nav-inner {
@@ -1034,8 +1041,21 @@
             }
         }
         
+        @media only screen and (max-width: 1600px) and (min-width: 1476px) and (min-height: 55.6776vw) and (max-height:156.25vw) {
+            .cld-main-header-inner {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 1600px) {
             /* Intro Section ----- */
+            .cld-main-header-inner {
+                padding: 12.5vw 0 9.375vw;
+            }
             .cld-intro-top,
             .cld-bar-inner,
             .cld-intro-btm {
@@ -1097,6 +1117,16 @@
             }
         }
         
+        @media only screen and (max-width: 1475px) and (min-width: 1226px) and (min-height: 51.2820vw) and (max-height:135.5932vw) {
+            .cld-main-header-inner {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 1475px) {
             /* All ----- */
             .header1-txt {
@@ -1109,6 +1139,10 @@
             .cld-contact-detail li span,
             .cld-info a {
                 font-size: 1.0847vw;
+            }
+            /* Intro Section ----- */
+            .cld-main-header-inner {
+                padding: 12.8205vw 0 10.9890vw;
             }
             /* Portfolio Section ----- */
             .cld-proj-inner {
@@ -1133,9 +1167,9 @@
             .cld-intro-view .intro-btn {
                 padding: 4.0677vw 1.3559vw;
             }
-            .cld-nav-wrap {
+            /* .cld-nav-wrap {
                 padding-left: 1.6271vw;
-            }
+            } */
             /* Contact Section ----- */
             .cld-contact-wrap {
                 width: 88.1355vw;
@@ -1228,6 +1262,9 @@
             .cld-main-header {
                 border-top: 1.4652vw solid #1cbc9b;
             }
+            /* .cld-main-header-inner {
+                padding: 12.8205vw 0 10.9890vw;
+            } */
             /* Portfolio Section ----- */
             .cld-main-proj {
                 border-top: 1.4652vw solid #EAB32C;
@@ -1270,6 +1307,16 @@
             }
         }
         
+        @media only screen and (max-width: 1225px) and (min-width: 976px) and (min-height: 59.1836vw) and (max-height:163.2653vw) {
+            .cld-main-header-inner {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 1225px) {
             /* All */
             p,
@@ -1287,13 +1334,16 @@
                 font-size: 50px;
             }
             /* Intro Section ----- */
+            .cld-main-header-inner {
+                padding: 12.2448vw 0 8.1632vw;
+            }
             .cld-intro-top,
             .cld-bar-inner,
             .cld-intro-btm {
                 margin-left: 50px;
             }
             .cld-kv-portrait {
-                margin-bottom: 50px;
+                margin-bottom: 75px;
             }
             .cld-intro-text {
                 width: 100%;
@@ -1305,6 +1355,14 @@
                 margin: 0 auto;
                 text-align: center;
                 border-right: 5px solid #333c4a;
+            }
+            /* Navigation Section ----- */
+            .cld-nav-wrap {
+                top: 2.0408vw;
+            }
+            .cld-nav-wrap>li:nth-child(2),
+            .cld-nav-wrap>li:nth-child(1) {
+                margin-bottom: 0.8163vw;
             }
             /* Portfolio Section ----- */
             .cld-proj-inner {
@@ -1426,6 +1484,16 @@
             }
         }
         
+        @media only screen and (max-width: 975px) and (min-width: 676px) and (min-height: 61.5384vw) and (max-height:205.1282vw) {
+            .cld-main-header-inner {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .cld-main-header {
+                height: 100vh;
+            }
+        }
+        
         @media only screen and (max-width: 975px) {
             /* All */
             .header1-txt {
@@ -1459,20 +1527,27 @@
             .cld-nav-wrap>li:nth-child(2),
             .cld-nav-wrap>li:nth-child(1) {
                 margin-bottom: 0;
-                margin-right: 10px;
+                margin-right: 5px;
             }
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
             .cld-intro-view .intro-btn {
-                padding: 1.3559vw 4.0677vw;
+                padding: 15px 45px;
             }
             .cld-nav-wrap {
+                top: 2.5641vw;
+            }
+            .cld-nav-wrap li a {
+                padding: 15px;
+                border: 5px solid #FFF;
+            }
+            .cld-projects-view .cld-nav-wrap li a {
+                border: 5px solid #333c4a;
+            }
+            /* .cld-nav-wrap {
                 padding-top: 2.5641vw;
-            }
+            } */
             /* Intro Section ----- */
-            .cld-main-header {
-                height: unset;
-            }
             .cld-main-header-inner {
                 padding-top: 15.3846vw;
                 padding-bottom: 10.2564vw;
@@ -1628,7 +1703,7 @@
             }
         }
         
-        @media only screen and (max-width: 675px) and (min-height: 121.4814vw) and (max-height:216.5333vw) {
+        @media only screen and (max-width: 675px) and (min-height: 147.3684vw) and (max-height: 252.6315vw) {
             .cld-main-header-inner {
                 padding-top: 0;
                 padding-bottom: 0;
@@ -1666,6 +1741,22 @@
                 width: 25.4814vw;
                 padding: 1.3333vw 0;
             }
+            /* Navigation Section */
+            .cld-nav-wrap li a {
+                padding: 2.2222vw;
+                border: 0.7407vw solid #FFF;
+            }
+            .cld-projects-view .cld-nav-wrap li a {
+                border: 0.7407vw solid #333c4a;
+            }
+            .cld-contact-view .contact-btn,
+            .cld-projects-view .portfolio-btn,
+            .cld-intro-view .intro-btn {
+                padding: 2.2222vw 6.6666vw;
+            }
+            .cld-nav-wrap {
+                top: 3.7037vw;
+            }
             /* Intro Section */
             .cld-main-header-inner {
                 padding-top: 15vw;
@@ -1678,7 +1769,6 @@
                 max-width: 92.5925vw;
                 width: 100%;
             }
-            /*  */
             .cld-text-wrap,
             .cld-name-wrap {
                 text-align: center;
@@ -1703,7 +1793,6 @@
             .cld-bar {
                 box-shadow: 0 -0.7407vw #c3644c;
             }
-            /*  */
             .cld-kv-portrait,
             .cld-intro-text {
                 width: 100%;
@@ -2033,7 +2122,7 @@
             }
             .cld-prof-pic img {
                 max-width: 36.8421vw;
-                margin-bottom: 5.2631vw;
+                margin-bottom: 8.4210vw;
             }
             .cld-contact-detail li:first-child {
                 margin-bottom: 5.2631vw;
