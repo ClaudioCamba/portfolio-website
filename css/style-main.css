@@ -379,8 +379,6 @@
             }
             26% {
                 opacity: 1;
-            }
-            26% {
                 top: 2px;
             }
             35% {
@@ -570,7 +568,7 @@
             justify-content: flex-end;
         }
         
-        .cld-used-tech object {
+        .cld-used-tech img {
             max-width: 25px;
             max-height: 25px;
             width: 100%;
@@ -631,7 +629,7 @@
             margin: 0 auto;
             padding: 25px;
             width: 100%;
-            max-width: 1440px;
+            max-width: 1393px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -696,7 +694,7 @@
             -webkit-transform: rotate( 3deg);
             transform: rotate( 3deg);
             border-radius: 15px;
-            margin: 50px auto 200px auto;
+            margin: 100px auto 200px auto;
             display: flex;
             align-items: stretch;
             background-color: #FFFFFF;
@@ -1039,6 +1037,10 @@
             .cld-box-inner {
                 margin-bottom: 1.2vw;
             }
+            /* Projects Modal */
+            .cld-modal-content {
+                max-width: 90vw;
+            }
         }
         
         @media only screen and (max-width: 1600px) and (min-width: 1476px) and (min-height: 55.6776vw) and (max-height:156.25vw) {
@@ -1052,6 +1054,57 @@
         }
         
         @media only screen and (max-width: 1600px) {
+            /* Animations */
+            /* Name slide down  30% */
+            @keyframes cld-top-name {
+                0% {
+                    top: 2px;
+                    opacity: 0;
+                    text-shadow: none;
+                    color: #333c4a;
+                }
+                25% {
+                    top: 2px;
+                    color: #333c4a;
+                    text-shadow: none;
+                    opacity: 0;
+                }
+                26% {
+                    opacity: 1;
+                    top: 2px;
+                }
+                35% {
+                    top: 3.25vw;
+                    color: #333c4a;
+                }
+                40% {
+                    text-shadow: none;
+                    color: #333c4a;
+                }
+                55% {
+                    text-shadow: 7.5px 7.5px #c3644c;
+                    color: #ebb22e;
+                }
+            }
+            /* Text slide up 20% */
+            @keyframes cld-top-text {
+                0% {
+                    padding-top: 6.25vw;
+                    text-shadow: 0 0 #c3644c;
+                }
+                10% {
+                    padding-top: 6.25vw;
+                }
+                25% {
+                    padding-top: 0.5625vw;
+                }
+                40% {
+                    text-shadow: 0 0 #c3644c;
+                }
+                55% {
+                    text-shadow: 5px 0 #c3644c;
+                }
+            }
             /* Intro Section ----- */
             .cld-main-header-inner {
                 padding: 12.5vw 0 9.375vw;
@@ -1295,7 +1348,7 @@
                 text-shadow: -0.3663vw 0.3663vw #c3644c;
             }
             .cld-contact-wrap {
-                margin-top: 3.6630vw;
+                margin-top: 7.3260vw;
                 margin-bottom: 14.6520vw;
             }
             /* Footer Section ----- */
@@ -1495,6 +1548,22 @@
         }
         
         @media only screen and (max-width: 975px) {
+            /* Animations */
+            /* KV slide left */
+            /* @keyframes cld-frame {
+                0% {
+                    margin-left: -30.7692vw;
+                    opacity: 0;
+                }
+                50% {
+                    margin-left: -30.7692vw;
+                    opacity: 0;
+                }
+                80% {
+                    margin-left: 0;
+                    opacity: 1;
+                }
+            } */
             /* All */
             .header1-txt {
                 font-size: 2.4615vw;
@@ -1560,7 +1629,7 @@
                 margin: 0 auto;
             }
             .cld-top-text {
-                text-shadow: 0.5128vw 0px #c3644c;
+                text-shadow: 0.5128vw 0 #c3644c;
             }
             .cld-bar {
                 box-shadow: 0 -0.5128vw #c3644c;
@@ -1596,7 +1665,7 @@
                 padding: 1.0256vw;
                 border-top-left-radius: 2.5641vw;
             }
-            .cld-used-tech object {
+            .cld-used-tech img {
                 max-width: 2.5641vw;
                 max-height: 2.5641vw;
                 margin: 0 0.5128vw;
@@ -1607,6 +1676,10 @@
             }
             .cld-box-desc .btn-slide:first-of-type {
                 margin-right: 1.8461vw;
+            }
+            /* Projects Modal */
+            .cld-modal-content {
+                max-width: 82vw;
             }
             /* Contact Section ----- */
             .cld-contact-title hr {
@@ -1714,6 +1787,58 @@
         }
         
         @media only screen and (max-width: 675px) {
+            /* Animations */
+            .cld-top-name {}
+            /* Text slide up 20% */
+            @keyframes cld-top-text {
+                0% {
+                    padding-top: 9.5625vw;
+                    text-shadow: 0 0 #c3644c;
+                }
+                10% {
+                    padding-top: 9.5625vw;
+                }
+                25% {
+                    padding-top: 0.5625vw;
+                }
+                40% {
+                    text-shadow: 0 0 #c3644c;
+                }
+                55% {
+                    text-shadow: 0.7407vw 0 #c3644c;
+                }
+            }
+            /* Name slide down  30% */
+            @keyframes cld-top-name {
+                0% {
+                    top: 2px;
+                    opacity: 0;
+                    text-shadow: none;
+                    color: #333c4a;
+                }
+                25% {
+                    top: 2px;
+                    color: #333c4a;
+                    text-shadow: none;
+                    opacity: 0;
+                }
+                26% {
+                    opacity: 1;
+                    top: 2px;
+                }
+                35% {
+                    top: 5.25vw;
+                    color: #333c4a;
+                }
+                40% {
+                    text-shadow: none;
+                    color: #333c4a;
+                }
+                55% {
+                    text-shadow: 1.1111vw 1.1111vw #c3644c;
+                    color: #ebb22e;
+                }
+            }
             /* All */
             .title1-txt {
                 font-size: 14.8148vw;
@@ -1848,7 +1973,7 @@
                 padding: 2.2222vw;
                 border-top: 0.7407vw solid #EAB32C;
             }
-            .cld-used-tech object {
+            .cld-used-tech img {
                 max-width: 2.9629vw;
                 max-height: 2.9629vw;
                 margin: 0 0.7407vw;
@@ -1862,6 +1987,10 @@
             }
             .cld-proj-wrap {
                 padding-bottom: 8.8888vw;
+            }
+            /* Projects Modal */
+            .cld-modal-content {
+                max-width: 85vw;
             }
             /* Contact Section */
             .cld-contact-title .cld-sec-title {
@@ -2000,7 +2129,7 @@
                 padding: 3.7894vw;
                 border-top: 1.5789vw solid #EAB32C;
             }
-            .cld-used-tech object {
+            .cld-used-tech img {
                 max-width: 5.2631vw;
                 max-height: 5.2631vw;
                 margin: 0 1.0526vw;
@@ -2018,6 +2147,10 @@
             }
             .cld-proj-wrap {
                 padding-bottom: 12.6315vw;
+            }
+            /* Projects Modal */
+            .cld-modal-content {
+                width: 76vw;
             }
             /* Contact */
             .cld-main-contact {

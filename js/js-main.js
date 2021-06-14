@@ -1,3 +1,49 @@
+// Portfolio Projects
+const cldWebsiteInfo = {
+    'intro': {
+
+    },
+    'portfolio': {
+        'project1': {
+            'name': 'test1',
+            'desc': '',
+            'liveCta': '',
+            'learnCta': '',
+            'modal': {
+                'imgs': ''
+
+            }
+        },
+        'project2': {
+
+        },
+        'project3': {
+
+        },
+        'project4': {
+
+        },
+        'project5': {
+
+        },
+        'project6': {
+
+        },
+        'project7': {
+
+        },
+        'project8': {
+
+        },
+        'project9': {
+
+        }
+    },
+    'contact': {
+
+    }
+};
+
 // Section Variables
 const cldBody = document.querySelector('body'),
     cldNavLinks = document.querySelectorAll(".cld-nav-wrap li a"),
@@ -14,7 +60,6 @@ const cldBody = document.querySelector('body'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close');
-
 
 // Main Section ----- //
 function cldSecDetect() {
@@ -47,6 +92,7 @@ function cldSmoothScroll() {
         });
     });
 };
+
 // Modal slide down ----- //
 function cldModalAnimate() {
 
@@ -105,7 +151,7 @@ var chkReadyState = setInterval(function() {
     }
 }, 100);
 
-// Navigation size ----- //
+
 
 // Scroll eventlistener ----- // 
 window.addEventListener("scroll", function() {
