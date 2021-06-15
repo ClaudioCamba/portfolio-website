@@ -5,13 +5,12 @@ const cldWebsiteInfo = {
     },
     'portfolio': {
         'project1': {
-            'name': 'test1',
+            'name': '',
             'desc': '',
             'liveCta': '',
             'learnCta': '',
             'modal': {
-                'imgs': ''
-
+                'imgs': ['', '', '', '']
             }
         },
         'project2': {
@@ -36,7 +35,14 @@ const cldWebsiteInfo = {
 
         },
         'project9': {
-
+            'name': 'Faceman',
+            'desc': 'Faceman Description',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'modal': {
+                'imgs': ['', '', '', '']
+            }
         }
     },
     'contact': {
@@ -47,7 +53,6 @@ const cldWebsiteInfo = {
 // Section Variables
 const cldBody = document.querySelector('body'),
     cldNavLinks = document.querySelectorAll(".cld-nav-wrap li a"),
-    // cldNavLinkWrap = document.querySelectorAll(".cld-nav-wrap"),
     cldIntroSec = document.getElementById('cld-intro'),
     cldProjectSec = document.getElementById('cld-projects'),
     cldContactSec = document.getElementById('cld-contact'),
