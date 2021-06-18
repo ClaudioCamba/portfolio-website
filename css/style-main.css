@@ -541,11 +541,24 @@
             box-shadow: 0 0 5px rgba(20, 20, 50, 0.2);
             overflow: hidden;
         }
+        
+        .cld-box-img:hover {
+            cursor: pointer;
+        }
         /* Image */
+        
+        .cld-box-img {
+            overflow: hidden;
+        }
         
         .cld-box-img img {
             width: 100%;
             height: auto;
+            transition: 0.5s;
+        }
+        
+        .cld-box-inner:hover .cld-box-img img {
+            transform: scale(1.1);
         }
         /* card info */
         
@@ -635,7 +648,7 @@
             top: 50%;
             border-radius: 15px;
             transform: translate(-50%, -50%);
-            height: 250px;
+            /* height: 250px; */
             transition: all 0.5s;
             overflow: hidden;
         }
@@ -2291,6 +2304,15 @@
             footer {
                 border-top: 2.1052vw solid #1CBC9B;
             }
+        }
+        /* TESTING */
+        
+        .cld-modal-body h1 {
+            font-size: 20px;
+        }
+        
+        .cld-box-desc p {
+            display: none;
         }
         /*         
         .cld-intro-top,
