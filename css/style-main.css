@@ -2311,8 +2311,36 @@
             font-size: 20px;
         }
         
+        .cld-modal-body p {
+            font-size: 14px;
+        }
+        
+        .cld-modal-body li {
+            font-size: 14px;
+        }
+        
+        .cld-modal-body-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        
         .cld-box-desc p {
             display: none;
+        }
+        
+        .cld-modal-body-text {
+            width: 30%;
+            padding-right: 3.33%;
+        }
+        
+        .cld-modal-body-img {
+            width: 66.66%
+        }
+        
+        .cld-modal-body>div {
+            display: inline-block;
+            vertical-align: top;
         }
         /*         
         .cld-intro-top,

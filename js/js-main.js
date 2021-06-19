@@ -91,7 +91,24 @@ const cldWebsiteInfo = {
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'modalContent': {
-                'imgs': ['assets/projects/faceman/faceman-slide-1.jpg', 'assets/projects/faceman/faceman-slide-2.jpg']
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'step 1',
+                    'step 2',
+                    'step 3',
+                    'step 4',
+                    'step 5',
+                    'step 6'
+                ]
             }
         }
     },
@@ -115,23 +132,50 @@ var cldBody = document.querySelector('body'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
-    cldModalBody = document.querySelector('.cld-modal-body'),
+    cldModalTitle = document.querySelector('.cld-modal-body-title'),
+    cldModalDesc = document.querySelector('.cld-modal-body-desc'),
+    cldModalList = document.querySelector('.cld-modal-body-list'),
+    cldModalSlider = document.querySelector('.cld-modal-body-img'),
     cldModalData = '';
 
 
 // Modal Populating ----- //
 function cldModalPopulating() {
-    console.log(cldModalBody);
+
     // Description
-    cldModalBody.innerHTML = '<h1>' + cldWebsiteInfo.portfolio[cldModalData].name + '</h1>';
+    cldModalTitle.innerHTML = '<h1>' + cldWebsiteInfo.portfolio[cldModalData].name + '</h1>';
+    cldModalDesc.innerHTML = '<p>' + cldWebsiteInfo.portfolio[cldModalData].desc + '</p>';
+
+    // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs.length; i++) {
-        cldModalBody.innerHTML = cldModalBody.innerHTML + '<img alt=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.name + ' src=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs[i] + '>';
-        console.log(cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs[i]);
-    }
-    // cldModalBody.innerHTML = cldModalBody.innerHTML + "additional HTML code"
-    // for (i = 0; i < cldWebsiteInfo.portfolio.length; i++) {
-    //     console.log(cldWebsiteInfo.portfolio[i].project);
-    // };
+        if (i === 0) {
+            console.log('only 1');
+            cldModalSlider.innerHTML = '<img alt=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.alts[i] + ' src=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs[i] + '>';
+        } else {
+            console.log('more than 1');
+            cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.alts[i] + ' src=' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs[i] + '>';
+            console.log(i);
+        };
+    };
+
+    // Appending list
+    for (var u = 0; u < cldWebsiteInfo.portfolio[cldModalData].modalContent.list.length; u++) {
+        if (u === 0) {
+            console.log('only 1');
+            cldModalList.innerHTML = '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.list[u] + '</li>';
+        } else {
+            console.log('more than 1');
+            cldModalList.innerHTML = cldModalList.innerHTML + '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.list[u] + '</li>';
+
+        };
+    };
+
+    // Carousel Initiate 
+    $('.cld-modal-body-img').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
 };
 
 // Main Section ----- //
@@ -192,11 +236,15 @@ function cldModalOpenClose() {
     // open
     cldLearnBtn.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            //handle click
-            cldModalData = this.getAttribute('modal-data');
+            // Handle click ----- //
+            if (cldModalData !== this.getAttribute('modal-data')) {
+                cldModalData = this.getAttribute('modal-data');
+                cldModalPopulating();
+            };
+            // Show Modal
             cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
-            cldModalPopulating();
+
 
         });
     });
