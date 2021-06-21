@@ -10,86 +10,8 @@ const cldWebsiteInfo = {
             'liveCta': 'Play',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'samsungcartabandonment': {
-            'name': 'Samsung Cart Abandonment',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'samsungcataffinity': {
-            'name': 'Samsung Category Affinity',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'samsungusp': {
-            'name': 'Samsung USP',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'targetav': {
-            'name': 'Target AV',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'gpmc': {
-            'name': 'GPMC',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'portfoliov1': {
-            'name': 'Claudio Portfolio V1',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'minagent': {
-            'name': 'Minagent',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
-            'modalContent': {
-                'imgs': ['', '', '', '']
-            }
-        },
-        'faceman': {
-            'name': 'Faceman',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
-            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
@@ -102,12 +24,244 @@ const cldWebsiteInfo = {
                     'face man slide 3 alt'
                 ],
                 'list': [
-                    'step 1',
-                    'step 2',
-                    'step 3',
-                    'step 4',
-                    'step 5',
-                    'step 6'
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'samsungcartabandonment': {
+            'name': 'Samsung Cart Abandonment',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'samsungcataffinity': {
+            'name': 'Samsung Category Affinity',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'samsungusp': {
+            'name': 'Samsung USP',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'targetav': {
+            'name': 'Target AV',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'gpmc': {
+            'name': 'GPMC',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'portfoliov1': {
+            'name': 'Claudio Portfolio V1',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'minagent': {
+            'name': 'Minagent',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'Play',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
+                ]
+            }
+        },
+        'faceman': {
+            'name': 'Faceman',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'liveCta': 'View Live',
+            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'learnCta': 'Learn More',
+            'gitCta': 'Repository',
+            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'modalContent': {
+                'imgs': [
+                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/faceman/faceman-slide-2.jpg',
+                    'assets/projects/faceman/faceman-slide-3.jpg'
+                ],
+                'alts': [
+                    'face man slide 1 alt',
+                    'face man slide 2 alt',
+                    'face man slide 3 alt'
+                ],
+                'list': [
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players',
+                    'A re-imagined version of the famous hangman game, this game is for two or more players'
                 ]
             }
         }
@@ -132,19 +286,19 @@ var cldBody = document.querySelector('body'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
-    cldModalTitle = document.querySelector('.cld-modal-body-title'),
-    cldModalDesc = document.querySelector('.cld-modal-body-desc'),
+    cldModalTitle = document.querySelector('.cld-modal-body-title h1'),
+    cldModalDesc = document.querySelector('.cld-modal-body-desc p'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
     cldModalSlider = document.querySelector('.cld-modal-body-img'),
+    cldModalLink1 = document.querySelector('.cld-modal-link1'),
+    cldModalLink1Text = document.querySelector('.cld-modal-link1 span'),
+    cldModalLink2 = document.querySelector('.cld-modal-link2'),
+    cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
     cldModalData = '';
 
 
 // Modal Populating ----- //
 function cldModalPopulating() {
-
-    // Description
-    cldModalTitle.innerHTML = '<h1>' + cldWebsiteInfo.portfolio[cldModalData].name + '</h1>';
-    cldModalDesc.innerHTML = '<p>' + cldWebsiteInfo.portfolio[cldModalData].desc + '</p>';
 
     // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgs.length; i++) {
@@ -166,16 +320,37 @@ function cldModalPopulating() {
         } else {
             console.log('more than 1');
             cldModalList.innerHTML = cldModalList.innerHTML + '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.list[u] + '</li>';
-
         };
     };
 
-    // Carousel Initiate 
+    // Description and links
+    cldModalTitle.innerText = cldWebsiteInfo.portfolio[cldModalData].name;
+    cldModalDesc.innerText = cldWebsiteInfo.portfolio[cldModalData].desc
+    cldModalLink1Text.innerText = cldWebsiteInfo.portfolio[cldModalData].liveCta
+    cldModalLink1.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].liveCtaLink);
+    cldModalLink2Text.innerText = cldWebsiteInfo.portfolio[cldModalData].gitCta
+    cldModalLink2.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].gitCtaLink);
+
+    // Reset div class before carousel initiate
+    cldModalSlider.setAttribute('class', 'cld-modal-body-img');
+
+    // Carousel Initiate
     $('.cld-modal-body-img').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        draggable: true,
+        pauseOnHover: true,
+        swipe: true,
+        arrows: true
     });
+
 };
 
 // Main Section ----- //
@@ -240,11 +415,13 @@ function cldModalOpenClose() {
             if (cldModalData !== this.getAttribute('modal-data')) {
                 cldModalData = this.getAttribute('modal-data');
                 cldModalPopulating();
+                console.log(cldModalData);
             };
             // Show Modal
             cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
-
+            // Fix carousel loading issue
+            $('.slick-slider').slick('refresh');
 
         });
     });
@@ -260,6 +437,11 @@ function cldModalOpenClose() {
                 // console.log('close');
             };
         };
+    });
+    // close button
+    cldModalCloseBtn.addEventListener('click', function(event) {
+        cldBody.classList.remove('cld-modal-show');
+        cldModalContent.removeAttribute('style');
     });
 };
 
