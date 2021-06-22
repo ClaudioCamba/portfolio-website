@@ -123,6 +123,7 @@
     .btn-yel:hover {
         color: #333c4a;
         border: 2px solid #EAB32C;
+        background-color: #EAB32C;
     }
     
     .btn-red {
@@ -138,6 +139,8 @@
     .btn-red:hover {
         color: #333c4a;
         border: 2px solid #c3644c;
+        background-color: #c3644c;
+        ;
     }
     /* btn size */
     
@@ -536,7 +539,7 @@
         max-width: 450px;
         width: 100%;
         margin-bottom: 25px;
-        background-color: #fff;
+        background-color: #333c4a;
         border-radius: 15px;
         box-shadow: 0 0 5px rgba(20, 20, 50, 0.2);
         overflow: hidden;
@@ -566,6 +569,7 @@
         padding: 20px 20px;
         position: relative;
         border-top: 5px solid #EAB32C;
+        background: #FFFFFF;
     }
     
     .cld-used-tech {
@@ -959,6 +963,7 @@
     
     .cld-info a:hover {
         color: #333c4a;
+        background-color: #1CBC9B;
     }
     
     .cld-info a {
@@ -2324,6 +2329,12 @@
         top: 0;
         padding-top: 15px;
         padding-right: 15px;
+        opacity: 0.75;
+    }
+    
+    .cld-modal-top button:hover,
+    .cld-modal-top button:active {
+        opacity: 1;
     }
     
     .cld-modal-top button span {
@@ -2351,6 +2362,10 @@
         padding: 20px 0;
     }
     /* Modal Slider */
+    
+    .cld-modal-body-img.slick-vertical .slick-slide {
+        border: 0 solid transparent !important;
+    }
     
     .cld-modal-body-img {
         width: 66.66%;
@@ -2394,7 +2409,7 @@
     
     .cld-modal-body-title,
     .cld-modal-body-desc {
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
     
     .cld-modal-body-text {

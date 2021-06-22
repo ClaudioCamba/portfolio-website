@@ -13,6 +13,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -42,6 +43,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -71,6 +73,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -100,6 +103,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -129,6 +133,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -158,6 +163,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -187,6 +193,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -216,10 +223,17 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/minagent/test-1.jpg',
+                    'assets/projects/minagent/test-2.jpg',
+                    'assets/projects/minagent/test-3.jpg',
+                    // 'assets/projects/minagent/minagent-slide-1.jpg',
+                    // 'assets/projects/minagent/minagent-slide-2.jpg',
+                    // 'assets/projects/minagent/minagent-slide-3.jpg',
+                    'assets/projects/minagent/minagent-slide-4.jpg',
+                    'assets/projects/minagent/minagent-slide-5.jpg',
+                    'assets/projects/minagent/minagent-slide-6.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -245,6 +259,7 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
+                'swipe': 'default',
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -334,23 +349,42 @@ function cldModalPopulating() {
     // Reset div class before carousel initiate
     cldModalSlider.setAttribute('class', 'cld-modal-body-img');
 
-    // Carousel Initiate
-    $('.cld-modal-body-img').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 3000,
-        draggable: true,
-        pauseOnHover: true,
-        swipe: true,
-        arrows: true
-    });
-
+    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.swipe === 'vertical') {
+        // Carousel Vertical Swipe Initiate
+        $('.cld-modal-body-img').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            speed: 3000,
+            vertical: true,
+            verticalSwiping: true,
+            cssEase: 'ease-in-out',
+            autoplay: true,
+            autoplaySpeed: 0,
+            draggable: true,
+            pauseOnHover: true,
+            swipe: true,
+            arrows: true
+        });
+    } else {
+        // Carousel Default Swipe Initiate
+        $('.cld-modal-body-img').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            speed: 1000,
+            fade: true,
+            cssEase: 'ease-in-out',
+            autoplay: true,
+            autoplaySpeed: 1000,
+            draggable: true,
+            pauseOnHover: true,
+            swipe: true,
+            arrows: true
+        });
+    };
 };
 
 // Main Section ----- //
