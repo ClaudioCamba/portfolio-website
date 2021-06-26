@@ -2418,6 +2418,15 @@
     }
     /* title */
     
+    .cld-modal-body-title {
+        background: #333c4a;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+    
     .cld-modal-body h1 {
         font-size: 40px;
         font-weight: 600;
@@ -2428,7 +2437,7 @@
         overflow: hidden;
         /* padding-top: 5px; */
         padding-left: 5px;
-        color: #333c4a;
+        color: #EAB32C;
         text-shadow: -3px 3px #c3644c;
     }
     

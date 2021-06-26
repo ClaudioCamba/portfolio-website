@@ -135,9 +135,10 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/targetav/targetav-slide-1.jpg',
+                    'assets/projects/targetav/targetav-slide-2.jpg',
+                    'assets/projects/targetav/targetav-slide-3.jpg',
+                    'assets/projects/targetav/targetav-slide-4.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -165,9 +166,11 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/gpmc/gpmc-slide-1.jpg',
+                    'assets/projects/gpmc/gpmc-slide-2.jpg',
+                    'assets/projects/gpmc/gpmc-slide-3.jpg',
+                    'assets/projects/gpmc/gpmc-slide-4.jpg',
+                    'assets/projects/gpmc/gpmc-slide-5.jpg',
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -187,7 +190,7 @@ const cldWebsiteInfo = {
         'portfoliov1': {
             'name': 'Claudio Portfolio V1',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'View Live',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
@@ -195,9 +198,9 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/portfolio-v1/portfoliov1-slide-1.jpg',
+                    'assets/projects/portfolio-v1/portfoliov1-slide-2.jpg',
+                    'assets/projects/portfolio-v1/portfoliov1-slide-3.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -217,7 +220,7 @@ const cldWebsiteInfo = {
         'minagent': {
             'name': 'Minagent',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'View Live',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
@@ -225,15 +228,12 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/minagent/test-1.jpg',
-                    'assets/projects/minagent/test-2.jpg',
-                    'assets/projects/minagent/test-3.jpg',
-                    // 'assets/projects/minagent/minagent-slide-1.jpg',
-                    // 'assets/projects/minagent/minagent-slide-2.jpg',
-                    // 'assets/projects/minagent/minagent-slide-3.jpg',
-                    'assets/projects/minagent/minagent-slide-4.jpg',
-                    'assets/projects/minagent/minagent-slide-5.jpg',
-                    'assets/projects/minagent/minagent-slide-6.jpg'
+                    'assets/projects/minagent/minagent-slide-1.jpg',
+                    'assets/projects/minagent/minagent-slide-2.jpg',
+                    'assets/projects/minagent/minagent-slide-3.jpg'
+                    // 'assets/projects/minagent/minagent-slide-4.jpg',
+                    // 'assets/projects/minagent/minagent-slide-5.jpg',
+                    // 'assets/projects/minagent/minagent-slide-6.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -356,7 +356,7 @@ function cldModalPopulating() {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
-            speed: 3000,
+            speed: 3500,
             vertical: true,
             verticalSwiping: true,
             cssEase: 'ease-in-out',
@@ -374,11 +374,11 @@ function cldModalPopulating() {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
-            speed: 1000,
+            speed: 500,
             fade: true,
             cssEase: 'ease-in-out',
             autoplay: true,
-            autoplaySpeed: 1000,
+            autoplaySpeed: 3000,
             draggable: true,
             pauseOnHover: true,
             swipe: true,
