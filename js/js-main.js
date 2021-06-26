@@ -75,7 +75,7 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
+                    'assets/projects/category-affinity/category-affinity-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
                     'assets/projects/faceman/faceman-slide-3.jpg'
                 ],
@@ -105,9 +105,10 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/mmp-usp/usp-slide-1.jpg',
+                    'assets/projects/mmp-usp/usp-slide-2.jpg',
+                    'assets/projects/mmp-usp/usp-slide-3.jpg',
+                    'assets/projects/mmp-usp/usp-slide-4.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -356,12 +357,12 @@ function cldModalPopulating() {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
-            speed: 3500,
+            speed: 500,
             vertical: true,
             verticalSwiping: true,
             cssEase: 'ease-in-out',
             autoplay: true,
-            autoplaySpeed: 0,
+            autoplaySpeed: 1000,
             draggable: true,
             pauseOnHover: true,
             swipe: true,
@@ -378,7 +379,7 @@ function cldModalPopulating() {
             fade: true,
             cssEase: 'ease-in-out',
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 1000,
             draggable: true,
             pauseOnHover: true,
             swipe: true,
