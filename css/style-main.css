@@ -2437,8 +2437,8 @@
         overflow: hidden;
         /* padding-top: 5px; */
         padding-left: 5px;
-        color: #EAB32C;
-        text-shadow: -3px 3px #c3644c;
+        color: #FFF;
+        text-shadow: -3px 3px #000;
     }
     
     .cld-modal-body p {

@@ -45,9 +45,10 @@ const cldWebsiteInfo = {
             'modalContent': {
                 'swipe': 'vertical',
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg',
+                    'assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg',
+                    'assets/projects/cart-abandonment/cart-abandonment-slide-3.jpg',
+                    'assets/projects/cart-abandonment/cart-abandonment-slide-4.jpg',
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -76,8 +77,10 @@ const cldWebsiteInfo = {
                 'swipe': 'vertical',
                 'imgs': [
                     'assets/projects/category-affinity/category-affinity-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/category-affinity/category-affinity-slide-2.jpg',
+                    'assets/projects/category-affinity/category-affinity-slide-3.jpg',
+                    'assets/projects/category-affinity/category-affinity-slide-4.jpg',
+                    'assets/projects/category-affinity/category-affinity-slide-5.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -108,7 +111,8 @@ const cldWebsiteInfo = {
                     'assets/projects/mmp-usp/usp-slide-1.jpg',
                     'assets/projects/mmp-usp/usp-slide-2.jpg',
                     'assets/projects/mmp-usp/usp-slide-3.jpg',
-                    'assets/projects/mmp-usp/usp-slide-4.jpg'
+                    'assets/projects/mmp-usp/usp-slide-4.jpg',
+                    'assets/projects/mmp-usp/usp-slide-5.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
