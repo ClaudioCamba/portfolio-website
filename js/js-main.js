@@ -7,17 +7,24 @@ const cldWebsiteInfo = {
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'Generator',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 2000,
+                    'fade': false,
+                    'vertical': false,
+                    'cssEase': 'ease',
+                    'verticalSwiping': false,
+                    'autoplaySpeed': 3000
+                },
                 'imgs': [
-                    'assets/projects/faceman/faceman-slide-1.jpg',
-                    'assets/projects/faceman/faceman-slide-2.jpg',
-                    'assets/projects/faceman/faceman-slide-3.jpg'
+                    'assets/projects/comparison-tables/comparison-table-slide-1.jpg',
+                    'assets/projects/comparison-tables/comparison-table-slide-2.jpg',
+                    'assets/projects/comparison-tables/comparison-table-slide-3.jpg'
                 ],
                 'alts': [
                     'face man slide 1 alt',
@@ -37,13 +44,20 @@ const cldWebsiteInfo = {
         'samsungcartabandonment': {
             'name': 'Samsung Cart Abandonment',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'Generator',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 1000,
+                    'fade': true,
+                    'vertical': false,
+                    'cssEase': 'ease',
+                    'verticalSwiping': false,
+                    'autoplaySpeed': 3000
+                },
                 'imgs': [
                     'assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg',
                     'assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg',
@@ -68,13 +82,20 @@ const cldWebsiteInfo = {
         'samsungcataffinity': {
             'name': 'Samsung Category Affinity',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'Generator',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 1000,
+                    'fade': true,
+                    'vertical': false,
+                    'cssEase': 'ease',
+                    'verticalSwiping': false,
+                    'autoplaySpeed': 3000
+                },
                 'imgs': [
                     'assets/projects/category-affinity/category-affinity-slide-1.jpg',
                     'assets/projects/category-affinity/category-affinity-slide-2.jpg',
@@ -100,13 +121,20 @@ const cldWebsiteInfo = {
         'samsungusp': {
             'name': 'Samsung USP',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'Generator',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 4000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplaySpeed': 1000
+                },
                 'imgs': [
                     'assets/projects/mmp-usp/usp-slide-1.jpg',
                     'assets/projects/mmp-usp/usp-slide-2.jpg',
@@ -132,13 +160,20 @@ const cldWebsiteInfo = {
         'targetav': {
             'name': 'Target AV',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'View Live',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 4000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplaySpeed': 1000
+                },
                 'imgs': [
                     'assets/projects/targetav/targetav-slide-1.jpg',
                     'assets/projects/targetav/targetav-slide-2.jpg',
@@ -163,13 +198,20 @@ const cldWebsiteInfo = {
         'gpmc': {
             'name': 'GPMC',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Play',
+            'liveCta': 'View Live',
             'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 4000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplaySpeed': 1000
+                },
                 'imgs': [
                     'assets/projects/gpmc/gpmc-slide-1.jpg',
                     'assets/projects/gpmc/gpmc-slide-2.jpg',
@@ -201,7 +243,14 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 4000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplaySpeed': 1000
+                },
                 'imgs': [
                     'assets/projects/portfolio-v1/portfoliov1-slide-1.jpg',
                     'assets/projects/portfolio-v1/portfoliov1-slide-2.jpg',
@@ -231,7 +280,14 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'vertical',
+                'slick': {
+                    'speed': 4000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplaySpeed': 1000
+                },
                 'imgs': [
                     'assets/projects/minagent/minagent-slide-1.jpg',
                     'assets/projects/minagent/minagent-slide-2.jpg',
@@ -264,7 +320,14 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'modalContent': {
-                'swipe': 'default',
+                'slick': {
+                    'speed': 1000,
+                    'fade': true,
+                    'vertical': false,
+                    'cssEase': 'ease-in-out',
+                    'verticalSwiping': false,
+                    'autoplaySpeed': 3000
+                },
                 'imgs': [
                     'assets/projects/faceman/faceman-slide-1.jpg',
                     'assets/projects/faceman/faceman-slide-2.jpg',
@@ -354,42 +417,25 @@ function cldModalPopulating() {
     // Reset div class before carousel initiate
     cldModalSlider.setAttribute('class', 'cld-modal-body-img');
 
-    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.swipe === 'vertical') {
-        // Carousel Vertical Swipe Initiate
-        $('.cld-modal-body-img').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            speed: 500,
-            vertical: true,
-            verticalSwiping: true,
-            cssEase: 'ease-in-out',
-            autoplay: true,
-            autoplaySpeed: 1000,
-            draggable: true,
-            pauseOnHover: true,
-            swipe: true,
-            arrows: true
-        });
-    } else {
-        // Carousel Default Swipe Initiate
-        $('.cld-modal-body-img').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'ease-in-out',
-            autoplay: true,
-            autoplaySpeed: 1000,
-            draggable: true,
-            pauseOnHover: true,
-            swipe: true,
-            arrows: true
-        });
-    };
+    // Carousel Vertical Swipe Initiate
+    $('.cld-modal-body-img').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        speed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.speed,
+        fade: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.fade,
+        vertical: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.vertical,
+        verticalSwiping: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.verticalSwiping,
+        cssEase: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.cssEase,
+        autoplay: true,
+        autoplaySpeed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplaySpeed,
+        draggable: true,
+        pauseOnHover: true,
+        swipe: true,
+        arrows: true
+    });
+
 };
 
 // Main Section ----- //
