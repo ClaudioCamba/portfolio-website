@@ -544,14 +544,15 @@
         box-shadow: 0 0 5px rgba(20, 20, 50, 0.2);
         overflow: hidden;
     }
-    
-    .cld-box-img:hover {
-        cursor: pointer;
-    }
     /* Image */
     
     .cld-box-img {
         overflow: hidden;
+        position: relative;
+    }
+    
+    .cld-box-img:hover {
+        cursor: pointer;
     }
     
     .cld-box-img img {
@@ -567,14 +568,14 @@
     
     .cld-box-desc {
         padding: 20px 20px;
-        position: relative;
+        /* position: relative; */
         border-top: 5px solid #EAB32C;
         background: #FFFFFF;
     }
     
     .cld-used-tech {
         position: absolute;
-        top: -46px;
+        bottom: 0;
         right: 0;
         width: auto;
         background-color: #EAB32C;
@@ -583,6 +584,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        pointer-events: none;
     }
     
     .cld-used-tech img {
@@ -608,6 +610,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    
+    .cld-modal-cta-wrap a:empty,
+    .cld-modal-body ol:empty,
+    .cld-modal-body-title:empty,
+    .cld-modal-body:empty {
+        display: none;
     }
     
     .cld-cta-wrap .btn-slide {
@@ -1681,7 +1690,7 @@
             border-radius: 1.5384vw;
         }
         .cld-used-tech {
-            top: -4.7179vw;
+            /* top: -4.7179vw; */
             padding: 1.0256vw;
             border-top-left-radius: 2.5641vw;
         }
@@ -1999,7 +2008,7 @@
             margin: 0 0.7407vw;
         }
         .cld-used-tech {
-            top: -5.1851vw;
+            /* top: -5.1851vw; */
         }
         .cld-box-desc p,
         .cld-card-title {
@@ -2155,7 +2164,7 @@
             margin: 0 1.0526vw;
         }
         .cld-used-tech {
-            top: -8.6315vw;
+            /* top: -8.6315vw; */
             padding: 1.5789vw;
             border-top-left-radius: 3.1578vw;
         }
@@ -2483,4 +2492,9 @@
         border-radius: 50%;
         text-align: center;
         border: 3px solid #333c4a;
+    }
+    
+    .cld-modal-body ol li.focus {
+        font-weight: 800;
+        background: rgba(0, 0, 0, 0.1);
     }
