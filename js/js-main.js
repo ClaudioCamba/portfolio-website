@@ -13,11 +13,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/adobe-target-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/javascript-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/javascript-icon.png', 'JavaScript'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -44,11 +44,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/adobe-target-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/javascript-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/javascript-icon.png', 'JavaScript'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -76,11 +76,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/adobe-target-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/javascript-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/javascript-icon.png', 'JavaScript'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -109,11 +109,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/adobe-target-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/javascript-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/javascript-icon.png', 'JavaScript'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -142,9 +142,9 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/photoshop-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/photoshop-icon.png', 'Photoshop'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -172,10 +172,10 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/photoshop-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/photoshop-icon.png', 'Photoshop'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -204,10 +204,10 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/photoshop-icon.png', 'bootstrap logo'],
-                ['assets/icons/bootstrap-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/photoshop-icon.png', 'Photoshop'],
+                ['assets/icons/bootstrap-icon.png', 'Bootstrap'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -234,11 +234,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Minagent',
             'techUsed': [
-                ['assets/icons/photoshop-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/bootstrap-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/photoshop-icon.png', 'Photoshop'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/bootstrap-icon.png', 'Bootstrap'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -268,11 +268,11 @@ const cldWebsiteInfo = {
             'gitCta': 'Repository',
             'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
-                ['assets/icons/photoshop-icon.png', 'bootstrap logo'],
-                ['assets/icons/jquery-icon.png', 'bootstrap logo'],
-                ['assets/icons/bootstrap-icon.png', 'bootstrap logo'],
-                ['assets/icons/css3-icon.png', 'bootstrap logo'],
-                ['assets/icons/html5-icon.png', 'bootstrap logo']
+                ['assets/icons/photoshop-icon.png', 'Photoshop'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/bootstrap-icon.png', 'Bootstrap'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
             ],
             'modalContent': {
                 'slick': {
@@ -296,7 +296,7 @@ const cldWebsiteInfo = {
     }
 };
 
-// Section Variables
+// Section Variables ----- //
 var cldBody = document.querySelector('body'),
     cldNavLinks = document.querySelectorAll('.cld-nav-wrap li a'),
     cldIntroSec = document.getElementById('cld-intro'),
@@ -318,10 +318,16 @@ var cldBody = document.querySelector('body'),
     cldModalLink1 = document.querySelector('.cld-modal-link1'),
     // cldModalLink1Text = document.querySelector('.cld-modal-link1 span'),
     cldModalLink2 = document.querySelector('.cld-modal-link2'),
+    cldModalUsedTech = document.querySelector('.cld-modal-used-tech'),
     cldUsedTech = document.querySelectorAll('.cld-used-tech'),
+    cldIntroBtm = document.querySelector('.cld-intro-btm'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
     cldModalData = '';
 
+// Show / Hide Intro Desc
+function cldShowHideIntroDesc() {
+    cldIntroBtm.classList.toggle('cld-long-desc');
+};
 
 // Used tech ----- //
 function cldUsedTechs() {
@@ -499,6 +505,22 @@ function cldModalPopulating() {
         cldModalLink2.innerHTML = '';
         cldModalLink2.setAttribute('href', '');
     }
+
+    // Modal used tech
+    // if (document.querySelectorAll('.cld-used-tech[modal-data="' + cldModalData + '"]')[0].innerHTML.length > 0) {
+    //     cldModalUsedTech.innerHTML = document.querySelectorAll('.cld-used-tech[modal-data="' + cldModalData + '"]')[0].innerHTML;
+    // } else {
+    //     cldModalUsedTech.innerHTML = '';
+    // };
+    for (var x = 0; x < cldWebsiteInfo.portfolio[cldModalData].techUsed.length; x++) {
+        if (x === 0) {
+            cldModalUsedTech.innerHTML = '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
+        } else {
+            cldModalUsedTech.innerHTML = cldModalUsedTech.innerHTML + '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
+        }
+    }
+
+
 
     // Reset div class before carousel initiate
     cldModalSlider.setAttribute('class', 'cld-modal-body-img');

@@ -91,6 +91,7 @@
     }
     
     p,
+    .cld-intro-desc-long,
     .cld-contact-form label span,
     .cld-contact-form input[type="text"],
     .cld-contact-form textarea,
@@ -109,6 +110,22 @@
     }
     /* Button style ----- */
     /* button colour */
+    
+    .btn-grn {
+        border: 2px solid #333c4a;
+        background: #333c4a;
+        color: #FFFFFF;
+    }
+    
+    .btn-grn:after {
+        background: #1CBC9B;
+    }
+    
+    .btn-grn:hover {
+        color: #333c4a;
+        border: 2px solid #1CBC9B;
+        background-color: #1CBC9B;
+    }
     
     .btn-yel {
         border: 2px solid #333c4a;
@@ -274,6 +291,7 @@
     .cld-intro-text {
         display: inline-block;
         width: 50%;
+        position: relative;
     }
     
     .cld-frame img {
@@ -301,11 +319,39 @@
         border-radius: 15px;
     }
     
+    .cld-long-desc .cld-intro-desc-short,
+    .cld-intro-desc-long {
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .cld-long-desc .cld-intro-desc-long {
+        display: block;
+    }
+    
+    .cld-intro-btm.cld-long-desc {
+        padding-top: 50px;
+    }
+    
+    .cld-intro-btm {
+        transition: 0.5s;
+    }
+    
     .cld-desc-wrap {
         padding-right: 10%;
         padding-left: 5%;
         border-left: 5px solid #333c4a;
         color: #333c4a;
+    }
+    
+    .cld-intro-text .btn-slide {
+        display: block;
+        margin-top: 50px;
+        position: absolute;
+    }
+    
+    .cld-intro-text {
+        background: rgba(255, 255, 255, 0.5);
     }
     /* Intro Animations ----- */
     
@@ -543,6 +589,11 @@
         border-radius: 15px;
         box-shadow: 0 0 5px rgba(20, 20, 50, 0.2);
         overflow: hidden;
+        transition: 0.3s;
+    }
+    
+    .cld-box-inner:hover {
+        transform: scale(1.05);
     }
     /* Image */
     
@@ -575,7 +626,7 @@
     
     .cld-used-tech {
         position: absolute;
-        bottom: 0;
+        bottom: -3px;
         right: 0;
         width: auto;
         background-color: #EAB32C;
@@ -615,7 +666,9 @@
     .cld-modal-cta-wrap a:empty,
     .cld-modal-body ol:empty,
     .cld-modal-body-title:empty,
-    .cld-modal-body:empty {
+    .cld-modal-body:empty,
+    .cld-used-tech:empty,
+    .cld-modal-used-tech:empty {
         display: none;
     }
     
@@ -1215,6 +1268,7 @@
             font-size: 1.4915vw;
         }
         p,
+        .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form textarea,
@@ -1402,6 +1456,7 @@
     @media only screen and (max-width: 1225px) {
         /* All */
         p,
+        .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form textarea,
@@ -1602,6 +1657,7 @@
             padding: 1.0256vw 0;
         }
         p,
+        .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form textarea,
@@ -1879,6 +1935,7 @@
             font-size: 2.5vw;
         }
         p,
+        .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form textarea,
@@ -2104,6 +2161,7 @@
     @media only screen and (max-width: 475px) {
         /* All */
         p,
+        .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form textarea,
@@ -2417,7 +2475,8 @@
     /* Modal Text */
     
     .cld-modal-body-title,
-    .cld-modal-body-desc {
+    .cld-modal-body-desc,
+    .cld-modal-used-tech {
         margin-bottom: 20px;
     }
     
@@ -2428,12 +2487,12 @@
     /* title */
     
     .cld-modal-body-title {
-        background: #333c4a;
-        border-bottom-left-radius: 15px;
+        background: #ffffff;
+        /* border-bottom-left-radius: 15px;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
-        padding: 10px;
-        text-align: center;
+        padding: 10px; */
+        text-align: left;
     }
     
     .cld-modal-body h1 {
@@ -2446,8 +2505,60 @@
         overflow: hidden;
         /* padding-top: 5px; */
         padding-left: 5px;
-        color: #FFF;
-        text-shadow: -3px 3px #000;
+        color: #333c4a;
+        /* text-shadow: -3px 3px #000; */
+    }
+    /* .cld-modal-used-tech {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } */
+    
+    .cld-modal-used-tech img {
+        width: 100%;
+        height: auto;
+        max-width: 40px;
+        margin: 0 5px;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        position: absolute;
+        width: 80px;
+        background-color: #333c4a;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s;
+        top: 135%;
+        left: 50%;
+        margin-left: -40px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #333c4a transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
     }
     
     .cld-modal-body p {
