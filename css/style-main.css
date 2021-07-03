@@ -111,6 +111,11 @@
     /* Button style ----- */
     /* button colour */
     
+    .cld-long-desc .btn-grn {
+        background: #ffffff;
+        color: #333c4a;
+    }
+    
     .btn-grn {
         border: 2px solid #333c4a;
         background: #333c4a;
@@ -319,18 +324,22 @@
         border-radius: 15px;
     }
     
-    .cld-long-desc .cld-intro-desc-short,
-    .cld-intro-desc-long {
-        height: 0px;
-        overflow: hidden;
+    .cld-intro-btm.cld-long-desc .cld-intro-desc-short,
+    .cld-intro-btm.cld-long-desc .cld-read-more,
+    .cld-intro-btm .cld-intro-desc-long,
+    .cld-intro-btm .cld-read-less {
+        display: none;
     }
     
-    .cld-long-desc .cld-intro-desc-long {
+    .cld-intro-btm .cld-read-more,
+    .cld-intro-btm .cld-intro-desc-short,
+    .cld-intro-btm.cld-long-desc .cld-intro-desc-long,
+    .cld-intro-btm.cld-long-desc .cld-read-less {
         display: block;
     }
     
     .cld-intro-btm.cld-long-desc {
-        padding-top: 50px;
+        padding-top: 75px;
     }
     
     .cld-intro-btm {
@@ -1226,6 +1235,9 @@
         .cld-text-wrap {
             height: 5.375vw;
         }
+        .cld-intro-btm.cld-long-desc {
+            padding-top: 6.25VW;
+        }
         /* Portfolio Section ----- */
         .cld-proj-inner {
             margin-right: 100px;
@@ -1484,6 +1496,7 @@
         }
         .cld-intro-text {
             width: 100%;
+            position: unset;
         }
         .cld-desc-wrap {
             width: 65%;
@@ -1492,6 +1505,13 @@
             margin: 0 auto;
             text-align: center;
             border-right: 5px solid #333c4a;
+        }
+        .cld-intro-btm.cld-long-desc {
+            padding-top: 0;
+        }
+        .cld-intro-text .btn-slide {
+            margin-top: 4.0816vw;
+            position: relative;
         }
         /* Navigation Section ----- */
         .cld-nav-wrap {
@@ -1725,6 +1745,9 @@
         .cld-kv-portrait {
             margin-left: 25px;
         }
+        .cld-intro-text .btn-slide {
+            margin-top: 7.6923vw;
+        }
         /* Portfolio Section ----- */
         .cld-sec-title {
             font-size: 5.1282vw;
@@ -1861,7 +1884,7 @@
         }
     }
     
-    @media only screen and (max-width: 675px) and (min-height: 147.3684vw) and (max-height: 252.6315vw) {
+    @media only screen and (min-width: 476px) and (max-width: 675px) and (min-height: 147.3684vw) and (max-height: 252.6315vw) {
         .cld-main-header-inner {
             padding-top: 0;
             padding-bottom: 0;
@@ -1872,8 +1895,6 @@
     }
     
     @media only screen and (max-width: 675px) {
-        /* Animations */
-        .cld-top-name {}
         /* Text slide up 20% */
         @keyframes cld-top-text {
             0% {
@@ -2011,6 +2032,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         .cld-kv-portrait {
             margin: 5vw 0 15vw 0;
@@ -2155,6 +2177,16 @@
         /* Footer */
         .cld-footer-inner {
             padding: 6.3157vw 5.2631vw 6.3157vw;
+        }
+    }
+    
+    @media only screen and (max-width: 475px) and (min-height: 177.7777vw) and (max-height: 252.6315vw) {
+        .cld-main-header-inner {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .cld-main-header {
+            height: 100vh;
         }
     }
     
@@ -2542,7 +2574,7 @@
         left: 50%;
         margin-left: -40px;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 10px;
     }
     
     .tooltip .tooltiptext::after {

@@ -324,7 +324,7 @@ var cldBody = document.querySelector('body'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
     cldModalData = '';
 
-// Show / Hide Intro Desc
+// Show / Hide Intro Desc Class
 function cldShowHideIntroDesc() {
     cldIntroBtm.classList.toggle('cld-long-desc');
 };
@@ -541,6 +541,10 @@ function cldModalPopulating() {
         draggable: true,
         pauseOnHover: true,
         swipe: true,
+        accessibility: true,
+        focusOnSelect: true,
+        pauseOnFocus: true,
+        swipeToSlide: true,
         arrows: true
     });
 
