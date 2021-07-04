@@ -334,7 +334,7 @@ function cldUsedTechs() {
     for (var e = 0; e < cldUsedTech.length; e++) {
         var cldHoldtech = cldUsedTech[e].getAttribute('modal-data');
         // cldWebsiteInfo.portfolio[cldHoldtech].techUsed
-        console.log(cldWebsiteInfo.portfolio[cldHoldtech].techUsed);
+        // console.log(cldWebsiteInfo.portfolio[cldHoldtech].techUsed);
         for (var t = 0; t < cldWebsiteInfo.portfolio[cldHoldtech].techUsed.length; t++) {
             if (t === 0) {
                 cldUsedTech[e].innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][1] + '" src="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][0] + '">';
@@ -407,7 +407,7 @@ function cldModalOpenClose() {
             if (cldModalData !== this.getAttribute('modal-data')) {
                 cldModalData = this.getAttribute('modal-data');
                 cldModalPopulating();
-                console.log(cldModalData);
+                // console.log(cldModalData);
             };
             // Show Modal
             cldModalAnimate();
@@ -466,14 +466,14 @@ function cldModalPopulating() {
     // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc.length; i++) {
         if (i === 0) {
-            console.log('only 1');
+            // console.log('only 1');
             cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
             cldModalList.innerHTML = '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
         } else {
-            console.log('more than 1');
+            // console.log('more than 1');
             cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
             cldModalList.innerHTML = cldModalList.innerHTML + '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
-            console.log(i);
+            // console.log(i);
         };
     };
 
@@ -547,5 +547,12 @@ function cldModalPopulating() {
         swipeToSlide: true,
         arrows: true
     });
+    // Check for vertical
+    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.vertical) {
+        cldModalContent.classList.add('cld-modal-vertical-btn');
+    } else {
+        cldModalContent.classList.remove('cld-modal-vertical-btn');
+    };
+
 
 };
