@@ -666,7 +666,7 @@
     
     .cld-box-desc p {
         padding-bottom: 20px;
-        /* display: none; */
+        display: none;
     }
     
     .cld-cta-wrap,
