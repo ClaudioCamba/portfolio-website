@@ -2659,3 +2659,7 @@
         font-weight: 800;
         background: rgba(0, 0, 0, 0.1);
     }
+    
+    .cld-modal-body-list .cld-modal-active {
+        color: red;
+    }

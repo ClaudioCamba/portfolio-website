@@ -314,7 +314,7 @@ var cldBody = document.querySelector('body'),
     cldModalTitle = document.querySelector('.cld-modal-body-title'),
     cldModalDesc = document.querySelector('.cld-modal-body-desc'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
-    cldModalSlider = document.querySelector('.cld-modal-body-img'),
+    cldModalSlider = document.querySelectorAll('.cld-modal-body-img')[0],
     cldModalLink1 = document.querySelector('.cld-modal-link1'),
     // cldModalLink1Text = document.querySelector('.cld-modal-link1 span'),
     cldModalLink2 = document.querySelector('.cld-modal-link2'),
@@ -322,7 +322,8 @@ var cldBody = document.querySelector('body'),
     cldUsedTech = document.querySelectorAll('.cld-used-tech'),
     cldIntroBtm = document.querySelector('.cld-intro-btm'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
-    cldModalData = '';
+    cldModalData = '',
+    cldSliderEventListner = false;
 
 // Show / Hide Intro Desc Class
 function cldShowHideIntroDesc() {
@@ -406,7 +407,7 @@ function cldModalOpenClose() {
     cldLearnBtn.forEach(function(btn) {
         btn.addEventListener('click', function() {
             // Handle click ----- //
-            if (cldModalData !== this.getAttribute('modal-data')) {
+            if (cldModalSlider.outerHTML.indexOf('slick-initialized') < 0) {
                 cldModalData = this.getAttribute('modal-data');
                 cldModalPopulating();
                 // console.log(cldModalData);
@@ -416,6 +417,23 @@ function cldModalOpenClose() {
             cldBody.classList.add('cld-modal-show');
             // Fix carousel loading issue
             $('.slick-slider').slick('refresh');
+            //On After slide change eventlistner
+            if (cldSliderEventListner === false) {
+
+                if (document.querySelector('.cld-modal-body-list').outerHTML.indexOf('cld-modal-active') < 0) {
+                    document.querySelectorAll('.cld-modal-body-list li')[0].classList.add('cld-modal-active');
+                }
+
+                $('.cld-modal-body-img').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                    for (var y = 0; y < document.querySelectorAll('.cld-modal-body-list li').length; y++) {
+                        document.querySelectorAll('.cld-modal-body-list li')[y].classList.remove('cld-modal-active');
+                    };
+                    document.querySelectorAll('.cld-modal-body-list li')[nextSlide].classList.add('cld-modal-active');
+                    console.log('testing101');
+                });
+                cldSliderEventListner = true;
+            };
+
 
         });
     });
@@ -425,9 +443,7 @@ function cldModalOpenClose() {
             if (event.target !== cldModalBg && event.target !== cldModalCloseBtn) {
                 // console.log('open');
             } else {
-                cldBody.classList.remove('cld-modal-show');
-                cldModalContent.removeAttribute('style');
-                $('.cld-modal-body-img').slick('unslick');
+                cldClosingModal();
                 // cldModalContent.classList.remove('cld-content-show');
                 // console.log('close');
             };
@@ -436,12 +452,23 @@ function cldModalOpenClose() {
     });
     // close button
     cldModalCloseBtn.addEventListener('click', function(event) {
-        cldBody.classList.remove('cld-modal-show');
-        cldModalContent.removeAttribute('style');
-        $('.cld-modal-body-img').slick('unslick');
+        cldClosingModal();
     });
 };
 
+function cldClosingModal() {
+    cldBody.classList.remove('cld-modal-show');
+    cldModalContent.removeAttribute('style');
+    $('.cld-modal-body-img').slick('unslick');
+    for (v = 0; v < document.querySelectorAll('.cld-modal-body-img img').length; v++) {
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('tabindex');
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('role');
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('aria-describedby');
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('class');
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('style');
+        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('id');
+    }
+}
 // Onload functions ----- //
 var chkReadyState = setInterval(function() {
     if (document.readyState == 'complete') {
@@ -557,15 +584,4 @@ function cldModalPopulating() {
     } else {
         cldModalContent.classList.remove('cld-modal-vertical-btn');
     };
-
-    // On After slide change
-    if (cldModalSlider.outerHTML.indexOf('cld-slide-change') < 0) {
-        console.log('slide change init');
-        $('.cld-modal-body-img').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-            // console.log(nextSlide);
-            console.log('test');
-        });
-        cldModalSlider.classList.add('cld-slide-change');
-    };
-
 };
