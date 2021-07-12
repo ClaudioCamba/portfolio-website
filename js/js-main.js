@@ -7,11 +7,11 @@ const cldWebsiteInfo = {
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Generator',
-            'liveCtaLink': 'https://claudiocamba.github.io/s21comparisontable/',
+            'ctaLinkOneText': 'Generator',
+            'ctaLinkOne': 'https://claudiocamba.github.io/s21comparisontable/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/s20comparisontable/',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/s20comparisontable/',
             'techUsed': [
                 ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -38,11 +38,11 @@ const cldWebsiteInfo = {
         'samsungcartabandonment': {
             'name': 'Samsung Cart Abandonment',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Generator',
-            'liveCtaLink': 'https://claudiocamba.github.io/imcartabandonment/',
+            'ctaLinkOneText': 'Generator',
+            'ctaLinkOne': 'https://claudiocamba.github.io/imcartabandonment/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/imcartabandonment',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/imcartabandonment',
             'techUsed': [
                 ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -70,11 +70,11 @@ const cldWebsiteInfo = {
         'samsungcataffinity': {
             'name': 'Samsung Category Affinity',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Generator',
-            'liveCtaLink': 'https://claudiocamba.github.io/imcategoryaffinity/',
+            'ctaLinkOneText': 'Generator',
+            'ctaLinkOne': 'https://claudiocamba.github.io/imcategoryaffinity/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/imcategoryaffinity',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/imcategoryaffinity',
             'techUsed': [
                 ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -103,11 +103,11 @@ const cldWebsiteInfo = {
         'samsungusp': {
             'name': 'Samsung USP',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'Generator',
-            'liveCtaLink': 'https://claudiocamba.github.io/uspgenerator/',
+            'ctaLinkOneText': 'Generator',
+            'ctaLinkOne': 'https://claudiocamba.github.io/uspgenerator/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/uspgenerator',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/uspgenerator',
             'techUsed': [
                 ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -136,11 +136,11 @@ const cldWebsiteInfo = {
         'targetav': {
             'name': 'Target AV',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'View Live',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'ctaLinkOneText': 'View Live',
+            'ctaLinkOne': 'https://www.targetav.com/index.php',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            // 'ctaLinkTwo': 'Repository',
+            // 'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/css3-icon.png', 'CSS3'],
@@ -166,11 +166,11 @@ const cldWebsiteInfo = {
         'gpmc': {
             'name': 'GPMC',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'View Live',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'ctaLinkOneText': 'View Live',
+            'ctaLinkOne': 'https://www.gpmcq.com/index.php',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            // 'ctaLinkTwo': 'Repository',
+            // 'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -198,11 +198,11 @@ const cldWebsiteInfo = {
         'portfoliov1': {
             'name': 'Claudio Portfolio V1',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'View Live',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'ctaLinkOneText': 'View Live',
+            'ctaLinkOne': 'https://claudiocamba.github.io/Portfolio/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Portfolio',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/bootstrap-icon.png', 'Bootstrap'],
@@ -228,11 +228,11 @@ const cldWebsiteInfo = {
         'minagent': {
             'name': 'Minagent',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'View Live',
-            'liveCtaLink': 'https://claudiocamba.github.io/Minagent/',
+            'ctaLinkOneText': 'View Live',
+            'ctaLinkOne': 'https://claudiocamba.github.io/Minagent/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/Minagent',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Minagent',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -262,11 +262,11 @@ const cldWebsiteInfo = {
         'faceman': {
             'name': 'Faceman',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'liveCta': 'View Live',
-            'liveCtaLink': 'https://claudiocamba.github.io/Faceman/',
+            'ctaLinkOneText': 'View Live',
+            'ctaLinkOne': 'https://claudiocamba.github.io/Faceman/',
             'learnCta': 'Learn More',
-            'gitCta': 'Repository',
-            'gitCtaLink': 'https://github.com/ClaudioCamba/Faceman',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -336,8 +336,6 @@ function cldShowHideIntroDesc() {
 function cldUsedTechs() {
     for (var e = 0; e < cldUsedTech.length; e++) {
         var cldHoldtech = cldUsedTech[e].getAttribute('modal-data');
-        // cldWebsiteInfo.portfolio[cldHoldtech].techUsed
-        // console.log(cldWebsiteInfo.portfolio[cldHoldtech].techUsed);
         for (var t = 0; t < cldWebsiteInfo.portfolio[cldHoldtech].techUsed.length; t++) {
             if (t === 0) {
                 cldUsedTech[e].innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][1] + ' Icon' + '" src="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][0] + '">';
@@ -407,33 +405,16 @@ function cldModalOpenClose() {
     cldLearnBtn.forEach(function(btn) {
         btn.addEventListener('click', function() {
             // Handle click ----- //
-            if (cldModalSlider.outerHTML.indexOf('slick-initialized') < 0) {
+            if (cldModalData !== this.getAttribute('modal-data')) {
                 cldModalData = this.getAttribute('modal-data');
                 cldModalPopulating();
-                // console.log(cldModalData);
+                console.log('New Card Populating Modal');
             };
             // Show Modal
             cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
             // Fix carousel loading issue
             $('.slick-slider').slick('refresh');
-            //On After slide change eventlistner
-            if (cldSliderEventListner === false) {
-
-                if (document.querySelector('.cld-modal-body-list').outerHTML.indexOf('cld-modal-active') < 0) {
-                    document.querySelectorAll('.cld-modal-body-list li')[0].classList.add('cld-modal-active');
-                }
-
-                $('.cld-modal-body-img').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                    for (var y = 0; y < document.querySelectorAll('.cld-modal-body-list li').length; y++) {
-                        document.querySelectorAll('.cld-modal-body-list li')[y].classList.remove('cld-modal-active');
-                    };
-                    document.querySelectorAll('.cld-modal-body-list li')[nextSlide].classList.add('cld-modal-active');
-                    console.log('testing101');
-                });
-                cldSliderEventListner = true;
-            };
-
 
         });
     });
@@ -441,11 +422,9 @@ function cldModalOpenClose() {
     cldBody.addEventListener('click', function(event) {
         if (cldBody.classList.value.indexOf('cld-modal-show') > -1) {
             if (event.target !== cldModalBg && event.target !== cldModalCloseBtn) {
-                // console.log('open');
+                console.log('Clicked On Modal');
             } else {
                 cldClosingModal();
-                // cldModalContent.classList.remove('cld-content-show');
-                // console.log('close');
             };
         };
 
@@ -456,19 +435,36 @@ function cldModalOpenClose() {
     });
 };
 
+// Slick eventlistners ----- //
+function cldSlickListner() {
+
+    // On After slide change eventlistner
+    $(cldModalSlider).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        for (var y = 0; y < cldModalList.querySelectorAll('li').length; y++) {
+            cldModalList.querySelectorAll('li')[y].classList.remove('cld-modal-active');
+        };
+        cldModalList.querySelectorAll('li')[nextSlide].classList.add('cld-modal-active');
+        console.log('Slide Change');
+    });
+
+    //  On after slick initialised
+    $(cldModalSlider).on('init', function(event, slick) {
+        if (cldModalList.outerHTML.indexOf('cld-modal-active') < 0) {
+            cldModalList.querySelectorAll('li')[0].classList.add('cld-modal-active');
+            console.log('Highlight Initial List');
+        }
+    });
+};
+
+// Modal closing ----- //
 function cldClosingModal() {
     cldBody.classList.remove('cld-modal-show');
     cldModalContent.removeAttribute('style');
-    $('.cld-modal-body-img').slick('unslick');
-    for (v = 0; v < document.querySelectorAll('.cld-modal-body-img img').length; v++) {
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('tabindex');
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('role');
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('aria-describedby');
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('class');
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('style');
-        document.querySelectorAll('.cld-modal-body-img img')[v].removeAttribute('id');
-    }
-}
+    // Pausing slick slider
+    $(cldModalSlider).slick('slickPause');
+    console.log('Closing Modal');
+};
+
 // Onload functions ----- //
 var chkReadyState = setInterval(function() {
     if (document.readyState == 'complete') {
@@ -479,6 +475,7 @@ var chkReadyState = setInterval(function() {
         cldModalOpenClose();
         cldSmoothScroll();
         cldUsedTechs();
+        cldSlickListner();
     }
 }, 100);
 
@@ -498,14 +495,14 @@ function cldModalPopulating() {
     // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc.length; i++) {
         if (i === 0) {
-            // console.log('only 1');
+            console.log('Append First Img & List');
             cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
             cldModalList.innerHTML = '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
         } else {
-            // console.log('more than 1');
+            console.log('Append Rest Img & List');
             cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
             cldModalList.innerHTML = cldModalList.innerHTML + '<li>' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
-            // console.log(i);
+
         };
     };
 
@@ -522,28 +519,22 @@ function cldModalPopulating() {
         cldModalDesc.innerHTML = '';
     }
 
-    if (typeof cldWebsiteInfo.portfolio[cldModalData].liveCta != "undefined") {
-        cldModalLink1.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].liveCta + '</span>';
-        cldModalLink1.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].liveCtaLink);
+    if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText != "undefined") {
+        cldModalLink1.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText + '</span>';
+        cldModalLink1.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].ctaLinkOne);
     } else {
         cldModalLink1.innerHTML = '';
         cldModalLink1.setAttribute('href', '');
     }
 
-    if (typeof cldWebsiteInfo.portfolio[cldModalData].gitCta != "undefined") {
-        cldModalLink2.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].gitCta + '</span>';
-        cldModalLink2.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].gitCtaLink);
+    if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwo != "undefined") {
+        cldModalLink2.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwo + '</span>';
+        cldModalLink2.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwoText);
     } else {
         cldModalLink2.innerHTML = '';
         cldModalLink2.setAttribute('href', '');
     }
 
-    // Modal used tech
-    // if (document.querySelectorAll('.cld-used-tech[modal-data="' + cldModalData + '"]')[0].innerHTML.length > 0) {
-    //     cldModalUsedTech.innerHTML = document.querySelectorAll('.cld-used-tech[modal-data="' + cldModalData + '"]')[0].innerHTML;
-    // } else {
-    //     cldModalUsedTech.innerHTML = '';
-    // };
     for (var x = 0; x < cldWebsiteInfo.portfolio[cldModalData].techUsed.length; x++) {
         if (x === 0) {
             cldModalUsedTech.innerHTML = '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
@@ -556,7 +547,7 @@ function cldModalPopulating() {
     cldModalSlider.setAttribute('class', 'cld-modal-body-img');
 
     // Carousel Swipe Initiate
-    $('.cld-modal-body-img').slick({
+    $(cldModalSlider).slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
