@@ -464,10 +464,10 @@ function cldClosingModal() {
     $(cldModalSlider).slick('slickPause');
     console.log('Closing Modal');
 };
+
 // List control slider ----- //
-function cldListControl() {
-    // $(cldModalSlider).slick('slickGoTo', 3);
-    console.log('Testing101');
+function cldListControl(index) {
+    $(cldModalSlider).slick('slickGoTo', index);
 };
 
 // Onload functions ----- //
@@ -502,11 +502,11 @@ function cldModalPopulating() {
         if (i === 0) {
             console.log('Append First Img & List');
             cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = '<li onclick="cldListControl()" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
+            cldModalList.innerHTML = '<li onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
         } else {
             console.log('Append Rest Img & List');
             cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = cldModalList.innerHTML + '<li onclick="cldListControl()" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
+            cldModalList.innerHTML = cldModalList.innerHTML + '<li onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
         };
     };
 
