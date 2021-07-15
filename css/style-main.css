@@ -724,7 +724,7 @@
             /* padding: 50px;
             padding-top: 60px; */
             width: 100%;
-            max-width: 1400px;
+            max-width: 1600px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -736,13 +736,16 @@
         }
         
         .cld-modal-top {
-            padding: 60px 50px 0 50px;
+            padding: 50px 50px 0 50px;
             background-color: #333c4a;
         }
         
         .cld-modal-body {
             background: #fff;
             padding: 30px 50px 50px;
+            display: inline-block;
+            /* justify-content: center; */
+            /* align-items: stretch;*/
         }
         
         .cld-modal-top button {
@@ -785,7 +788,7 @@
         
         .cld-modal-body>div {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
         }
         
         .cld-modal-cta-wrap {
@@ -797,7 +800,7 @@
             border: 0 solid transparent !important;
         }
         
-        .cld-modal-body-img {
+        .cld-modal-slider-wrap {
             width: 66.66%;
             /* border-radius: 15px;
         overflow: hidden; */
@@ -915,7 +918,7 @@
             transition: opacity 0.3s;
             top: 135%;
             left: 50%;
-            margin-left: -40px;
+            margin-left: -42px;
             text-transform: uppercase;
             font-size: 10px;
         }
@@ -960,7 +963,7 @@
             line-height: 1.4;
             font-weight: 400;
             display: list-item;
-            padding: 10px 15px;
+            padding: 10px;
             margin: 10px 0;
             border-radius: 10px;
             border: 1px solid rgba(51, 60, 74, 0.1);
@@ -1024,9 +1027,12 @@
             background: rgba(51, 60, 74, 1);
         }
         
-        .cld-modal-body-title h1,
-        .cld-modal-used-tech>.tooltip {
+        .cld-modal-body-title h1 {
             margin-bottom: 30px;
+        }
+        
+        .cld-modal-used-tech>.tooltip {
+            margin-bottom: 20px;
         }
         /* Contact Section ----- */
         
@@ -1416,6 +1422,12 @@
         }
         /* MEDIA QUERY TABLET ------------------------------ */
         
+        @media only screen and (max-width: 1700px) {
+            .cld-modal-content {
+                max-width: 94.1176vw;
+            }
+        }
+        
         @media only screen and (min-width: 1601px) and (min-height: 900px) {
             .cld-main-header {
                 height: 100vh;
@@ -1432,9 +1444,6 @@
                 margin-bottom: 1.35vw;
             }
             /* Projects Modal */
-            .cld-modal-content {
-                max-width: 90vw;
-            }
         }
         
         @media only screen and (max-width: 1600px) and (min-width: 1476px) and (min-height: 55.6776vw) and (max-height:156.25vw) {
@@ -1558,6 +1567,16 @@
             .cld-box-inner {
                 max-width: 29.0322vw;
             }
+            /* Modal Section */
+            .cld-modal-top {
+                padding: 3.2258vw 3.2258vw 0 3.2258vw;
+            }
+            .cld-modal-body {
+                padding: 1.9354vw 3.2258vw 3.2258vw;
+            }
+            .cld-modal-used-tech>.tooltip {
+                margin-bottom: 1.2903vw;
+            }
         }
         
         @media only screen and (max-width: 1525px) {
@@ -1618,9 +1637,45 @@
             .cld-intro-view .intro-btn {
                 padding: 4.0677vw 1.3559vw;
             }
-            /* .cld-nav-wrap {
-                padding-left: 1.6271vw;
+            /* Modal Section */
+            .cld-modal-body-title h1 {
+                font-size: 2.7118vw;
+                margin-bottom: 2.0338vw;
+            }
+            /* .cld-modal-used-tech>.tooltip {
+                margin-bottom: 2.0338vw;
             } */
+            .cld-modal-top button span {
+                font-size: 2.7118vw;
+            }
+            .cld-modal-body-img .slick-prev:before,
+            .cld-modal-body-img .slick-next:before {
+                font-size: 3.1186vw;
+            }
+            .cld-modal-body-img .slick-prev,
+            .cld-modal-body-img .slick-next {
+                width: 3.1864vw;
+                height: 2.7118vw;
+            }
+            .cld-modal-used-tech img {
+                max-width: 2.7118vw;
+            }
+            .cld-modal-body-list li:first-child {
+                margin-top: 1.3559vw;
+            }
+            .cld-modal-body-list li:last-child {
+                margin-bottom: 1.3559vw;
+            }
+            .cld-modal-body-list li:last-child {
+                margin-bottom: 1.3559vw;
+            }
+            .tooltip .tooltiptext {
+                width: 5.4237vw;
+                padding: 0.3389vw 0;
+                border-radius: 0.4067vw;
+                margin-left: -2.8474vw;
+                font-size: 0.6779vw;
+            }
             /* Contact Section ----- */
             .cld-contact-wrap {
                 width: 88.1355vw;
@@ -1734,6 +1789,12 @@
             }
             .cld-box-desc p {
                 padding-bottom: 1.4652vw;
+            }
+            /* Modal Section */
+            .cld-modal-body-list li {
+                font-size: 1.0256vw;
+                padding: 0.7326vw;
+                border-radius: 0.7326vw;
             }
             /* Contact Section ----- */
             .cld-main-contact {
@@ -2088,10 +2149,7 @@
             .cld-box-desc .btn-slide:first-of-type {
                 margin-right: 1.8461vw;
             }
-            /* Projects Modal */
-            .cld-modal-content {
-                max-width: 82vw;
-            }
+            /* Modal Section */
             /* Contact Section ----- */
             .cld-contact-title hr {
                 height: 1.0256vw;
@@ -2397,9 +2455,9 @@
                 padding-bottom: 8.8888vw;
             }
             /* Projects Modal */
-            .cld-modal-content {
+            /* .cld-modal-content {
                 max-width: 85vw;
-            }
+            } */
             /* Contact Section */
             .cld-contact-title .cld-sec-title {
                 text-shadow: -0.6444vw 0 #c3644c;
@@ -2568,9 +2626,9 @@
                 padding-bottom: 12.6315vw;
             }
             /* Projects Modal */
-            .cld-modal-content {
+            /* .cld-modal-content {
                 width: 76vw;
-            }
+            } */
             /* Contact */
             .cld-main-contact {
                 border-top: 2.1052vw solid #c3644c;
