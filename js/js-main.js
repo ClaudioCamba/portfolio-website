@@ -314,11 +314,11 @@ var cldBody = document.querySelector('body'),
     cldModalTitle = document.querySelector('.cld-modal-body-title'),
     cldModalDesc = document.querySelector('.cld-modal-body-desc'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
-    cldModalSlider = document.querySelectorAll('.cld-modal-body-img')[0],
+    cldModalSlider = document.querySelector('.cld-modal-body-img'),
     cldModalLink1 = document.querySelector('.cld-modal-link1'),
     // cldModalLink1Text = document.querySelector('.cld-modal-link1 span'),
     cldModalLink2 = document.querySelector('.cld-modal-link2'),
-    cldModalUsedTech = document.querySelector('.cld-modal-used-tech'),
+    cldModalUsedTech = document.querySelectorAll('.cld-modal-used-tech'),
     cldUsedTech = document.querySelectorAll('.cld-used-tech'),
     cldIntroBtm = document.querySelector('.cld-intro-btm'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
@@ -540,12 +540,14 @@ function cldModalPopulating() {
     }
 
     for (var x = 0; x < cldWebsiteInfo.portfolio[cldModalData].techUsed.length; x++) {
-        if (x === 0) {
-            cldModalUsedTech.innerHTML = '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
-        } else {
-            cldModalUsedTech.innerHTML = cldModalUsedTech.innerHTML + '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
+        for (var o = 0; o < cldModalUsedTech.length; o++) {
+            if (x === 0) {
+                cldModalUsedTech[o].innerHTML = '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
+            } else {
+                cldModalUsedTech[o].innerHTML = cldModalUsedTech[o].innerHTML + '<div class="tooltip"><img alt="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][0] + '"><span class="tooltiptext">' + cldWebsiteInfo.portfolio[cldModalData].techUsed[x][1] + '</span></div>';
+            }
         }
-    }
+    };
 
     // Reset div class before carousel initiate
     cldModalSlider.setAttribute('class', 'cld-modal-body-img');

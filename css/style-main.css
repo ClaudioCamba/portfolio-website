@@ -733,11 +733,29 @@
             /* height: 250px; */
             transition: all 0.5s;
             overflow: hidden;
+            max-height: 95%;
+            overflow: scroll;
         }
         
         .cld-modal-top {
             padding: 50px 50px 0 50px;
             background-color: #333c4a;
+        }
+        
+        .cld-modal-top .cld-modal-used-tech img {
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #FFFFFF;
+        }
+        
+        .cld-modal-top .tooltip:last-child img {
+            margin-right: 0;
+        }
+        
+        .cld-modal-top .cld-modal-used-tech {
+            display: none;
+            margin: 0 auto;
+            width: fit-content;
         }
         
         .cld-modal-body {
@@ -806,10 +824,16 @@
         overflow: hidden; */
         }
         
+        .cld-modal-body-img {
+            max-width: 1000px;
+            min-height: 666.672px;
+            background: #FFF;
+            /* border-radius: 20px; */
+        }
+        
         .cld-modal-body-img img {
             width: 100%;
             height: auto;
-            border-radius: 15px;
         }
         
         .cld-modal-body-img .slick-prev,
@@ -1425,6 +1449,9 @@
         @media only screen and (max-width: 1700px) {
             .cld-modal-content {
                 max-width: 94.1176vw;
+            }
+            .cld-modal-body-img {
+                min-height: 39.216vw;
             }
         }
         
@@ -2150,6 +2177,56 @@
                 margin-right: 1.8461vw;
             }
             /* Modal Section */
+            .cld-modal-body {
+                display: flex;
+                flex-direction: column;
+            }
+            .cld-modal-top {
+                padding: 3.5897vw 3.5897vw 0 3.5897vw;
+            }
+            .cld-modal-top button span {
+                font-size: 3.0769vw;
+            }
+            .cld-modal-body-text {
+                order: 2;
+            }
+            .cld-modal-slider-wrap {
+                order: 1;
+            }
+            .cld-modal-body>div {
+                display: block;
+                /* vertical-align: unset; */
+                width: 100%;
+                max-width: 87.6923vw;
+                padding: 0;
+            }
+            .cld-modal-body-img {
+                min-height: 58.0832vw;
+            }
+            .cld-modal-body-img .slick-prev,
+            .cld-modal-body-img .slick-next {
+                width: 4.1025vw;
+                height: 3.4871vw;
+            }
+            .cld-modal-body-img .slick-prev:before,
+            .cld-modal-body-img .slick-next:before {
+                font-size: 4.1186vw;
+            }
+            .cld-modal-top .cld-modal-used-tech {
+                display: block;
+            }
+            .cld-modal-body-text .cld-modal-used-tech {
+                display: none;
+            }
+            .cld-modal-body-title h1 {
+                margin-bottom: 1.5384vw;
+            }
+            .cld-modal-used-tech>.tooltip {
+                margin-bottom: 25px;
+            }
+            .cld-modal-body {
+                padding: 25px 35px 35px;
+            }
             /* Contact Section ----- */
             .cld-contact-title hr {
                 height: 1.0256vw;
