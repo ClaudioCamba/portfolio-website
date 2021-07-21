@@ -11,7 +11,7 @@ const cldWebsiteInfo = {
             'ctaLinkOne': 'https://claudiocamba.github.io/s21comparisontable/',
             'learnCta': 'Learn More',
             'ctaLinkTwo': 'Repository',
-            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/s20comparisontable/',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/s21comparisontable/',
             'techUsed': [
                 ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -313,6 +313,7 @@ var cldBody = document.querySelector('body'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
     cldModalTitle = document.querySelector('.cld-modal-body-title'),
     cldModalDesc = document.querySelector('.cld-modal-body-desc'),
+    cldModalCtaWrap = document.querySelector('.cld-modal-cta-wrap'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
     cldModalSlider = document.querySelector('.cld-modal-body-img'),
     cldModalLink1 = document.querySelector('.cld-modal-link1'),
@@ -492,6 +493,7 @@ window.addEventListener('scroll', function() {
 // Resize eventlistener ----- //
 window.addEventListener('resize', function() {
     cldSecDetect();
+    $('.slick-slider').slick('refresh');
 });
 
 // Modal Populating ----- //
@@ -523,20 +525,24 @@ function cldModalPopulating() {
         cldModalDesc.innerHTML = '';
     }
 
-    if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText != "undefined") {
+    if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkOne != "undefined") {
         cldModalLink1.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText + '</span>';
         cldModalLink1.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].ctaLinkOne);
+        cldModalCtaWrap.removeAttribute('style');
     } else {
         cldModalLink1.innerHTML = '';
         cldModalLink1.setAttribute('href', '');
+        cldModalCtaWrap.style.justifyContent = 'center';
     }
 
     if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwo != "undefined") {
         cldModalLink2.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwo + '</span>';
         cldModalLink2.setAttribute('href', cldWebsiteInfo.portfolio[cldModalData].ctaLinkTwoText);
+        cldModalCtaWrap.removeAttribute('style');
     } else {
         cldModalLink2.innerHTML = '';
         cldModalLink2.setAttribute('href', '');
+        cldModalCtaWrap.style.justifyContent = 'center';
     }
 
     for (var x = 0; x < cldWebsiteInfo.portfolio[cldModalData].techUsed.length; x++) {

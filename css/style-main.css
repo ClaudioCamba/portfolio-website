@@ -588,6 +588,16 @@
             justify-content: space-between;
             padding-bottom: 100px;
         }
+        
+        .cld-proj-card {
+            display: flex;
+        }
+        
+        .cld-box-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         /* Card */
         
         .cld-box-inner {
@@ -635,6 +645,11 @@
             /* position: relative; */
             border-top: 5px solid #EAB32C;
             background: #FFFFFF;
+            -ms-flex: auto;
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         .cld-used-tech {
@@ -742,6 +757,11 @@
             background-color: #333c4a;
         }
         
+        .cld-modal-used-tech .tooltip:hover img {
+            background: #EAB32C;
+            border: 2px solid #EAB32C;
+        }
+        
         .cld-modal-top .cld-modal-used-tech img {
             border-radius: 50%;
             background: #fff;
@@ -761,7 +781,7 @@
         .cld-modal-body {
             background: #fff;
             padding: 30px 50px 50px;
-            display: inline-block;
+            display: block;
             /* justify-content: center; */
             /* align-items: stretch;*/
         }
@@ -806,11 +826,16 @@
         
         .cld-modal-body>div {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
         }
         
         .cld-modal-cta-wrap {
             padding: 20px 0;
+        }
+        
+        .cld-modal-cta-wrap .btn-slide {
+            width: 46%;
+            margin: 0;
         }
         /* Modal Slider */
         
@@ -917,6 +942,8 @@
             height: auto;
             max-width: 40px;
             margin: 0 5px;
+            border: 2px solid #fff;
+            border-radius: 50%;
         }
         
         .tooltip {
@@ -932,22 +959,21 @@
             visibility: hidden;
             position: absolute;
             width: 80px;
-            background-color: #333c4a;
-            color: #fff;
+            background-color: #EAB32C;
+            color: #333c4a;
             text-align: center;
             padding: 5px 0;
             border-radius: 6px;
             z-index: 1;
             opacity: 0;
             transition: opacity 0.3s;
-            top: 135%;
-            left: 50%;
+            top: 112%;
+            left: 55%;
             margin-left: -42px;
             text-transform: uppercase;
             font-size: 10px;
         }
-        
-        .tooltip .tooltiptext::after {
+        /* .tooltip .tooltiptext::after {
             content: "";
             position: absolute;
             bottom: 100%;
@@ -956,7 +982,7 @@
             border-width: 5px;
             border-style: solid;
             border-color: transparent transparent #333c4a transparent;
-        }
+        } */
         
         .tooltip:hover .tooltiptext {
             visibility: visible;
@@ -990,16 +1016,14 @@
             padding: 10px;
             margin: 10px 0;
             border-radius: 10px;
-            border: 1px solid rgba(51, 60, 74, 0.1);
-            -webkit-box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5);
-            box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5);
+            border: 1px solid #CBCED1;
+            /* -webkit-box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5);
+            box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5); */
             color: rgba(51, 60, 74, 0.5);
         }
         
         .cld-modal-body-list li:hover {
-            border: 1px solid rgba(51, 60, 74, 0.3);
-            /* -webkit-box-shadow: 0px 0px 3px 0px rgba(51, 60, 74, 0.3);
-            box-shadow: 0px 0px 3px 0px rgba(51, 60, 74, 0.3); */
+            border: 1px solid #EAB32C;
             color: rgba(51, 60, 74, 0.7);
             cursor: pointer;
         }
@@ -1043,16 +1067,16 @@
         
         .cld-modal-body-list .cld-modal-active,
         .cld-modal-body-list .cld-modal-active:hover {
-            /* border: 1px solid rgba(51, 60, 74, 0.5); */
-            /* border: 1px solid #fff; */
+            /* border: 1px solid rgba(51, 60, 74, 0.3); */
             /* -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5);
             box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5); */
-            color: #FFFFFF;
-            background: rgba(51, 60, 74, 1);
+            border: 1px solid #EAB32C;
+            color: #333c4a;
+            background: #EAB32C;
         }
         
         .cld-modal-body-title h1 {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         
         .cld-modal-used-tech>.tooltip {
@@ -1321,6 +1345,11 @@
             width: 100%;
             display: inline-block;
             position: relative;
+            transition: 0.35s;
+        }
+        
+        .cld-info:hover {
+            transform: scale(1.3);
         }
         
         .cld-info button {
@@ -1667,7 +1696,7 @@
             /* Modal Section */
             .cld-modal-body-title h1 {
                 font-size: 2.7118vw;
-                margin-bottom: 2.0338vw;
+                margin-bottom: 1.0169vw;
             }
             /* .cld-modal-used-tech>.tooltip {
                 margin-bottom: 2.0338vw;
@@ -1702,6 +1731,9 @@
                 border-radius: 0.4067vw;
                 margin-left: -2.8474vw;
                 font-size: 0.6779vw;
+            }
+            .cld-modal-cta-wrap {
+                padding: 1.3559vw 0;
             }
             /* Contact Section ----- */
             .cld-contact-wrap {
@@ -2177,6 +2209,9 @@
                 margin-right: 1.8461vw;
             }
             /* Modal Section */
+            .cld-modal-content {
+                max-width: 96vw;
+            }
             .cld-modal-body {
                 display: flex;
                 flex-direction: column;
@@ -2185,7 +2220,7 @@
                 padding: 3.5897vw 3.5897vw 0 3.5897vw;
             }
             .cld-modal-top button span {
-                font-size: 3.0769vw;
+                font-size: 3.6923vw;
             }
             .cld-modal-body-text {
                 order: 2;
@@ -2197,20 +2232,20 @@
                 display: block;
                 /* vertical-align: unset; */
                 width: 100%;
-                max-width: 87.6923vw;
+                max-width: 88.8235vw;
                 padding: 0;
             }
             .cld-modal-body-img {
-                min-height: 58.0832vw;
+                min-height: 59.2820vw;
             }
             .cld-modal-body-img .slick-prev,
             .cld-modal-body-img .slick-next {
-                width: 4.1025vw;
-                height: 3.4871vw;
+                width: 4.4102vw;
+                height: 4.1025vw;
             }
             .cld-modal-body-img .slick-prev:before,
             .cld-modal-body-img .slick-next:before {
-                font-size: 4.1186vw;
+                font-size: 4.6153vw;
             }
             .cld-modal-top .cld-modal-used-tech {
                 display: block;
@@ -2219,13 +2254,45 @@
                 display: none;
             }
             .cld-modal-body-title h1 {
-                margin-bottom: 1.5384vw;
+                font-size: 3.0769vw;
+                margin: 0.5384vw 0 1.5384vw;
             }
             .cld-modal-used-tech>.tooltip {
-                margin-bottom: 25px;
+                margin-bottom: 2.5641vw;
+            }
+            .tooltip .tooltiptext {
+                width: 8.2051vw;
+                padding: 0.5128vw 0;
+                border-radius: 0.6153vw;
+                left: 55%;
+                font-size: 1.0256vw;
+                margin-left: -4.3076vw;
+                top: 125%;
             }
             .cld-modal-body {
-                padding: 25px 35px 35px;
+                padding: 2.5641vw 3.5897vw;
+            }
+            .cld-modal-used-tech img {
+                max-width: 3.0769vw;
+            }
+            .cld-modal-body-img .slick-next {
+                right: -1.0256vw;
+            }
+            .cld-modal-body-img .slick-prev {
+                left: -1.0256vw;
+            }
+            .cld-modal-body-list li:first-child {
+                margin-top: 1.5384vw;
+            }
+            .cld-modal-body-list li:last-child {
+                margin-bottom: 1.5384vw;
+            }
+            .cld-modal-body-list li {
+                font-size: 1.4358vw;
+                padding: 1.0256vw;
+            }
+            .cld-modal-cta-wrap {
+                padding: 2.0512vw 0;
             }
             /* Contact Section ----- */
             .cld-contact-title hr {
@@ -2532,9 +2599,35 @@
                 padding-bottom: 8.8888vw;
             }
             /* Projects Modal */
-            /* .cld-modal-content {
-                max-width: 85vw;
-            } */
+            .cld-modal-used-tech img {
+                max-width: 4.4444vw;
+            }
+            .cld-modal-top button span {
+                font-size: 4.1481vw;
+            }
+            .cld-modal-top {
+                padding: 4.4444vw 3.7037vw 0 3.7037vw;
+            }
+            .cld-modal-body-title h1 {
+                font-size: 3.7037vw;
+                margin: 1.4814vw 0 2.2222vw;
+            }
+            .cld-modal-body {
+                padding: 3.5897vw;
+            }
+            .cld-modal-body-list li:first-child {
+                margin-top: 2.9629vw;
+            }
+            .cld-modal-body-list li:first-child {
+                margin-top: 2.9629vw;
+            }
+            .cld-modal-body-list li:last-child {
+                margin-bottom: 2.2222vw;
+            }
+            .cld-modal-body-list li {
+                font-size: 1.7777vw;
+                padding: 1.4814vw;
+            }
             /* Contact Section */
             .cld-contact-title .cld-sec-title {
                 text-shadow: -0.6444vw 0 #c3644c;
@@ -2703,9 +2796,68 @@
                 padding-bottom: 12.6315vw;
             }
             /* Projects Modal */
-            /* .cld-modal-content {
-                width: 76vw;
-            } */
+            .cld-modal-body>div {
+                max-width: 90.8235vw;
+            }
+            .cld-modal-content {
+                max-width: 100%;
+            }
+            .cld-modal-top button span {
+                font-size: 5.2631vw;
+            }
+            .cld-modal-top {
+                padding: 6.3157vw 4.2105vw 0 4.2105vw;
+            }
+            .cld-modal-body-title h1 {
+                font-size: 4.2105vw;
+                margin: 2.1052vw 0 3.1578vw;
+            }
+            .cld-modal-used-tech img {
+                max-width: 5.2631vw;
+            }
+            .cld-modal-used-tech>.tooltip {
+                margin-bottom: 3.1578vw;
+            }
+            .cld-modal-body-list li {
+                font-size: 2.5263vw;
+                padding: 2.1052vw;
+                margin: 2.1052vw 0;
+            }
+            .cld-modal-body-list li:last-child {
+                margin-bottom: 3.1578vw;
+            }
+            .cld-modal-body {
+                padding: 3.5897vw 0;
+            }
+            .cld-modal-body .cld-modal-body-text {
+                margin: 0 auto;
+                max-width: 90.8235vw;
+            }
+            .cld-modal-body .cld-modal-slider-wrap {
+                margin: 0 auto;
+                max-width: 100vw;
+            }
+            .cld-modal-body-img {
+                min-height: 66.6677vw;
+            }
+            .cld-modal-body-img .slick-prev:before,
+            .cld-modal-body-img .slick-next:before {
+                font-size: 6.6153vw;
+            }
+            .cld-modal-body-img .slick-next {
+                right: 0;
+            }
+            .cld-modal-body-img .slick-prev {
+                left: 0;
+            }
+            .cld-modal-body-img .slick-prev,
+            .cld-modal-body-img .slick-next {
+                width: 6.7368vw;
+                height: 5.8947vw;
+            }
+            .cld-modal-body {
+                padding: 4.2105vw 0;
+            }
             /* Contact */
             .cld-main-contact {
                 border-top: 2.1052vw solid #c3644c;
