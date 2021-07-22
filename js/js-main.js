@@ -353,7 +353,6 @@ function cldSecDetect() {
         cldBody.classList.add('cld-contact-view');
         cldBody.classList.remove('cld-projects-view', 'cld-intro-view');
     } else if (cldProjectSec.getBoundingClientRect().top <= cldProjectBtn.getBoundingClientRect().bottom) {
-
         cldBody.classList.add('cld-projects-view');
         cldBody.classList.remove('cld-contact-view', 'cld-intro-view');
     } else {
@@ -364,41 +363,36 @@ function cldSecDetect() {
 
 // Navigation smooth scroll ----- //
 function cldSmoothScroll() {
-    cldNavLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            //handle click
-            e.preventDefault();
-            const cldHref = this.getAttribute('href');
-            const cldOffsetTop = document.querySelector(cldHref).offsetTop;
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        event.preventDefault();
 
-            scroll({
-                top: cldOffsetTop,
-                behavior: 'smooth'
-            });
-        });
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 800);
     });
 };
 
+
 // Modal slide down ----- //
-function cldModalAnimate() {
+// function cldModalAnimate() {
 
-    cldModalContent.style.top = 0;
+//     cldModalContent.style.top = 0;
 
-    var cldModalSlide = null,
-        cldModalPos = 0;
+//     var cldModalSlide = null,
+//         cldModalPos = 0;
 
-    clearInterval(cldModalSlide);
-    cldModalSlide = setInterval(modalFrame, 1);
+//     clearInterval(cldModalSlide);
+//     cldModalSlide = setInterval(modalFrame, 1);
 
-    function modalFrame() {
-        if (cldModalPos === 50) {
-            clearInterval(cldModalSlide);
-        } else {
-            cldModalPos += 1;
-            cldModalContent.style.top = cldModalPos + '%';
-        };
-    };
-};
+//     function modalFrame() {
+//         if (cldModalPos === 50) {
+//             clearInterval(cldModalSlide);
+//         } else {
+//             cldModalPos += 1;
+//             cldModalContent.style.top = cldModalPos + '%';
+//         };
+//     };
+// };
 
 // Modal projects open / close ----- //
 function cldModalOpenClose() {
@@ -412,7 +406,7 @@ function cldModalOpenClose() {
                 console.log('New Card Populating Modal');
             };
             // Show Modal
-            cldModalAnimate();
+            // cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
             // Fix carousel loading issue
             $('.slick-slider').slick('refresh');

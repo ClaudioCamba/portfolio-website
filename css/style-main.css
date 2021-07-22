@@ -484,6 +484,52 @@
                 opacity: 1;
             }
         }
+        /* Navigation Animation */
+        
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(28, 188, 155, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(28, 188, 155, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(28, 188, 155, 0);
+            }
+        }
+        
+        @keyframes pulse-yellow {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(234, 179, 44, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(234, 179, 44, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(234, 179, 44, 0);
+            }
+        }
+        
+        @keyframes pulse-red {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(195, 100, 76, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(195, 100, 76, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(195, 100, 76, 0);
+            }
+        }
         /* Navigation CTA ----- */
         
         .cld-nav-inner {
@@ -507,12 +553,12 @@
         
         .cld-nav-wrap>li {
             display: block;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
         
         .cld-nav-wrap>li:nth-child(2),
         .cld-nav-wrap>li:nth-child(1) {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         
         .cld-nav-wrap li a {
@@ -522,6 +568,22 @@
             display: block;
             border-radius: 50px;
             transition: all 0.3s;
+            transform: scale(1);
+        }
+        
+        .cld-nav-wrap .intro-btn {
+            animation: pulse-green 2s infinite;
+            box-shadow: 0 0 0 0 rgba(28, 188, 155, 1);
+        }
+        
+        .cld-nav-wrap .portfolio-btn {
+            animation: pulse-yellow 2s infinite;
+            box-shadow: 0 0 0 0 rgba(234, 179, 44, 1);
+        }
+        
+        .cld-nav-wrap .contact-btn {
+            animation: pulse-red 2s infinite;
+            box-shadow: 0 0 0 0 rgba(195, 100, 76, 1);
         }
         
         .cld-projects-view .cld-nav-wrap li a {
@@ -544,6 +606,7 @@
         .cld-projects-view .portfolio-btn,
         .cld-intro-view .intro-btn {
             padding: 60px 20px;
+            animation: none;
         }
         /* Projects ----- */
         
@@ -623,6 +686,10 @@
         .cld-box-img {
             overflow: hidden;
             position: relative;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
         }
         
         .cld-box-img:hover {
@@ -707,11 +774,18 @@
         /* Modal Section ----- */
         
         .cld-main-modal {
-            display: none;
+            /* display: none; */
+            visibility: hidden;
+            /* transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; */
         }
         
         .cld-modal-show .cld-main-modal {
-            display: block;
+            /* display: block; */
+            visibility: visible;
         }
         
         body.cld-modal-show {
@@ -742,14 +816,23 @@
             max-width: 1600px;
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 0%;
+            opacity: 0.0;
             border-radius: 15px;
             transform: translate(-50%, -50%);
             /* height: 250px; */
-            transition: all 0.5s;
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
             overflow: hidden;
             max-height: 95%;
             overflow: scroll;
+        }
+        
+        .cld-modal-show .cld-modal-content {
+            top: 50%;
+            opacity: 1;
         }
         
         .cld-modal-top {
@@ -1942,7 +2025,7 @@
             }
             .cld-nav-wrap>li:nth-child(2),
             .cld-nav-wrap>li:nth-child(1) {
-                margin-bottom: 0.8163vw;
+                margin-bottom: 1.6326vw;
             }
             /* Portfolio Section ----- */
             .cld-proj-inner {
@@ -2124,7 +2207,7 @@
             .cld-nav-wrap>li:nth-child(2),
             .cld-nav-wrap>li:nth-child(1) {
                 margin-bottom: 0;
-                margin-right: 5px;
+                margin-right: 20px;
             }
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
