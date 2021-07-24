@@ -312,7 +312,7 @@ var cldBody = document.querySelector('body'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
     cldModalTitle = document.querySelector('.cld-modal-body-title'),
-    cldModalDesc = document.querySelector('.cld-modal-body-desc'),
+    // cldModalDesc = document.querySelector('.cld-modal-body-desc'),
     cldModalCtaWrap = document.querySelector('.cld-modal-cta-wrap'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
     cldModalSlider = document.querySelector('.cld-modal-body-img'),
@@ -370,6 +370,15 @@ function cldSmoothScroll() {
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 800);
     });
+};
+
+// Control Slider state
+function cldControlSliderState() {
+    if (cldModalSlider.slick.paused) {
+        console.log('paused');
+    } else {
+        console.log('playing');
+    }
 };
 
 
@@ -498,11 +507,11 @@ function cldModalPopulating() {
         if (i === 0) {
             console.log('Append First Img & List');
             cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = '<li onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
+            cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldControlSliderState()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
         } else {
             console.log('Append Rest Img & List');
             cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = cldModalList.innerHTML + '<li onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</li>';
+            cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldControlSliderState()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
         };
     };
 
@@ -513,11 +522,11 @@ function cldModalPopulating() {
         cldModalTitle.innerHTML = '';
     }
 
-    if (typeof cldWebsiteInfo.portfolio[cldModalData].desc != "undefined") {
-        cldModalDesc.innerHTML = '<p>' + cldWebsiteInfo.portfolio[cldModalData].desc + '</p>'
-    } else {
-        cldModalDesc.innerHTML = '';
-    }
+    // if (typeof cldWebsiteInfo.portfolio[cldModalData].desc != "undefined") {
+    //     cldModalDesc.innerHTML = '<p>' + cldWebsiteInfo.portfolio[cldModalData].desc + '</p>'
+    // } else {
+    //     cldModalDesc.innerHTML = '';
+    // }
 
     if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkOne != "undefined") {
         cldModalLink1.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText + '</span>';
@@ -563,7 +572,7 @@ function cldModalPopulating() {
         vertical: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.vertical,
         verticalSwiping: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.verticalSwiping,
         cssEase: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.cssEase,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplaySpeed,
         draggable: true,
         pauseOnHover: true,

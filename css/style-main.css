@@ -488,45 +488,45 @@
         
         @keyframes pulse-green {
             0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(28, 188, 155, 0.7);
+                transform: scale(0.85);
+                box-shadow: 0 0 0 0 rgba(28, 188, 155, 1);
             }
             70% {
                 transform: scale(1);
                 box-shadow: 0 0 0 10px rgba(28, 188, 155, 0);
             }
             100% {
-                transform: scale(0.95);
+                transform: scale(0.85);
                 box-shadow: 0 0 0 0 rgba(28, 188, 155, 0);
             }
         }
         
         @keyframes pulse-yellow {
             0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(234, 179, 44, 0.7);
+                transform: scale(0.85);
+                box-shadow: 0 0 0 0 rgba(234, 179, 44, 1);
             }
             70% {
                 transform: scale(1);
                 box-shadow: 0 0 0 10px rgba(234, 179, 44, 0);
             }
             100% {
-                transform: scale(0.95);
+                transform: scale(0.85);
                 box-shadow: 0 0 0 0 rgba(234, 179, 44, 0);
             }
         }
         
         @keyframes pulse-red {
             0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(195, 100, 76, 0.7);
+                transform: scale(0.85);
+                box-shadow: 0 0 0 0 rgba(195, 100, 76, 1);
             }
             70% {
                 transform: scale(1);
                 box-shadow: 0 0 0 10px rgba(195, 100, 76, 0);
             }
             100% {
-                transform: scale(0.95);
+                transform: scale(0.85);
                 box-shadow: 0 0 0 0 rgba(195, 100, 76, 0);
             }
         }
@@ -544,16 +544,12 @@
         .cld-nav-wrap {
             position: absolute;
             right: 25px;
-            top: 25px;
-            /* padding-right: 25px;
-            padding-left: 24px;
-            padding-top: 25px; */
-            /* height: 100vh; */
+            top: 50px;
         }
         
         .cld-nav-wrap>li {
-            display: block;
-            /* overflow: hidden; */
+            display: flex;
+            justify-content: center;
         }
         
         .cld-nav-wrap>li:nth-child(2),
@@ -563,26 +559,42 @@
         
         .cld-nav-wrap li a {
             text-decoration: none;
-            padding: 20px;
+            padding: 25px;
             border: 5px solid #FFF;
-            display: block;
-            border-radius: 50px;
+            border-radius: 50%;
             transition: all 0.3s;
             transform: scale(1);
+            position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cld-nav-wrap a img {
+            max-width: 20px;
+            height: auto;
+            position: absolute;
+            transition: opacity 0.25s ease-in;
+        }
+        /* hide arrows on hover */
+        
+        .cld-nav-wrap a:hover img {
+            opacity: 0;
         }
         
         .cld-nav-wrap .intro-btn {
-            animation: pulse-green 2s infinite;
+            animation: pulse-green 1.5s infinite;
             box-shadow: 0 0 0 0 rgba(28, 188, 155, 1);
         }
         
         .cld-nav-wrap .portfolio-btn {
-            animation: pulse-yellow 2s infinite;
+            animation: pulse-yellow 1.5s infinite;
             box-shadow: 0 0 0 0 rgba(234, 179, 44, 1);
         }
         
         .cld-nav-wrap .contact-btn {
-            animation: pulse-red 2s infinite;
+            animation: pulse-red 1.5s infinite;
             box-shadow: 0 0 0 0 rgba(195, 100, 76, 1);
         }
         
@@ -590,12 +602,27 @@
             border: 5px solid #333c4a;
         }
         
+        .cld-nav-wrap a.intro-btn:hover {
+            background: transparent;
+            border-color: #1CBC9B;
+        }
+        
         .intro-btn {
             background: #1CBC9B;
         }
         
+        .cld-nav-wrap a.portfolio-btn:hover {
+            background: transparent;
+            border-color: #EAB32C;
+        }
+        
         .portfolio-btn {
             background-color: #EAB32C;
+        }
+        
+        .cld-nav-wrap a.contact-btn:hover {
+            background: transparent;
+            border-color: #c3644c;
         }
         
         .contact-btn {
@@ -605,8 +632,37 @@
         .cld-contact-view .contact-btn,
         .cld-projects-view .portfolio-btn,
         .cld-intro-view .intro-btn {
-            padding: 60px 20px;
+            padding: 60px 10px;
             animation: none;
+            border-radius: 50px;
+        }
+        /* Hide current section arrow */
+        
+        .cld-contact-view .contact-btn img,
+        .cld-projects-view .portfolio-btn img,
+        .cld-intro-view .intro-btn img {
+            display: none;
+        }
+        /* Single Arrow */
+        
+        .cld-intro-view .portfolio-btn img:nth-child(2),
+        .cld-projects-view .intro-btn img:nth-child(2),
+        .cld-projects-view .contact-btn img:nth-child(2),
+        .cld-contact-view .portfolio-btn img:nth-child(2) {
+            display: none;
+        }
+        /* Double Arrow */
+        
+        .cld-intro-view .contact-btn img:nth-child(1),
+        .cld-contact-view .intro-btn img:nth-child(1) {
+            display: none;
+        }
+        /* Arrow face correct direction */
+        
+        .cld-contact-view .cld-nav-wrap a img,
+        .cld-projects-view .intro-btn img {
+            -ms-transform: rotate(180deg);
+            transform: rotate( 180deg);
         }
         /* Projects ----- */
         
@@ -1071,13 +1127,12 @@
             visibility: visible;
             opacity: 1;
         }
-        
-        .cld-modal-body p {
+        /* .cld-modal-body p {
             font-size: 16px;
             line-height: 1.4;
             font-weight: 300;
             display: none;
-        }
+        } */
         
         .cld-modal-body-list {
             list-style-type: none;
@@ -1092,23 +1147,66 @@
         }
         
         .cld-modal-body-list li {
-            font-size: 14px;
-            line-height: 1.4;
-            font-weight: 400;
-            display: list-item;
-            padding: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: stretch;
+            /* padding: 10px; */
             margin: 10px 0;
             border-radius: 10px;
-            border: 1px solid #CBCED1;
-            /* -webkit-box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5);
-            box-shadow: 0px 0px 1px 0px rgba(51, 60, 74, 0.5); */
-            color: rgba(51, 60, 74, 0.5);
+            /* border: 1px solid #CBCED1; */
+            /* color: rgba(51, 60, 74, 0.5); */
+            overflow: hidden;
         }
         
         .cld-modal-body-list li:hover {
-            border: 1px solid #EAB32C;
+            /* border: 1px solid #EAB32C; */
             color: rgba(51, 60, 74, 0.7);
             cursor: pointer;
+        }
+        
+        .cld-modal-body-list li .cld-list-desc {
+            padding: 10px;
+            display: inline-block;
+            width: 400px;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        
+        .cld-modal-body-list li .cld-play-pause {
+            display: inline-block;
+            width: 30px;
+            vertical-align: middle;
+            /* background: red; */
+            position: relative;
+            overflow: hidden;
+            transition: all 1s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .cld-modal-body-list .cld-modal-active .cld-play-pause img {
+            left: 0;
+        }
+        
+        .cld-modal-body-list .cld-modal-active .cld-play-pause {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .cld-modal-body-list li span img {
+            max-width: 100%;
+            min-width: 20px;
+            width: 20px;
+            height: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: -50px;
+            margin: auto;
+            transition: all 0.5s ease;
         }
         /* .cld-modal-body ol {
             counter-reset: my-awesome-counter;
@@ -1153,7 +1251,7 @@
             /* border: 1px solid rgba(51, 60, 74, 0.3); */
             /* -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5);
             box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5); */
-            border: 1px solid #EAB32C;
+            /* border: 1px solid #EAB32C; */
             color: #333c4a;
             background: #EAB32C;
         }
@@ -1262,6 +1360,7 @@
         .cld-contact-form label span {
             position: absolute;
             padding: 5px;
+            padding-bottom: 0;
             background-color: #FFF;
             margin-left: 10px;
             color: #333c4a;
@@ -1765,8 +1864,11 @@
             }
             /* Navigation Section ----- */
             .cld-nav-wrap li a {
-                padding: 1.3559vw;
+                padding: 1.6949vw;
                 border: 0.3389vw solid #FFF;
+            }
+            .cld-nav-wrap a img {
+                max-width: 1.6326vw;
             }
             .cld-projects-view .cld-nav-wrap li a {
                 border: 0.3389vw solid #333c4a;
@@ -1774,7 +1876,7 @@
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
             .cld-intro-view .intro-btn {
-                padding: 4.0677vw 1.3559vw;
+                padding: 4.0677vw 0.6779vw;
             }
             /* Modal Section */
             .cld-modal-body-title h1 {
@@ -2025,7 +2127,7 @@
             }
             .cld-nav-wrap>li:nth-child(2),
             .cld-nav-wrap>li:nth-child(1) {
-                margin-bottom: 1.6326vw;
+                margin-bottom: 2.0408vw;
             }
             /* Portfolio Section ----- */
             .cld-proj-inner {
@@ -2203,6 +2305,7 @@
             /* Navigation Section ----- */
             .cld-nav-wrap>li {
                 display: inline-block;
+                vertical-align: middle;
             }
             .cld-nav-wrap>li:nth-child(2),
             .cld-nav-wrap>li:nth-child(1) {
@@ -2212,14 +2315,17 @@
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
             .cld-intro-view .intro-btn {
-                padding: 15px 45px;
+                padding: 10px 45px;
             }
             .cld-nav-wrap {
                 top: 2.5641vw;
             }
             .cld-nav-wrap li a {
-                padding: 15px;
+                padding: 20px;
                 border: 5px solid #FFF;
+            }
+            .cld-nav-wrap a img {
+                max-width: 20px;
             }
             .cld-projects-view .cld-nav-wrap li a {
                 border: 5px solid #333c4a;
@@ -2253,6 +2359,11 @@
             }
             .cld-intro-text .btn-slide {
                 margin-top: 7.6923vw;
+            }
+            ul.cld-nav-wrap {
+                background: rgba(255, 255, 255, 0.75);
+                border-radius: 50px;
+                padding: 5px;
             }
             /* Portfolio Section ----- */
             .cld-sec-title {
@@ -2563,7 +2674,7 @@
             }
             /* Navigation Section */
             .cld-nav-wrap li a {
-                padding: 2.2222vw;
+                padding: 2.9629vw;
                 border: 0.7407vw solid #FFF;
             }
             .cld-projects-view .cld-nav-wrap li a {
@@ -2572,10 +2683,17 @@
             .cld-contact-view .contact-btn,
             .cld-projects-view .portfolio-btn,
             .cld-intro-view .intro-btn {
-                padding: 2.2222vw 6.6666vw;
+                padding: 1.4814vw 6.6666vw;
+            }
+            .cld-nav-wrap a img {
+                max-width: 2.9629vw;
             }
             .cld-nav-wrap {
                 top: 3.7037vw;
+            }
+            ul.cld-nav-wrap {
+                border-radius: 7.4074vw;
+                padding: 0.7407vw;
             }
             /* Intro Section */
             .cld-main-header-inner {
@@ -3082,4 +3200,3 @@
             }
         }
         /* TESTING */
-        /* Modal Section ----- */
