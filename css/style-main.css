@@ -1158,16 +1158,10 @@
             overflow: hidden;
         }
         
-        .cld-modal-body-list li:hover {
-            /* border: 1px solid #EAB32C; */
-            color: rgba(51, 60, 74, 0.7);
-            cursor: pointer;
-        }
-        
         .cld-modal-body-list li .cld-list-desc {
             padding: 10px;
             display: inline-block;
-            width: 400px;
+            width: 395px;
             vertical-align: middle;
             font-size: 14px;
             line-height: 1.4;
@@ -1176,7 +1170,7 @@
         
         .cld-modal-body-list li .cld-play-pause {
             display: inline-block;
-            width: 30px;
+            width: 35px;
             vertical-align: middle;
             /* background: red; */
             position: relative;
@@ -1186,16 +1180,7 @@
             visibility: hidden;
         }
         
-        .cld-modal-body-list .cld-modal-active .cld-play-pause img {
-            left: 0;
-        }
-        
-        .cld-modal-body-list .cld-modal-active .cld-play-pause {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .cld-modal-body-list li span img {
+        .cld-modal-body-list .cld-play-pause img {
             max-width: 100%;
             min-width: 20px;
             width: 20px;
@@ -1207,6 +1192,24 @@
             left: -50px;
             margin: auto;
             transition: all 0.5s ease;
+        }
+        
+        .cld-modal-body-list .cld-modal-active .cld-play-pause img {
+            left: 0;
+        }
+        
+        .cld-modal-body-list .cld-modal-active .cld-play-pause {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .cld-modal-content.cld-slider-playing .cld-play-pause .cld-slide-pause {
+            display: inline-block;
+        }
+        
+        .cld-modal-content.cld-slider-playing .cld-play-pause .cld-slide-play,
+        .cld-modal-content .cld-play-pause .cld-slide-pause {
+            display: none;
         }
         /* .cld-modal-body ol {
             counter-reset: my-awesome-counter;
@@ -1245,6 +1248,12 @@
             font-weight: 800;
             background: rgba(0, 0, 0, 0.1);
         } */
+        
+        .cld-modal-body-list li:hover {
+            /* border: 1px solid #EAB32C; */
+            color: rgba(51, 60, 74, 0.7);
+            cursor: pointer;
+        }
         
         .cld-modal-body-list .cld-modal-active,
         .cld-modal-body-list .cld-modal-active:hover {
@@ -1907,9 +1916,6 @@
             .cld-modal-body-list li:last-child {
                 margin-bottom: 1.3559vw;
             }
-            .cld-modal-body-list li:last-child {
-                margin-bottom: 1.3559vw;
-            }
             .tooltip .tooltiptext {
                 width: 5.4237vw;
                 padding: 0.3389vw 0;
@@ -2036,9 +2042,11 @@
             }
             /* Modal Section */
             .cld-modal-body-list li {
+                border-radius: 0.7326vw;
+            }
+            .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.0256vw;
                 padding: 0.7326vw;
-                border-radius: 0.7326vw;
             }
             /* Contact Section ----- */
             .cld-main-contact {
@@ -2481,7 +2489,7 @@
             .cld-modal-body-list li:last-child {
                 margin-bottom: 1.5384vw;
             }
-            .cld-modal-body-list li {
+            .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.4358vw;
                 padding: 1.0256vw;
             }
@@ -2819,13 +2827,10 @@
             .cld-modal-body-list li:first-child {
                 margin-top: 2.9629vw;
             }
-            .cld-modal-body-list li:first-child {
-                margin-top: 2.9629vw;
-            }
             .cld-modal-body-list li:last-child {
                 margin-bottom: 2.2222vw;
             }
-            .cld-modal-body-list li {
+            .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.7777vw;
                 padding: 1.4814vw;
             }
@@ -3020,9 +3025,11 @@
                 margin-bottom: 3.1578vw;
             }
             .cld-modal-body-list li {
+                margin: 2.1052vw 0;
+            }
+            .cld-modal-body-list li .cld-list-desc {
                 font-size: 2.5263vw;
                 padding: 2.1052vw;
-                margin: 2.1052vw 0;
             }
             .cld-modal-body-list li:last-child {
                 margin-bottom: 3.1578vw;

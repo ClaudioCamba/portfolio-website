@@ -21,7 +21,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 2000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': false,
                     'cssEase': 'ease',
@@ -117,12 +117,12 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 4000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplaySpeed': 1000
+                    'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
                     ['assets/projects/mmp-usp/usp-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -148,12 +148,12 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 4000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplaySpeed': 1000
+                    'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
                     ['assets/projects/targetav/targetav-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -179,12 +179,12 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 4000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplaySpeed': 1000
+                    'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
                     ['assets/projects/gpmc/gpmc-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -211,12 +211,12 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 4000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplaySpeed': 1000
+                    'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
                     ['assets/projects/portfolio-v1/portfoliov1-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -242,12 +242,12 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
-                    'speed': 4000,
+                    'speed': 1000,
                     'fade': false,
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplaySpeed': 1000
+                    'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
                     ['assets/projects/minagent/minagent-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -373,15 +373,29 @@ function cldSmoothScroll() {
 };
 
 // Control Slider state
-function cldControlSliderState() {
+function cldPlayPause() {
+    // Toggle Play / Pause
     if (cldModalSlider.slick.paused) {
-        console.log('paused');
+        $(cldModalSlider).slick('slickPlay');
+        $(cldModalSlider).slick('slickNext');
+        cldModalContent.classList.add('cld-slider-playing');
     } else {
         console.log('playing');
-    }
+        $(cldModalSlider).slick('slickPause');
+        cldModalContent.classList.remove('cld-slider-playing');
+    };
 };
 
-
+// Detect Slider state
+function cldSliderState() {
+    if (cldModalSlider.slick.paused) {
+        console.log('paused');
+        cldModalContent.classList.remove('cld-slider-playing');
+    } else {
+        console.log('playing');
+        cldModalContent.classList.add('cld-slider-playing');
+    };
+};
 // Modal slide down ----- //
 // function cldModalAnimate() {
 
@@ -427,6 +441,7 @@ function cldModalOpenClose() {
         if (cldBody.classList.value.indexOf('cld-modal-show') > -1) {
             if (event.target !== cldModalBg && event.target !== cldModalCloseBtn) {
                 console.log('Clicked On Modal');
+                cldSliderState();
             } else {
                 cldClosingModal();
             };
@@ -472,6 +487,7 @@ function cldClosingModal() {
 // List control slider ----- //
 function cldListControl(index) {
     $(cldModalSlider).slick('slickGoTo', index);
+    $(cldModalSlider).slick('slickPause');
 };
 
 // Onload functions ----- //
@@ -507,11 +523,11 @@ function cldModalPopulating() {
         if (i === 0) {
             console.log('Append First Img & List');
             cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldControlSliderState()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
         } else {
             console.log('Append Rest Img & List');
             cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldControlSliderState()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
         };
     };
 
@@ -572,7 +588,7 @@ function cldModalPopulating() {
         vertical: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.vertical,
         verticalSwiping: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.verticalSwiping,
         cssEase: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.cssEase,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplaySpeed,
         draggable: true,
         pauseOnHover: true,
@@ -590,4 +606,5 @@ function cldModalPopulating() {
     } else {
         cldModalContent.classList.remove('cld-modal-vertical-btn');
     };
+
 };
