@@ -100,7 +100,7 @@
                 <div class="cld-proj-card">
                     <div class="cld-box-inner">
                         <div class="cld-box-img">
-                            <a target="_blank" href="#"><img alt="image" src="assets/projects/comparison-tables/project-comparison-table.jpg"></a>
+                            <a target="_blank" href="https://claudiocamba.github.io/s21comparisontable/"><img alt="image" src="assets/projects/comparison-tables/project-comparison-table.jpg"></a>
                             <div modal-data="samsungcomparisontable" class="cld-used-tech"></div>
                         </div>
                         <div class="cld-box-desc">
@@ -108,7 +108,7 @@
                                 <h5 class="cld-card-title header1-txt">Samsung Comparison Table</h5>
                                 <p>Hi! Don't hesitate to contact me if you have any questions by using the form below or the the contact details on the right.Hi! Don't hesitate.</p>
                             </div>
-                            <div class="cld-cta-wrap"><a class="cld-view btn-slide btn-yel"><span>Generator</span></a><a class="cld-learn btn-slide btn-yel" href="javascript: void(0)" modal-data="samsungcomparisontable"><span>Learn More</span></a></div>
+                            <div class="cld-cta-wrap"><a class="cld-view btn-slide btn-yel" target="_blank" href="https://claudiocamba.github.io/s21comparisontable/"><span>Generator</span></a><a class="cld-learn btn-slide btn-yel" href="javascript: void(0)" modal-data="samsungcomparisontable"><span>Learn More</span></a></div>
                         </div>
                     </div>
                 </div>
@@ -277,13 +277,33 @@
                         <h3 class="cld-intouch header1-txt">Get In Touch!</h3>
                         <p>Hi! Don't hesitate to contact me if you have any questions by using the form below or the the contact details on the right.</p>
                     </div>
-                    <form action="/action_page.php" class="cld-contact-form">
-                        <label class="cld-fname" for="fname"><input id="fname" name="fname" placeholder="Your name?" type="text"><span>Name</span></label> <label class="cld-lemail" for="lemail"><input id="lemail" name="lemail" placeholder="Your email?" type="text"><span>Email</span></label><br>
-                        <label for="lsubject"><input id="lsubject" name="lsubject" placeholder="Email subject?" type="text"><span>Subject</span></label><br>
-                        <label for="lmessage">
-						<textarea id="lmessage" name="lmessage" placeholder="Dont be shy, leave a message..." rows="5"></textarea> <span>Message</span></label><br>
-                        <button class="btn-slide  btn-red"><span>Send</span></button>
+                    <form id="my-form" action="https://formspree.io/f/xjvjaboq" method="POST" class="cld-contact-form">
+                        <label class="cld-fname" for="_fname">
+                            <input id="fname" name="_fname" placeholder="Your name?" type="text" required><span>Name</span>
+                        </label>
+                        <label class="cld-lemail" for="email">
+                                <input id="email" placeholder="Your email?" type="email" name="email" required><span>Email</span>
+                            </label>
+                        <br>
+                        <label for="subject">
+                            <input id="subject" name="subject" placeholder="Email subject?" type="text" required><span>Subject</span>
+                        </label>
+                        <br>
+                        <label for="message">
+						<textarea id="message"  placeholder="Dont be shy, leave a message..." rows="5" type="text" name="message" required></textarea> <span>Message</span>
+                    </label>
+                        <br>
+                        <p id="my-form-status"></p>
+                        <button class="btn-slide  btn-red" id="my-form-button"><span>Send</span></button>
                     </form>
+                    <!-- <form id="my-form" action="https://formspree.io/f/xjvjaboq" method="POST">
+                        <label>Email:</label>
+                        <input type="email" name="email" />
+                        <label>Message:</label>
+                        <input type="text" name="message" />
+                        <button id="my-form-button">Submit</button>
+                        <p id="my-form-status"></p>
+                    </form> -->
                 </div>
                 <div class="cld-info-detail">
                     <div class="cld-prof-pic"><img alt="image" src="assets/other/claudio-camba-contact-kv.png"></div>
@@ -322,12 +342,39 @@
         </div>
     </section>
 
+
+
+    <!-- Place this script at the end of the body tag -->
+    <!-- 
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset()
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script> -->
+
     <!-- Footer Section -->
     <footer id="cld-main-footer">
         <div class="cld-footer-inner">
 
             <p>&#169; Claudio Camba 2021. This portfolio was designed and coded by claudio. <a href="https://github.com/ClaudioCamba/portfolio-website" target="_blank">Check out the repo!</a></p>
-            <p>Icon by <a href="https://freeicons.io/profile/3">icon king1</a> on <a href="https://freeicons.io">freeicons.io</a></p>
+            <p>Icon by <a target="_blank" href="https://freeicons.io/profile/3">icon king1</a> on <a target="_blank" href="https://freeicons.io">freeicons.io</a></p>
         </div>
     </footer>
     <!-- JQuery -->

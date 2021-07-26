@@ -297,7 +297,8 @@ const cldWebsiteInfo = {
 };
 
 // Section Variables ----- //
-var cldBody = document.querySelector('body'),
+var form = document.getElementById("my-form"),
+    cldBody = document.querySelector('body'),
     cldNavLinks = document.querySelectorAll('.cld-nav-wrap li a, .cld-intro-btm .btn-yel'),
     cldIntroSec = document.getElementById('cld-intro'),
     cldProjectSec = document.getElementById('cld-projects'),
@@ -324,7 +325,30 @@ var cldBody = document.querySelector('body'),
     cldIntroBtm = document.querySelector('.cld-intro-btm'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
     cldModalData = '',
-    cldSliderEventListner = false;
+    cldSliderEventListner = false,
+    cldIntervalCounter = 0;
+
+// Form Submition 
+function cldFormSubmit() {
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
+};
 
 // Show / Hide Intro Desc Class
 function cldShowHideIntroDesc() {
@@ -374,6 +398,7 @@ function cldSmoothScroll() {
 
 // Control Slider state
 function cldPlayPause() {
+    // setTimeout(function() {
     // Toggle Play / Pause
     if (cldModalSlider.slick.paused) {
         $(cldModalSlider).slick('slickPlay');
@@ -384,17 +409,23 @@ function cldPlayPause() {
         $(cldModalSlider).slick('slickPause');
         cldModalContent.classList.remove('cld-slider-playing');
     };
+    // }, 250);
 };
 
 // Detect Slider state
 function cldSliderState() {
-    if (cldModalSlider.slick.paused) {
-        console.log('paused');
-        cldModalContent.classList.remove('cld-slider-playing');
-    } else {
-        console.log('playing');
-        cldModalContent.classList.add('cld-slider-playing');
-    };
+    // setTimeout(function() {
+    if (cldModalSlider.classList.contains('slick-initialized')) {
+        if (cldModalSlider.slick.paused) {
+            console.log('paused');
+            cldModalContent.classList.remove('cld-slider-playing');
+        } else {
+            console.log('playing');
+            cldModalContent.classList.add('cld-slider-playing');
+        };
+    }
+
+    // }, 250);
 };
 // Modal slide down ----- //
 // function cldModalAnimate() {
@@ -486,9 +517,24 @@ function cldClosingModal() {
 
 // List control slider ----- //
 function cldListControl(index) {
-    $(cldModalSlider).slick('slickGoTo', index);
-    $(cldModalSlider).slick('slickPause');
+    cldIntervalCounter = 0;
+
+    var gridCheckjQuery = setInterval(function() {
+        if (index === $(cldModalSlider).slick('slickCurrentSlide')) {
+            clearInterval(gridCheckjQuery); //clear interval 
+            console.log('CLEARED');
+        } else if (cldIntervalCounter >= 5) {
+            clearInterval(gridCheckjQuery); //clear interval
+            console.log('CLEARED2');
+        } else {
+            console.log('DONE IT');
+            $(cldModalSlider).slick('slickGoTo', index);
+            $(cldModalSlider).slick('slickPause');
+            cldSliderState();
+        }
+    }, 200);
 };
+
 
 // Onload functions ----- //
 var chkReadyState = setInterval(function() {
@@ -501,6 +547,7 @@ var chkReadyState = setInterval(function() {
         cldSmoothScroll();
         cldUsedTechs();
         cldSlickListner();
+        cldFormSubmit();
     }
 }, 100);
 
@@ -513,6 +560,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', function() {
     cldSecDetect();
     $('.slick-slider').slick('refresh');
+    cldSliderState();
 });
 
 // Modal Populating ----- //
@@ -597,6 +645,7 @@ function cldModalPopulating() {
         focusOnSelect: true,
         pauseOnFocus: true,
         swipeToSlide: true,
+        centerMode: true,
         arrows: true
     });
 

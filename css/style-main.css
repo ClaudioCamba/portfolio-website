@@ -94,6 +94,7 @@
         .cld-intro-desc-long,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
+        .cld-contact-form input[type="email"],
         .cld-contact-form textarea,
         .cld-contact-detail li span,
         .cld-info a {
@@ -919,7 +920,7 @@
         
         .cld-modal-body {
             background: #fff;
-            padding: 30px 50px 50px;
+            padding: 30px 40px 40px;
             display: block;
             /* justify-content: center; */
             /* align-items: stretch;*/
@@ -978,20 +979,22 @@
         }
         /* Modal Slider */
         
+        .cld-modal-body-img .slick-list {
+            padding: 0!important;
+        }
+        
         .cld-modal-body-img.slick-vertical .slick-slide {
             border: 0 solid transparent !important;
         }
         
         .cld-modal-slider-wrap {
-            width: 66.66%;
-            /* border-radius: 15px;
-        overflow: hidden; */
+            width: 65.79%;
         }
         
         .cld-modal-body-img {
             max-width: 1000px;
             min-height: 666.672px;
-            background: #FFF;
+            /* background: lightgrey; */
             /* border-radius: 20px; */
         }
         
@@ -1022,6 +1025,7 @@
         .cld-modal-body-img .slick-prev:before,
         .cld-modal-body-img .slick-next:before {
             font-size: 46px;
+            opacity: .5;
         }
         
         .cld-modal-body-img .slick-prev {
@@ -1035,6 +1039,13 @@
         .cld-modal-body-img .slick-dots li button:before {
             color: #333c4a;
         }
+        
+        .slick-prev:hover:before,
+        .slick-prev:focus:before,
+        .slick-next:hover:before,
+        .slick-next:focus:before {
+            color: #EAB32C;
+        }
         /* Modal Text */
         /* .cld-modal-body-title,
         .cld-modal-body-desc,
@@ -1043,8 +1054,8 @@
         } */
         
         .cld-modal-body-text {
-            width: 30%;
-            padding-right: 3.33%;
+            width: 32%;
+            padding-right: 2.21%;
         }
         /* title */
         
@@ -1152,16 +1163,17 @@
             align-items: stretch;
             /* padding: 10px; */
             margin: 10px 0;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             /* border: 1px solid #CBCED1; */
             /* color: rgba(51, 60, 74, 0.5); */
             overflow: hidden;
+            transition: 0.25s;
         }
         
         .cld-modal-body-list li .cld-list-desc {
             padding: 10px;
             display: inline-block;
-            width: 395px;
+            width: 426px;
             vertical-align: middle;
             font-size: 14px;
             line-height: 1.4;
@@ -1170,20 +1182,20 @@
         
         .cld-modal-body-list li .cld-play-pause {
             display: inline-block;
-            width: 35px;
+            width: 40px;
             vertical-align: middle;
-            /* background: red; */
+            background: #FFF;
+            border: 5px solid #EAB32C;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
             position: relative;
             overflow: hidden;
-            transition: all 1s;
             opacity: 0;
             visibility: hidden;
         }
         
         .cld-modal-body-list .cld-play-pause img {
-            max-width: 100%;
-            min-width: 20px;
-            width: 20px;
+            width: 65%;
             height: auto;
             position: absolute;
             top: 0;
@@ -1249,20 +1261,21 @@
             background: rgba(0, 0, 0, 0.1);
         } */
         
+        .cld-modal-body-list li {
+            color: #999EA4;
+            background-color: #E0E2E4;
+            border-radius: 10px;
+        }
+        
         .cld-modal-body-list li:hover {
-            /* border: 1px solid #EAB32C; */
-            color: rgba(51, 60, 74, 0.7);
+            color: #333c4a;
             cursor: pointer;
         }
         
         .cld-modal-body-list .cld-modal-active,
         .cld-modal-body-list .cld-modal-active:hover {
-            /* border: 1px solid rgba(51, 60, 74, 0.3); */
-            /* -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5);
-            box-shadow: 0px 0px 5px 0px rgba(51, 60, 74, 0.5); */
-            /* border: 1px solid #EAB32C; */
+            background-color: #EAB32C;
             color: #333c4a;
-            background: #EAB32C;
         }
         
         .cld-modal-body-title h1 {
@@ -1381,6 +1394,7 @@
         }
         
         .cld-contact-form input[type="text"],
+        .cld-contact-form input[type="email"],
         .cld-contact-form textarea {
             max-width: 646px;
             width: 100%;
@@ -1397,12 +1411,13 @@
         }
         
         .cld-contact-form input[type="text"]:focus,
+        .cld-contact-form input[type="email"]:focus,
         .cld-contact-form textarea:focus {
             outline: transparent;
         }
         
         .cld-contact-form label:nth-child(1) input[type="text"],
-        .cld-contact-form label:nth-child(2) input[type="text"] {
+        .cld-contact-form label:nth-child(2) input[type="email"] {
             width: 100%;
             max-width: 296px;
         }
@@ -1431,19 +1446,25 @@
         }
         
         .cld-contact-form input[type="text"]:focus~span,
+        .cld-contact-form input[type="email"]:focus~span,
         .cld-contact-form textarea:focus~span {
             color: #c3644c;
         }
         
         .cld-contact-form input[type="text"]:focus,
+        .cld-contact-form input[type="email"]:focus,
         .cld-contact-form textarea:focus {
             border-color: #c3644c;
         }
         
+        p#my-form-status {
+            display: inline-block;
+            width: 65%;
+        }
+        
         .cld-contact-form button {
-            display: block;
-            margin-right: 0;
-            margin-left: auto;
+            display: inline-block;
+            width: 35%;
             margin-top: 10px;
         }
         /* Profile Image */
@@ -1667,21 +1688,6 @@
         /* MEDIA QUERY TABLET ------------------------------ */
         
         @media only screen and (max-width: 1700px) {
-            .cld-modal-content {
-                max-width: 94.1176vw;
-            }
-            .cld-modal-body-img {
-                min-height: 39.216vw;
-            }
-        }
-        
-        @media only screen and (min-width: 1601px) and (min-height: 900px) {
-            .cld-main-header {
-                height: 100vh;
-            }
-        }
-        
-        @media only screen and (max-width: 1700px) {
             /* Navigation Section ----- */
             .cld-nav-inner {
                 width: 100%;
@@ -1691,6 +1697,24 @@
                 margin-bottom: 1.35vw;
             }
             /* Projects Modal */
+            .cld-modal-content {
+                max-width: 94.1176vw;
+            }
+            .cld-modal-body-img {
+                min-height: 39.216vw;
+            }
+            .cld-modal-body-list li .cld-play-pause {
+                width: 10%;
+            }
+            .cld-modal-body-list li .cld-list-desc {
+                width: 90%;
+            }
+        }
+        
+        @media only screen and (min-width: 1601px) and (min-height: 900px) {
+            .cld-main-header {
+                height: 100vh;
+            }
         }
         
         @media only screen and (max-width: 1600px) and (min-width: 1476px) and (min-height: 55.6776vw) and (max-height:156.25vw) {
@@ -1819,7 +1843,7 @@
                 padding: 3.2258vw 3.2258vw 0 3.2258vw;
             }
             .cld-modal-body {
-                padding: 1.9354vw 3.2258vw 3.2258vw;
+                padding: 1.9354vw 2.5806vw 2.5806vw;
             }
             .cld-modal-used-tech>.tooltip {
                 margin-bottom: 1.2903vw;
@@ -1852,6 +1876,7 @@
             .cld-intro-desc-long,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea,
             .cld-contact-detail li span,
             .cld-info a {
@@ -1957,6 +1982,7 @@
                 margin-bottom: 2.0338vw;
             }
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea {
                 border-radius: 0.5423vw;
                 margin-bottom: 1.3559vw;
@@ -2041,9 +2067,9 @@
                 padding-bottom: 1.4652vw;
             }
             /* Modal Section */
-            .cld-modal-body-list li {
+            /* .cld-modal-body-list li {
                 border-radius: 0.7326vw;
-            }
+            } */
             .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.0256vw;
                 padding: 0.7326vw;
@@ -2087,6 +2113,7 @@
             .cld-intro-desc-long,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea,
             .cld-contact-detail li span,
             .cld-info a {
@@ -2203,11 +2230,12 @@
             .cld-contact-form input[type="text"],
             .cld-contact-form textarea,
             .cld-contact-form label:nth-child(1) input[type="text"],
-            .cld-contact-form label:nth-child(2) input[type="text"] {
+            .cld-contact-form label:nth-child(2) input[type="email"] {
                 max-width: unset;
                 width: 100%;
             }
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea {
                 border-radius: 7.5px;
                 margin-bottom: 20px;
@@ -2296,6 +2324,7 @@
             .cld-intro-desc-long,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea,
             .cld-contact-detail li span,
             .cld-info a {
@@ -2493,6 +2522,12 @@
                 font-size: 1.4358vw;
                 padding: 1.0256vw;
             }
+            .cld-modal-body-list .cld-play-pause img {
+                max-width: 23px;
+                height: auto;
+                height: 100%;
+                max-height: 23px;
+            }
             .cld-modal-cta-wrap {
                 padding: 2.0512vw 0;
             }
@@ -2516,6 +2551,7 @@
                 padding-left: 4.1025vw;
             }
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea {
                 border-radius: 0.7692vw;
                 margin-bottom: 2.0512vw;
@@ -2666,6 +2702,7 @@
             .cld-intro-desc-long,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea,
             .cld-contact-detail li span,
             .cld-info a {
@@ -2831,7 +2868,8 @@
                 margin-bottom: 2.2222vw;
             }
             .cld-modal-body-list li .cld-list-desc {
-                font-size: 1.7777vw;
+                /* font-size: 1.7777vw; */
+                font-size: 12px;
                 padding: 1.4814vw;
             }
             /* Contact Section */
@@ -2886,6 +2924,7 @@
                 top: -2.2740vw;
             }
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea {
                 border: 1.5px solid #333c4a;
             }
@@ -2930,6 +2969,7 @@
             .cld-intro-desc-long,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea,
             .cld-contact-detail li span,
             .cld-info a {
@@ -3127,11 +3167,9 @@
                 padding-left: 0;
             }
             .cld-contact-form input[type="text"],
+            .cld-contact-form input[type="email"],
             .cld-contact-form textarea {
                 border: 2px solid #333c4a;
-            }
-            .cld-contact-form input[type="text"],
-            .cld-contact-form textarea {
                 border-radius: 1.5789vw;
                 margin-bottom: 3.1578vw;
                 padding: 2.1052vw;
