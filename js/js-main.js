@@ -328,6 +328,15 @@ var form = document.getElementById("my-form"),
     cldSliderEventListner = false,
     cldIntervalCounter = 0;
 
+// Scroll to updated message
+function scrollToFormMsg() {
+    cldContactSec.querySelector('.cld-intouch').scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+    });
+};
+
 // Form Submition 
 function cldFormSubmit() {
     async function handleSubmit(event) {
@@ -341,10 +350,15 @@ function cldFormSubmit() {
                 'Accept': 'application/json'
             }
         }).then(response => {
-            status.innerHTML = "Thanks for your submission!";
+            status.innerHTML = 'Thanks for your submission!';
+            cldContactSec.classList.add('cld-form-submitted');
+            cldContactSec.querySelector('.cld-intouch').innerText = 'Thank You!'
             form.reset()
+            scrollToFormMsg();
         }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            cldContactSec.classList.add('cld-form-error');
+            status.innerHTML = 'Oops! There was a problem submitting your form'
+            scrollToFormMsg();
         });
     }
     form.addEventListener("submit", handleSubmit)
@@ -559,7 +573,9 @@ window.addEventListener('scroll', function() {
 // Resize eventlistener ----- //
 window.addEventListener('resize', function() {
     cldSecDetect();
-    $('.slick-slider').slick('refresh');
+    if (document.querySelector('body').classList.contains('cld-modal-show')) {
+        $('.slick-slider').slick('refresh');
+    };
     cldSliderState();
 });
 

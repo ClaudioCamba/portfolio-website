@@ -92,6 +92,7 @@
         
         p,
         .cld-intro-desc-long,
+        .cld-form-title p span,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form input[type="email"],
@@ -885,6 +886,7 @@
             overflow: hidden;
             max-height: 95%;
             overflow: scroll;
+            border: 1px solid #FFF;
         }
         
         .cld-modal-show .cld-modal-content {
@@ -1079,7 +1081,7 @@
             /* padding-top: 5px; */
             /* padding-left: 5px; */
             color: #FFFFFF;
-            /* text-shadow: -3px 3px #000; */
+            text-shadow: -3px 3px #000;
         }
         /* .cld-modal-used-tech {
         display: flex;
@@ -1215,6 +1217,12 @@
             visibility: visible;
         }
         
+        .cld-modal-disclaimer p {
+            font-size: 12px;
+            padding: 5px;
+            color: #808080;
+        }
+        
         .cld-modal-content.cld-slider-playing .cld-play-pause .cld-slide-pause {
             display: inline-block;
         }
@@ -1270,6 +1278,8 @@
         .cld-modal-body-list li:hover {
             color: #333c4a;
             cursor: pointer;
+            -webkit-box-shadow: inset 0px 0px 0px 1px #eab32c;
+            box-shadow: inset 0px 0px 0px 1px #eab32c;
         }
         
         .cld-modal-body-list .cld-modal-active,
@@ -1370,14 +1380,49 @@
             letter-spacing: 2px;
         }
         
+        .cld-form-submitted .cld-intouch {
+            background-color: #1CBC9B;
+        }
+        
         .cld-form-title p {
             color: #333c4a;
             display: inline-block;
             width: 520px;
             padding-left: 20px;
             font-weight: 700;
+            text-align: center;
+        }
+        
+        .cld-form-title p span {
+            font-weight: 700;
+        }
+        
+        .cld-below {
+            display: none;
+        }
+        
+        .cld-right {
+            display: inline-block;
         }
         /* Contact form */
+        
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+        }
+        
+        .cld-form-submitted .cld-contact-form input[type="text"]::placeholder,
+        .cld-form-submitted .cld-contact-form input[type="email"]::placeholder,
+        .cld-form-submitted .cld-contact-form textarea::placeholder {
+            opacity: 0;
+        }
         
         .cld-contact-form label span {
             position: absolute;
@@ -1401,13 +1446,19 @@
             border-radius: 7.5px;
             margin-bottom: 20px;
             padding: 10px;
-            border: 2px solid #333c4a;
+            border: 2px solid #1CBC9B;
             color: #333c4a;
             margin-top: 15px;
             resize: none;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
             transition: 0.2s;
             font-weight: 500;
+        }
+        
+        .cld-contact-form input[type="text"]:invalid,
+        .cld-contact-form input[type="email"]:invalid,
+        .cld-contact-form textarea:invalid {
+            border-color: #333c4a;
         }
         
         .cld-contact-form input[type="text"]:focus,
@@ -1457,13 +1508,10 @@
             border-color: #c3644c;
         }
         
-        p#my-form-status {
-            display: inline-block;
-            width: 65%;
-        }
-        
         .cld-contact-form button {
-            display: inline-block;
+            display: block;
+            margin-right: 0;
+            margin-left: auto;
             width: 35%;
             margin-top: 10px;
         }
@@ -1503,6 +1551,22 @@
             -ms-transform: rotate(-3deg);
             -webkit-transform: rotate( -3deg);
             transform: rotate( -3deg);
+        }
+        
+        .cld-form-submitted .cld-prof-pic .cld-kv-default,
+        .cld-form-error .cld-prof-pic .cld-kv-default,
+        .cld-prof-pic .cld-kv-error,
+        .cld-prof-pic .cld-kv-submit {
+            display: none;
+        }
+        
+        .cld-form-submitted .cld-prof-pic .cld-kv-submit {
+            display: block;
+            background-color: #1CBC9B;
+        }
+        
+        .cld-form-error .cld-prof-pic .cld-kv-error {
+            display: block;
         }
         
         .cld-contact-detail li {
@@ -1874,6 +1938,7 @@
             }
             p,
             .cld-intro-desc-long,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2111,6 +2176,7 @@
             /* All */
             p,
             .cld-intro-desc-long,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2227,6 +2293,12 @@
                 /* font-size: 16px; */
                 padding-left: 40px;
             }
+            .cld-below {
+                display: inline-block;
+            }
+            .cld-right {
+                display: none;
+            }
             .cld-contact-form input[type="text"],
             .cld-contact-form textarea,
             .cld-contact-form label:nth-child(1) input[type="text"],
@@ -2322,6 +2394,7 @@
             }
             p,
             .cld-intro-desc-long,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2700,6 +2773,7 @@
             }
             p,
             .cld-intro-desc-long,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2967,6 +3041,7 @@
             /* All */
             p,
             .cld-intro-desc-long,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
