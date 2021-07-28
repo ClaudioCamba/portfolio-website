@@ -328,14 +328,14 @@ var form = document.getElementById("my-form"),
     cldSliderEventListner = false,
     cldIntervalCounter = 0;
 
-// Scroll to updated message
-function scrollToFormMsg() {
-    cldContactSec.querySelector('.cld-intouch').scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-    });
-};
+// // Scroll to updated message
+// function scrollToFormMsg() {
+//     cldContactSec.querySelector('.cld-intouch').scrollIntoView({
+//         behavior: "smooth",
+//         block: "center",
+//         inline: "center"
+//     });
+// };
 
 // Form Submition 
 function cldFormSubmit() {
@@ -350,9 +350,8 @@ function cldFormSubmit() {
                 'Accept': 'application/json'
             }
         }).then(response => {
-            status.innerHTML = 'Thanks for your submission!';
             cldContactSec.classList.add('cld-form-submitted');
-            cldContactSec.querySelector('.cld-intouch').innerText = 'Thank You!'
+            cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
             form.reset()
             scrollToFormMsg();
         }).catch(error => {
