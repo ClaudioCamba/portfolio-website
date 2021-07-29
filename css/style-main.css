@@ -723,7 +723,7 @@
             align-items: stretch;
             /* justify-content: space-between; */
             justify-content: center;
-            padding-bottom: 100px;
+            padding-bottom: 150px;
         }
         /* Card */
         
@@ -1001,6 +1001,35 @@
             margin: 0;
         }
         /* Modal Slider */
+        /* .slick-track {
+            display: flex;
+        }
+        
+        .slick-track .slick-slide {
+            display: flex;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        } */
+        /* .cld-modal-vid-wrap video {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        } */
+        /* .vid-ratio-480 video {
+            max-width: 854px;
+            padding: 93px 0;
+        } */
+        
+        .cld-modal-vid-wrap iframe {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            max-width: 1000px;
+            max-height: 562.5px;
+            padding: 52px 0;
+        }
         
         .cld-modal-body-img .slick-list {
             padding: 0!important;
@@ -1825,6 +1854,11 @@
             .cld-modal-body-list li .cld-list-desc {
                 width: 90%;
             }
+            .cld-modal-vid-wrap iframe {
+                max-width: 58.8235vw;
+                max-height: 33.0882vw;
+                padding: 3.0588vw 0;
+            }
         }
         
         @media only screen and (min-width: 1601px) and (min-height: 900px) {
@@ -2175,7 +2209,7 @@
                 text-shadow: -0.3663vw 0.3663vw #c3644c;
             }
             .cld-proj-wrap {
-                padding-bottom: 7.3260vw;
+                padding-bottom: 10.9890vw;
             }
             .cld-card-title {
                 padding-bottom: 1.0989vw;
@@ -2608,6 +2642,11 @@
                 margin-right: 1.8461vw;
             }
             /* Modal Section */
+            .cld-modal-vid-wrap iframe {
+                max-width: 100%;
+                max-height: 55.282vw;
+                padding: 0;
+            }
             .cld-modal-content {
                 max-width: 96vw;
             }
@@ -3020,7 +3059,7 @@
                 padding-bottom: 2.2222vw;
             }
             .cld-proj-wrap {
-                padding-bottom: 8.8888vw;
+                padding-bottom: 22.2222vw;
             }
             /* Projects Modal */
             .cld-modal-used-tech img {
@@ -3234,7 +3273,7 @@
                 margin-right: 3.8461vw;
             }
             .cld-proj-wrap {
-                padding-bottom: 12.6315vw;
+                padding-bottom: 21.0526vw;
             }
             /* Projects Modal */
             .cld-modal-body>div {

@@ -26,9 +26,11 @@ const cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease',
                     'verticalSwiping': false,
+                    'autoplay': false,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
+                    ['<iframe src="https://player.vimeo.com/video/580855196" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
@@ -57,6 +59,7 @@ const cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease',
                     'verticalSwiping': false,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -89,6 +92,7 @@ const cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease',
                     'verticalSwiping': false,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -122,6 +126,7 @@ const cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -153,6 +158,7 @@ const cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -184,6 +190,7 @@ const cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -216,6 +223,7 @@ const cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -247,6 +255,7 @@ const cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -281,6 +290,7 @@ const cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease-in-out',
                     'verticalSwiping': false,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -584,13 +594,25 @@ function cldModalPopulating() {
     // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc.length; i++) {
         if (i === 0) {
+            if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
+                cldModalSlider.innerHTML = '<div class="cld-modal-vid-wrap">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '</div>';
+                cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            } else {
+                cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
+                cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            };
             console.log('Append First Img & List');
-            cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+
         } else {
+            if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
+                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<div class="cld-modal-vid-wrap">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '</div>';
+                cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            } else {
+                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
+                cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+            };
             console.log('Append Rest Img & List');
-            cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
-            cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][2] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
+
         };
     };
 
@@ -651,7 +673,7 @@ function cldModalPopulating() {
         vertical: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.vertical,
         verticalSwiping: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.verticalSwiping,
         cssEase: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.cssEase,
-        autoplay: true,
+        autoplay: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplay,
         autoplaySpeed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplaySpeed,
         draggable: true,
         pauseOnHover: true,
