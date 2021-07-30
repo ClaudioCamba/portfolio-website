@@ -30,7 +30,7 @@ const cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['<iframe src="https://player.vimeo.com/video/580855196" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
+                    ['https://player.vimeo.com/video/580855196', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/comparison-tables/comparison-table-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
@@ -316,8 +316,8 @@ var form = document.getElementById("my-form"),
     cldIntroBtn = document.querySelectorAll('.intro-btn')[0],
     cldProjectBtn = document.querySelectorAll('.portfolio-btn')[0],
     cldContactBtn = document.querySelectorAll('.contact-btn')[0],
-    windowWidth = window.innerWidth,
-    windowHeight = window.innerHeight,
+    // windowWidth = window.innerWidth,
+    // windowHeight = window.innerHeight,
     cldLearnBtn = document.querySelectorAll('.cld-learn'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
@@ -334,7 +334,8 @@ var form = document.getElementById("my-form"),
     cldUsedTech = document.querySelectorAll('.cld-used-tech'),
     cldIntroBtm = document.querySelector('.cld-intro-btm'),
     // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
-    cldModalData = '',
+    cldVidWidth = 0;
+cldModalData = '',
     cldSliderEventListner = false,
     cldIntervalCounter = 0;
 
@@ -346,6 +347,22 @@ var form = document.getElementById("my-form"),
 //         inline: "center"
 //     });
 // };
+
+function cldWidthDetect() {
+    if (window.innerWidth > 1700) {
+        console.log('1700+');
+        cldVidWidth = 'width:1000px;height:562.5px;';
+    } else if (window.innerWidth <= 1700 && window.innerWidth >= 976) {
+        console.log('1700');
+        cldVidWidth = 'width:58.8235vw;height:33.0882vw;';
+    } else if (window.innerWidth <= 975 && window.innerWidth >= 476) {
+        console.log('88.9230');
+        cldVidWidth = 'width:88.9230vw;height:59.2820vw;';
+    } else if (window.innerWidth <= 475) {
+        console.log('100vw');
+        cldVidWidth = 'width:100vw;height:66.6652vw;';
+    };
+};
 
 // Form Submition 
 function cldFormSubmit() {
@@ -582,8 +599,18 @@ window.addEventListener('scroll', function() {
 // Resize eventlistener ----- //
 window.addEventListener('resize', function() {
     cldSecDetect();
+    cldWidthDetect();
     if (document.querySelector('body').classList.contains('cld-modal-show')) {
         $('.slick-slider').slick('refresh');
+        for (var d = 0; d < document.querySelectorAll('.cld-modal-vid-wrap iframe').length; d++) {
+
+            // console.log(document.querySelectorAll('.cld-modal-vid-wrap iframe')[0].attributes.style.value);
+            // console.log(cldVidWidth);
+            if (document.querySelectorAll('.cld-modal-vid-wrap iframe')[0].attributes.style.value !== cldVidWidth) {
+                document.querySelectorAll('.cld-modal-vid-wrap iframe')[d].setAttribute('style', cldVidWidth);
+                console.log('DOESNT MATCH');
+            }
+        };
     };
     cldSliderState();
 });
@@ -591,11 +618,13 @@ window.addEventListener('resize', function() {
 // Modal Populating ----- //
 function cldModalPopulating() {
 
+    cldWidthDetect();
+
     // Appending slide images
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc.length; i++) {
         if (i === 0) {
             if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
-                cldModalSlider.innerHTML = '<div class="cld-modal-vid-wrap">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '</div>';
+                cldModalSlider.innerHTML = '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; picture-in-picture"></iframe></div>';
                 cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
             } else {
                 cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
@@ -605,7 +634,7 @@ function cldModalPopulating() {
 
         } else {
             if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
-                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<div class="cld-modal-vid-wrap">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '</div>';
+                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; picture-in-picture"></iframe></div>';
                 cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
             } else {
                 cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';

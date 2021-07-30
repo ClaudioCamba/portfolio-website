@@ -1026,8 +1026,8 @@
             width: 100%;
             display: block;
             margin: 0 auto;
-            max-width: 1000px;
-            max-height: 562.5px;
+            /* max-width: 1000px;
+            max-height: 562.5px; */
             padding: 52px 0;
         }
         
@@ -1219,27 +1219,32 @@
             /* border: 1px solid #CBCED1; */
             /* color: rgba(51, 60, 74, 0.5); */
             overflow: hidden;
-            transition: 0.25s;
+            /* transition: 0.25s; */
         }
         
         .cld-modal-body-list li .cld-list-desc {
             padding: 10px;
             display: inline-block;
-            width: 426px;
+            width: 421px;
+            padding-right: 15px;
+            border-right: 0 solid #FFF;
             vertical-align: middle;
             font-size: 14px;
             line-height: 1.4;
             font-weight: 400;
         }
         
+        .cld-modal-body-list .cld-modal-active .cld-list-desc {
+            width: 421px;
+            padding-right: 10px;
+            border-right: 5px solid #FFF;
+        }
+        
         .cld-modal-body-list li .cld-play-pause {
             display: inline-block;
             width: 40px;
             vertical-align: middle;
-            background: #FFF;
-            border: 5px solid #EAB32C;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+            background: #EAB32C;
             position: relative;
             overflow: hidden;
             opacity: 0;
@@ -1247,7 +1252,7 @@
         }
         
         .cld-modal-body-list .cld-play-pause img {
-            width: 65%;
+            width: 50%;
             height: auto;
             position: absolute;
             top: 0;
@@ -1849,14 +1854,21 @@
                 min-height: 39.216vw;
             }
             .cld-modal-body-list li .cld-play-pause {
-                width: 10%;
+                width: 2.3529vw;
             }
             .cld-modal-body-list li .cld-list-desc {
-                width: 90%;
+                padding: 0.5882vw;
+                width: 24.7647vw;
+                padding-right: 0.8823vw;
+            }
+            .cld-modal-body-list .cld-modal-active .cld-list-desc {
+                width: 24.7647vw;
+                padding-right: 0.5882vw;
+                border-right: 0.2941vw solid #FFF;
             }
             .cld-modal-vid-wrap iframe {
-                max-width: 58.8235vw;
-                max-height: 33.0882vw;
+                /* max-width: 58.8235vw;
+                max-height: 33.0882vw; */
                 padding: 3.0588vw 0;
             }
         }
@@ -2223,7 +2235,7 @@
             } */
             .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.0256vw;
-                padding: 0.7326vw;
+                /* padding: 0.7326vw; */
             }
             /* Contact Section ----- */
             .cld-main-contact {
@@ -2643,8 +2655,8 @@
             }
             /* Modal Section */
             .cld-modal-vid-wrap iframe {
-                max-width: 100%;
-                max-height: 55.282vw;
+                /* max-width: 100%;
+                max-height: 55.282vw; */
                 padding: 0;
             }
             .cld-modal-content {
@@ -2725,15 +2737,25 @@
             .cld-modal-body-list li:last-child {
                 margin-bottom: 1.5384vw;
             }
+            .cld-modal-body-list li .cld-play-pause {
+                width: 8vw;
+            }
             .cld-modal-body-list li .cld-list-desc {
                 font-size: 1.4358vw;
                 padding: 1.0256vw;
+                padding-right: 1.5384vw;
+                width: 78.2564vw;
+            }
+            .cld-modal-body-list .cld-modal-active .cld-list-desc {
+                width: 78.2564vw;
+                padding-right: 1.0256vw;
+                border-right: 0.5128vw solid #FFF;
             }
             .cld-modal-body-list .cld-play-pause img {
-                max-width: 23px;
+                max-width: 3vw;
                 height: auto;
-                height: 100%;
-                max-height: 23px;
+                height: auto;
+                max-height: 3vw;
             }
             .cld-modal-cta-wrap {
                 padding: 2.0512vw 0;
@@ -3280,7 +3302,7 @@
                 max-width: 90.8235vw;
             }
             .cld-modal-content {
-                max-width: 100%;
+                max-width: 99.5789vw;
             }
             .cld-modal-top button span {
                 font-size: 5.2631vw;
@@ -3304,6 +3326,21 @@
             .cld-modal-body-list li .cld-list-desc {
                 font-size: 2.5263vw;
                 padding: 2.1052vw;
+                padding-right: 3.1578vw;
+            }
+            .cld-modal-body-list .cld-modal-active .cld-list-desc {
+                width: 77.0526vw;
+                padding-right: 2.1052vw;
+                border-right: 1.0526vw solid #FFF;
+            }
+            .cld-modal-body-list li .cld-play-pause {
+                width: 8.4210vw;
+            }
+            .cld-modal-body-list .cld-play-pause img {
+                max-width: 6vw;
+                height: auto;
+                height: auto;
+                max-height: 6vw;
             }
             .cld-modal-body-list li:last-child {
                 margin-bottom: 3.1578vw;
