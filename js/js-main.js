@@ -21,6 +21,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': false,
@@ -54,6 +55,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': true,
                     'vertical': false,
@@ -87,6 +89,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': true,
                     'vertical': false,
@@ -121,6 +124,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': true,
@@ -153,6 +157,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': true,
@@ -185,6 +190,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': true,
@@ -218,6 +224,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': true,
@@ -250,6 +257,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': false,
                     'vertical': true,
@@ -285,6 +293,7 @@ const cldWebsiteInfo = {
             ],
             'modalContent': {
                 'slick': {
+                    'infinite': true,
                     'speed': 1000,
                     'fade': true,
                     'vertical': false,
@@ -318,7 +327,7 @@ var form = document.getElementById("my-form"),
     cldContactBtn = document.querySelectorAll('.contact-btn')[0],
     // windowWidth = window.innerWidth,
     // windowHeight = window.innerHeight,
-    cldLearnBtn = document.querySelectorAll('.cld-learn'),
+    cldLearnBtn = document.querySelectorAll('.cld-learn, .cld-box-img>a'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
@@ -352,13 +361,16 @@ var form = document.getElementById("my-form"),
 
 // Vimeo video control
 function cldiFrameVidControl() {
-
     if (document.querySelectorAll('.cld-modal-vid-wrap iframe').length > 0) {
         iframe = document.querySelector('.cld-modal-vid-wrap iframe');
         player = new Vimeo.Player(iframe);
 
         player.on('play', function() {
-            console.log('played the video!');
+            if (cldModalContent.classList.contains('cld-slider-playing')) {
+                console.log('played the video!');
+                $(cldModalSlider).slick('slickPause');
+                cldSliderState();
+            };
         });
 
         player.getVideoTitle().then(function(title) {
@@ -378,18 +390,15 @@ function cldiFrameVidControl() {
     }
 };
 
+// Pausing video
 function cldVidPause() {
     // check if video has loaded
     if (document.querySelectorAll('.cld-modal-vid-wrap .cld-vid-loaded').length > 0) {
         player.getPaused().then(function(paused) {
-            if (!paused && !cldBody.classList.contains('cld-modal-show') || !cldModalContent.classList.contains('cld-slider-playing')) {
+            if (!paused && !cldBody.classList.contains('cld-modal-show') || cldModalContent.classList.contains('cld-slider-playing')) {
                 // `paused` indicates whether the player is paused
                 console.log('false', paused);
                 player.pause();
-                player.getCurrentTime().then(function(seconds) {
-                    // `seconds` indicates the current playback position of the video
-                    console.log('seconds:', seconds);
-                });
             };
 
         });
@@ -553,8 +562,9 @@ function cldModalOpenClose() {
             // cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
             // Fix carousel loading issue
-            $('.slick-slider').slick('refresh');
-
+            if (!cldModalSlider.querySelectorAll('iframe').length > 0) {
+                $('.slick-slider').slick('refresh');
+            }
         });
     });
     // close
@@ -662,6 +672,10 @@ window.addEventListener('resize', function() {
                 console.log('DOESNT MATCH');
             }
         };
+        setTimeout(function() {
+            cldiFrameVidControl();
+        }, 500);
+
     };
     cldSliderState();
 });
@@ -675,7 +689,7 @@ function cldModalPopulating() {
     for (var i = 0; i < cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc.length; i++) {
         if (i === 0) {
             if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
-                cldModalSlider.innerHTML = '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen"></iframe></div>';
+                cldModalSlider.innerHTML = '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; picture-in-picture"></iframe></div>';
                 cldModalList.innerHTML = '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
             } else {
                 cldModalSlider.innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
@@ -685,7 +699,7 @@ function cldModalPopulating() {
 
         } else {
             if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i].toString().indexOf('/video/') > -1) {
-                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen"></iframe></div>';
+                cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<div class="cld-modal-vid-wrap"><iframe style="' + cldVidWidth + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '" frameborder="0" allow="autoplay; picture-in-picture"></iframe></div>';
                 cldModalList.innerHTML = cldModalList.innerHTML + '<li><span class="cld-list-desc" onclick="cldListControl(' + i + ')" li-index="' + i + '">' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '</span><span onclick="cldPlayPause()" class="cld-play-pause"><img class="cld-slide-play" alt="image" src="assets/icons/play-icon.png"><img class="cld-slide-pause" alt="image" src="assets/icons/pause-icon.png"></span></li>';
             } else {
                 cldModalSlider.innerHTML = cldModalSlider.innerHTML + '<img alt="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][1] + '" src="' + cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[i][0] + '">';
@@ -744,7 +758,7 @@ function cldModalPopulating() {
 
     // Carousel Swipe Initiate
     $(cldModalSlider).slick({
-        infinite: true,
+        infinite: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.infinite,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,

@@ -822,7 +822,7 @@
         
         .cld-card-title {
             padding-bottom: 15px;
-            line-height: 80%;
+            /* line-height: 80%; */
         }
         
         .cld-box-desc p {
