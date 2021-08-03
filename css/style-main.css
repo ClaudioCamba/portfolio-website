@@ -92,9 +92,10 @@
         
         p,
         .cld-intro-desc-long,
-        .cld-form-title p span,
+        /* .cld-form-title p span,
         .cld-form-title p>.cld-right,
-        .cld-form-title p>.cld-below,
+        .cld-form-title p>.cld-below, */
+        
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form input[type="email"],
@@ -1456,19 +1457,17 @@
             font-weight: 700;
             text-align: center;
         }
-        
-        .cld-form-title p>.cld-right,
+        /* .cld-form-title p>.cld-right,
         .cld-form-title p>.cld-below {
             font-weight: 700;
-        }
-        
-        .cld-below {
+        } */
+        /* .cld-below {
             display: none;
         }
         
         .cld-right {
             display: inline-block;
-        }
+        } */
         /* Contact form */
         
         input:-webkit-autofill,
@@ -2042,9 +2041,9 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-form-title p span,
+            /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
-            .cld-form-title p>.cld-below,
+            .cld-form-title p>.cld-below, */
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2282,9 +2281,9 @@
             /* All */
             p,
             .cld-intro-desc-long,
-            .cld-form-title p span,
+            /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
-            .cld-form-title p>.cld-below,
+            .cld-form-title p>.cld-below, */
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2431,12 +2430,12 @@
                 /* font-size: 16px; */
                 padding-left: 40px;
             }
-            .cld-below {
+            /* .cld-below {
                 display: inline-block;
             }
             .cld-right {
                 display: none;
-            }
+            } */
             .cld-contact-form input[type="text"],
             .cld-contact-form textarea,
             .cld-contact-form label:nth-child(1) input[type="text"],
@@ -2532,9 +2531,9 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-form-title p span,
+            /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
-            .cld-form-title p>.cld-below,
+            .cld-form-title p>.cld-below, */
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2954,9 +2953,9 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-form-title p span,
+            /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
-            .cld-form-title p>.cld-below,
+            .cld-form-title p>.cld-below, */
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -3233,9 +3232,9 @@
             /* All */
             p,
             .cld-intro-desc-long,
-            .cld-form-title p span,
+            /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
-            .cld-form-title p>.cld-below,
+            .cld-form-title p>.cld-below, */
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
