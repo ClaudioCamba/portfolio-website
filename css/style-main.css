@@ -59,11 +59,6 @@
             color: #333c4a;
         }
         
-        .cld-footer-desc.cld-txt-grn,
-        .cld-txt-grn a {
-            color: #1cbc9b;
-        }
-        
         .title1-txt {
             font-size: 168px;
             font-weight: 600;
@@ -1829,9 +1824,15 @@
         }
         
         .cld-footer-inner p.cld-footer-desc,
-        .cld-footer-inner .cld-footer-desc a {
+        .cld-footer-desc a {
             font-weight: 200;
             color: #FFF;
+        }
+        
+        .cld-footer-inner .cld-footer-desc.cld-txt-grn,
+        .cld-footer-inner .cld-txt-grn a {
+            font-weight: 200;
+            color: #1cbc9b;
         }
         /* MEDIA QUERY TABLET ------------------------------ */
         
@@ -2536,7 +2537,7 @@
             .btn-slide span,
             .cld-footer-inner p.cld-footer-desc,
             .cld-footer-inner .cld-footer-desc a {
-                font-size: 1.2307vw;
+                font-size: 10px;
             }
             .cld-sec-title {
                 padding-top: 0.5128vw;
@@ -2956,7 +2957,7 @@
             .btn-slide span,
             .cld-footer-inner p.cld-footer-desc,
             .cld-footer-inner .cld-footer-desc a {
-                font-size: 1.6296vw;
+                font-size: 10px;
             }
             .btn-slide {
                 width: 25.4814vw;
@@ -3236,7 +3237,7 @@
             .btn-slide span,
             .cld-footer-inner p.cld-footer-desc,
             .cld-footer-inner .cld-footer-desc a {
-                font-size: 2.5263vw;
+                font-size: 9px;
             }
             .btn-slide {
                 padding: 1.5789vw 0;
