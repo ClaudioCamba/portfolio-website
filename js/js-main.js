@@ -450,7 +450,7 @@ function cldFormSubmit() {
             if (!cldContactSec.classList.contains('cld-form-submitted')) {
                 cldContactSec.classList.add('cld-form-error');
                 cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error.png')
-                status.innerHTML = 'Oops! There was a problem submitting your form'
+                cldContactSec.querySelector('.cld-intouch').innerText = 'Oops! There was a problem submitting your form'
                 scrollToFormMsg();
             }
         });

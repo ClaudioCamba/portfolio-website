@@ -59,6 +59,11 @@
             color: #333c4a;
         }
         
+        .cld-footer-desc.cld-txt-grn,
+        .cld-txt-grn a {
+            color: #1cbc9b;
+        }
+        
         .title1-txt {
             font-size: 168px;
             font-weight: 600;
@@ -105,8 +110,8 @@
         }
         
         .btn-slide span,
-        .cld-footer-inner p,
-        .cld-footer-inner a {
+        .cld-footer-inner p.cld-footer-desc,
+        .cld-footer-inner .cld-footer-desc a {
             font-size: 12px;
             font-weight: 400;
         }
@@ -836,6 +841,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-top: 5px;
         }
         
         .cld-modal-cta-wrap a:empty,
@@ -1132,6 +1138,7 @@
             /* padding-left: 5px; */
             color: #FFFFFF;
             text-shadow: -3px 3px #000;
+            padding: 0 7px;
         }
         /* .cld-modal-used-tech {
         display: flex;
@@ -1440,8 +1447,7 @@
             width: 100%;
         }
         
-        .cld-form-submitted .cld-form-title p,
-        .cld-form-error .cld-form-title p {
+        .cld-form-submitted .cld-form-title p {
             display: none;
         }
         
@@ -1458,9 +1464,7 @@
             font-weight: 700;
         }
         
-        .cld-below,
-        .cld-form-error .cld-below,
-        .cld-form-error .cld-right {
+        .cld-below {
             display: none;
         }
         
@@ -1820,12 +1824,12 @@
             text-align: center;
         }
         
-        .cld-footer-inner a {
-            display: inline-block;
+        .cld-footer-inner .cld-footer-desc a {
+            display: inline;
         }
         
-        .cld-footer-inner p,
-        .cld-footer-inner a {
+        .cld-footer-inner p.cld-footer-desc,
+        .cld-footer-inner .cld-footer-desc a {
             font-weight: 200;
             color: #FFF;
         }
@@ -2530,8 +2534,8 @@
                 font-size: 1.6410vw;
             }
             .btn-slide span,
-            .cld-footer-inner p,
-            .cld-footer-inner a {
+            .cld-footer-inner p.cld-footer-desc,
+            .cld-footer-inner .cld-footer-desc a {
                 font-size: 1.2307vw;
             }
             .cld-sec-title {
@@ -2709,13 +2713,20 @@
                 margin-bottom: 2.5641vw;
             }
             .tooltip .tooltiptext {
-                width: 8.2051vw;
+                /* width: 8.2051vw;
                 padding: 0.5128vw 0;
                 border-radius: 0.6153vw;
                 left: 55%;
                 font-size: 1.0256vw;
                 margin-left: -4.3076vw;
-                top: 125%;
+                top: 125%; */
+                width: 80px;
+                padding: 3px 0;
+                border-radius: 4px;
+                left: 55%;
+                font-size: 10px;
+                margin-left: -42px;
+                top: 130%;
             }
             .cld-modal-body {
                 padding: 2.5641vw 3.5897vw;
@@ -2943,8 +2954,8 @@
                 font-size: 1.9259vw;
             }
             .btn-slide span,
-            .cld-footer-inner p,
-            .cld-footer-inner a {
+            .cld-footer-inner p.cld-footer-desc,
+            .cld-footer-inner .cld-footer-desc a {
                 font-size: 1.6296vw;
             }
             .btn-slide {
@@ -3223,8 +3234,8 @@
                 font-size: 3.9vw;
             }
             .btn-slide span,
-            .cld-footer-inner p,
-            .cld-footer-inner a {
+            .cld-footer-inner p.cld-footer-desc,
+            .cld-footer-inner .cld-footer-desc a {
                 font-size: 2.5263vw;
             }
             .btn-slide {
