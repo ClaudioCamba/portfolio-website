@@ -440,15 +440,16 @@ function cldFormSubmit() {
                 'Accept': 'application/json'
             }
         }).then(response => {
-
-            cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
             form.reset();
-            cldContactSec.classList.add('cld-form-submitted');
             cldContactSec.classList.remove('cld-form-error');
+            cldContactSec.classList.add('cld-form-submitted');
+            cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-submitted');
+            cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
             scrollToFormMsg();
         }).catch(error => {
             if (!cldContactSec.classList.contains('cld-form-submitted')) {
                 cldContactSec.classList.add('cld-form-error');
+                cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error')
                 status.innerHTML = 'Oops! There was a problem submitting your form'
                 scrollToFormMsg();
             }

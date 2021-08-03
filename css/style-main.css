@@ -1613,15 +1613,14 @@
             -webkit-transform: rotate( -3deg);
             transform: rotate( -3deg);
         }
-        
-        .cld-form-submitted .cld-prof-pic .cld-kv-default,
+        /* .cld-form-submitted .cld-prof-pic .cld-kv-default,
         .cld-form-error .cld-prof-pic .cld-kv-default,
         .cld-prof-pic .cld-kv-error,
         .cld-prof-pic .cld-kv-submit {
             display: none;
-        }
+        } */
         
-        .cld-form-submitted .cld-prof-pic .cld-kv-submit {
+        .cld-form-submitted .cld-prof-pic .cld-kv-default {
             display: block;
             background-color: #1CBC9B;
         }
