@@ -1456,7 +1456,8 @@
             text-align: center;
         }
         
-        .cld-form-title p span {
+        .cld-contact-inner .cld-form-title p>span,
+        .cld-title-form-wrap .cld-form-title p {
             font-weight: 700;
         }
         
