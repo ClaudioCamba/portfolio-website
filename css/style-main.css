@@ -96,6 +96,7 @@
         .cld-form-title p>.cld-right,
         .cld-form-title p>.cld-below, */
         
+        .cld-form-title .cld-form-desc,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form input[type="email"],
@@ -1449,7 +1450,7 @@
             display: none;
         }
         
-        .cld-form-title p {
+        .cld-form-title .cld-form-desc {
             color: #333c4a;
             display: inline-block;
             width: 520px;
@@ -2044,6 +2045,7 @@
             /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
             .cld-form-title p>.cld-below, */
+            .cld-form-title .cld-form-desc,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2284,6 +2286,7 @@
             /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
             .cld-form-title p>.cld-below, */
+            .cld-form-title .cld-form-desc,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2534,6 +2537,7 @@
             /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
             .cld-form-title p>.cld-below, */
+            .cld-form-title .cld-form-desc,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2956,6 +2960,7 @@
             /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
             .cld-form-title p>.cld-below, */
+            .cld-form-title .cld-form-desc,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -3235,6 +3240,7 @@
             /* .cld-form-title p span,
             .cld-form-title p>.cld-right,
             .cld-form-title p>.cld-below, */
+            .cld-form-title .cld-form-desc,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
