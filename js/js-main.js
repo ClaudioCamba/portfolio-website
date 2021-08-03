@@ -468,7 +468,7 @@ function cldShowHideIntroDesc() {
 // Used tech ----- //
 function cldUsedTechs() {
     for (var e = 0; e < cldUsedTech.length; e++) {
-        var cldHoldtech = cldUsedTech[e].getAttribute('modal-data');
+        var cldHoldtech = cldUsedTech[e].getAttribute('data-modal');
         for (var t = 0; t < cldWebsiteInfo.portfolio[cldHoldtech].techUsed.length; t++) {
             if (t === 0) {
                 cldUsedTech[e].innerHTML = '<img alt="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][1] + ' Icon' + '" src="' + cldWebsiteInfo.portfolio[cldHoldtech].techUsed[t][0] + '">';
@@ -563,8 +563,8 @@ function cldModalOpenClose() {
     cldLearnBtn.forEach(function(btn) {
         btn.addEventListener('click', function() {
             // Handle click ----- //
-            if (cldModalData !== this.getAttribute('modal-data')) {
-                cldModalData = this.getAttribute('modal-data');
+            if (cldModalData !== this.getAttribute('data-modal')) {
+                cldModalData = this.getAttribute('data-modal');
                 cldModalPopulating();
                 console.log('New Card Populating Modal');
             };
