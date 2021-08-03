@@ -1,8 +1,5 @@
 // Website Content
 const cldWebsiteInfo = {
-    'intro': {
-
-    },
     'portfolio': {
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
@@ -65,6 +62,7 @@ const cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
+                    ['https://player.vimeo.com/video/582152829', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -99,6 +97,7 @@ const cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
+                    ['https://player.vimeo.com/video/582157253', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/category-affinity/category-affinity-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/category-affinity/category-affinity-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/category-affinity/category-affinity-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
@@ -134,11 +133,13 @@ const cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
+                    ['https://player.vimeo.com/video/582147719', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/mmp-usp/usp-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/mmp-usp/usp-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/mmp-usp/usp-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/mmp-usp/usp-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/mmp-usp/usp-slide-5.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+
                 ]
             }
         },
@@ -309,9 +310,6 @@ const cldWebsiteInfo = {
                 ]
             }
         }
-    },
-    'contact': {
-
     }
 };
 
@@ -359,11 +357,18 @@ var form = document.getElementById("my-form"),
 //     });
 // };
 
+cldBody.classList.add('cld-animation-setup');
+
 // Vimeo video control
 function cldiFrameVidControl() {
     if (document.querySelectorAll('.cld-modal-vid-wrap iframe').length > 0) {
         iframe = document.querySelector('.cld-modal-vid-wrap iframe');
         player = new Vimeo.Player(iframe);
+
+        player.ready().then(function() {
+            // the player is ready
+            console.log('READY');
+        });
 
         player.on('play', function() {
             if (cldModalContent.classList.contains('cld-slider-playing')) {
@@ -435,11 +440,14 @@ function cldFormSubmit() {
                 'Accept': 'application/json'
             }
         }).then(response => {
-            cldContactSec.classList.add('cld-form-submitted');
+
             cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
-            form.reset()
+            form.reset();
+            cldContactSec.classList.add('cld-form-submitted');
+            cldContactSec.classList.remove('cld-form-error');
             scrollToFormMsg();
         }).catch(error => {
+            cldContactSec.classList.remove('cld-form-submitted');
             cldContactSec.classList.add('cld-form-error');
             status.innerHTML = 'Oops! There was a problem submitting your form'
             scrollToFormMsg();
@@ -674,7 +682,7 @@ window.addEventListener('resize', function() {
         };
         setTimeout(function() {
             cldiFrameVidControl();
-        }, 500);
+        }, 1000);
 
     };
     cldSliderState();
