@@ -1624,10 +1624,9 @@
             display: block;
             background-color: #1CBC9B;
         }
-        
-        .cld-form-error .cld-prof-pic .cld-kv-error {
+        /* .cld-form-error .cld-prof-pic .cld-kv-error {
             display: block;
-        }
+        } */
         
         .cld-contact-detail li {
             border: 2px solid #c3644c;

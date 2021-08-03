@@ -443,13 +443,13 @@ function cldFormSubmit() {
             form.reset();
             cldContactSec.classList.remove('cld-form-error');
             cldContactSec.classList.add('cld-form-submitted');
-            cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-submitted');
+            cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-submitted.png');
             cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
             scrollToFormMsg();
         }).catch(error => {
             if (!cldContactSec.classList.contains('cld-form-submitted')) {
                 cldContactSec.classList.add('cld-form-error');
-                cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error')
+                cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error.png')
                 status.innerHTML = 'Oops! There was a problem submitting your form'
                 scrollToFormMsg();
             }
