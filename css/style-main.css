@@ -92,8 +92,7 @@
         
         p,
         .cld-intro-desc-long,
-        .cld-contact-inner .cld-form-title p>span,
-        .cld-title-form-wrap .cld-form-title p,
+        .cld-form-title p span,
         .cld-contact-form label span,
         .cld-contact-form input[type="text"],
         .cld-contact-form input[type="email"],
@@ -1456,8 +1455,7 @@
             text-align: center;
         }
         
-        .cld-contact-inner .cld-form-title p>span,
-        .cld-title-form-wrap .cld-form-title p {
+        .cld-form-title p span {
             font-weight: 700;
         }
         
@@ -2041,8 +2039,7 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-contact-inner .cld-form-title p>span,
-            .cld-title-form-wrap .cld-form-title p,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2280,8 +2277,7 @@
             /* All */
             p,
             .cld-intro-desc-long,
-            .cld-contact-inner .cld-form-title p>span,
-            .cld-title-form-wrap .cld-form-title p,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2529,8 +2525,7 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-contact-inner .cld-form-title p>span,
-            .cld-title-form-wrap .cld-form-title p,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -2950,8 +2945,7 @@
             }
             p,
             .cld-intro-desc-long,
-            .cld-contact-inner .cld-form-title p>span,
-            .cld-title-form-wrap .cld-form-title p,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
@@ -3228,8 +3222,7 @@
             /* All */
             p,
             .cld-intro-desc-long,
-            .cld-contact-inner .cld-form-title p>span,
-            .cld-title-form-wrap .cld-form-title p,
+            .cld-form-title p span,
             .cld-contact-form label span,
             .cld-contact-form input[type="text"],
             .cld-contact-form input[type="email"],
