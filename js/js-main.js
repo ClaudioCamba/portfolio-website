@@ -447,10 +447,11 @@ function cldFormSubmit() {
             cldContactSec.classList.remove('cld-form-error');
             scrollToFormMsg();
         }).catch(error => {
-            cldContactSec.classList.remove('cld-form-submitted');
-            cldContactSec.classList.add('cld-form-error');
-            status.innerHTML = 'Oops! There was a problem submitting your form'
-            scrollToFormMsg();
+            if (!cldContactSec.classList.contains('cld-form-submitted')) {
+                cldContactSec.classList.add('cld-form-error');
+                status.innerHTML = 'Oops! There was a problem submitting your form'
+                scrollToFormMsg();
+            }
         });
     }
     form.addEventListener("submit", handleSubmit)
