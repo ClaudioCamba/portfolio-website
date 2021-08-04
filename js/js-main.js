@@ -330,7 +330,8 @@ var form = document.getElementById("my-form"),
     cldModalData = '',
     cldIntervalCounter = 0,
     iframe,
-    player;
+    player,
+    cldImgRefresh;
 
 // Scroll to updated message
 function scrollToFormMsg() {
@@ -652,6 +653,19 @@ window.addEventListener('resize', function() {
     cldSliderState();
 });
 
+// Refreshing Images after modal load
+function cldModalImgRefresh() {
+    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1 && cldModalSlider.querySelectorAll('img').length >= cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].length) {
+        if (cldModalSlider.classList.contains('slick-initialized')) {
+            $(cldModalSlider).slick('refresh');
+            clearInterval(cldImgRefresh);
+            console.log('CLEARED');
+        }
+        // console.log('test1');
+    }
+    // console.log('test2');
+};
+
 // Modal Populating ----- //
 function cldModalPopulating() {
 
@@ -756,10 +770,15 @@ function cldModalPopulating() {
 
     cldiFrameVidControl();
 
-    setTimeout(function() {
-        if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
-            $(cldModalSlider).slick('refresh');
-            // console.log('REFRESH');
-        }
-    }, 250);
+    // setTimeout(function() {
+    //     if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
+    //         $(cldModalSlider).slick('refresh');
+    //         // console.log('REFRESH');
+    //     }
+    // }, 250);
+    // If the first slide is not a video run the refresh function
+    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
+        cldImgRefresh = setInterval(cldModalImgRefresh, 100);
+    };
+
 };
