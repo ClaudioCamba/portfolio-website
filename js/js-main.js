@@ -58,7 +58,7 @@ var cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease',
                     'verticalSwiping': false,
-                    'autoplay': true,
+                    'autoplay': false,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -93,7 +93,7 @@ var cldWebsiteInfo = {
                     'vertical': false,
                     'cssEase': 'ease',
                     'verticalSwiping': false,
-                    'autoplay': true,
+                    'autoplay': false,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -129,7 +129,7 @@ var cldWebsiteInfo = {
                     'vertical': true,
                     'cssEase': 'ease',
                     'verticalSwiping': true,
-                    'autoplay': true,
+                    'autoplay': false,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
@@ -393,11 +393,13 @@ function cldVidPause() {
 
 // Pausing video
 function cldVidPausing() {
-    player.getPaused().then(function(paused) {
-        if (paused === false) {
-            player.pause();
-        }
-    });
+    if (document.querySelectorAll('.cld-modal-vid-wrap .cld-vid-loaded').length > 0) {
+        player.getPaused().then(function(paused) {
+            if (paused === false) {
+                player.pause();
+            }
+        });
+    }
 };
 
 // width detection & video sizes
@@ -735,6 +737,7 @@ function cldModalPopulating() {
         autoplaySpeed: cldWebsiteInfo.portfolio[cldModalData].modalContent.slick.autoplaySpeed,
         draggable: true,
         pauseOnHover: true,
+        pauseOnDotsHover: true,
         swipe: true,
         accessibility: true,
         focusOnSelect: true,
