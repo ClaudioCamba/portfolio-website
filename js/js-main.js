@@ -1,5 +1,5 @@
 // Website Content
-const cldWebsiteInfo = {
+var cldWebsiteInfo = {
     'portfolio': {
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
@@ -149,8 +149,6 @@ const cldWebsiteInfo = {
             'ctaLinkOneText': 'View Live',
             'ctaLinkOne': 'https://www.targetav.com/index.php',
             'learnCta': 'Learn More',
-            // 'ctaLinkTwo': 'Repository',
-            // 'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/css3-icon.png', 'CSS3'],
@@ -181,8 +179,6 @@ const cldWebsiteInfo = {
             'ctaLinkOneText': 'View Live',
             'ctaLinkOne': 'https://www.gpmcq.com/index.php',
             'learnCta': 'Learn More',
-            // 'ctaLinkTwo': 'Repository',
-            // 'ctaLinkTwoText': 'https://github.com/ClaudioCamba/Faceman',
             'techUsed': [
                 ['assets/icons/photoshop-icon.png', 'Photoshop'],
                 ['assets/icons/jquery-icon.png', 'jQuery'],
@@ -271,9 +267,6 @@ const cldWebsiteInfo = {
                     ['assets/projects/minagent/minagent-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/minagent/minagent-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/minagent/minagent-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
-                    //['assets/projects/minagent/minagent-slide-4.jpg',
-                    //['assets/projects/minagent/minagent-slide-5.jpg',
-                    //['assets/projects/minagent/minagent-slide-6.jpg'
                 ]
             }
         },
@@ -316,46 +309,37 @@ const cldWebsiteInfo = {
 // Section Variables ----- //
 var form = document.getElementById("my-form"),
     cldBody = document.querySelector('body'),
-    cldNavLinks = document.querySelectorAll('.cld-nav-wrap li a, .cld-intro-btm .btn-yel'),
-    cldIntroSec = document.getElementById('cld-intro'),
     cldProjectSec = document.getElementById('cld-projects'),
     cldContactSec = document.getElementById('cld-contact'),
-    cldIntroBtn = document.querySelectorAll('.intro-btn')[0],
     cldProjectBtn = document.querySelectorAll('.portfolio-btn')[0],
     cldContactBtn = document.querySelectorAll('.contact-btn')[0],
-    // windowWidth = window.innerWidth,
-    // windowHeight = window.innerHeight,
     cldLearnBtn = document.querySelectorAll('.cld-learn, .cld-box-img>a'),
     cldModalBg = document.querySelector('.cld-modal-bg'),
     cldModalContent = document.querySelector('.cld-modal-content'),
     cldModalCloseBtn = document.querySelector('.cld-modal-close'),
     cldModalTitle = document.querySelector('.cld-modal-body-title'),
-    // cldModalDesc = document.querySelector('.cld-modal-body-desc'),
     cldModalCtaWrap = document.querySelector('.cld-modal-cta-wrap'),
     cldModalList = document.querySelector('.cld-modal-body-list'),
     cldModalSlider = document.querySelector('.cld-modal-body-img'),
     cldModalLink1 = document.querySelector('.cld-modal-link1'),
-    // cldModalLink1Text = document.querySelector('.cld-modal-link1 span'),
     cldModalLink2 = document.querySelector('.cld-modal-link2'),
     cldModalUsedTech = document.querySelectorAll('.cld-modal-used-tech'),
     cldUsedTech = document.querySelectorAll('.cld-used-tech'),
     cldIntroBtm = document.querySelector('.cld-intro-btm'),
-    // cldModalLink2Text = document.querySelector('.cld-modal-link2 span'),
     cldVidWidth = 0,
     cldModalData = '',
-    cldSliderEventListner = false,
     cldIntervalCounter = 0,
     iframe,
     player;
 
-// // Scroll to updated message
-// function scrollToFormMsg() {
-//     cldContactSec.querySelector('.cld-intouch').scrollIntoView({
-//         behavior: "smooth",
-//         block: "center",
-//         inline: "center"
-//     });
-// };
+// Scroll to updated message
+function scrollToFormMsg() {
+    cldContactSec.querySelector('.cld-intouch').scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+    });
+};
 
 cldBody.classList.add('cld-animation-setup');
 
@@ -413,16 +397,12 @@ function cldVidPause() {
 // width detection & video sizes
 function cldWidthDetect() {
     if (window.innerWidth > 1700) {
-        // console.log('1700+');
         cldVidWidth = 'width:1000px;height:562.5px;';
     } else if (window.innerWidth <= 1700 && window.innerWidth >= 976) {
-        // console.log('1700');
         cldVidWidth = 'width:58.8235vw;height:33.0882vw;';
     } else if (window.innerWidth <= 975 && window.innerWidth >= 476) {
-        // console.log('88.9230');
         cldVidWidth = 'width:88.9230vw;height:59.2820vw;';
     } else if (window.innerWidth <= 475) {
-        // console.log('100vw');
         cldVidWidth = 'width:100vw;height:66.6652vw;';
     };
 };
@@ -431,7 +411,6 @@ function cldWidthDetect() {
 function cldFormSubmit() {
     async function handleSubmit(event) {
         event.preventDefault();
-        var status = document.getElementById("my-form-status");
         var data = new FormData(event.target);
         fetch(event.target.action, {
             method: form.method,
@@ -449,13 +428,13 @@ function cldFormSubmit() {
         }).catch(error => {
             if (!cldContactSec.classList.contains('cld-form-submitted')) {
                 cldContactSec.classList.add('cld-form-error');
-                cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error.png')
-                cldContactSec.querySelector('.cld-intouch').innerText = 'Oops! There was a problem submitting your form'
+                cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-error.png');
+                cldContactSec.querySelector('.cld-intouch').innerText = 'Oops! There was a problem submitting your form';
                 scrollToFormMsg();
             }
         });
     }
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener("submit", handleSubmit);
 };
 
 // Show / Hide Intro Desc Class
@@ -506,7 +485,6 @@ function cldSmoothScroll() {
 
 // Control Slider state
 function cldPlayPause() {
-    // setTimeout(function() {
     // Toggle Play / Pause
     if (cldModalSlider.slick.paused) {
         $(cldModalSlider).slick('slickPlay');
@@ -517,12 +495,10 @@ function cldPlayPause() {
         $(cldModalSlider).slick('slickPause');
         cldModalContent.classList.remove('cld-slider-playing');
     };
-    // }, 250);
 };
 
 // Detect Slider state
 function cldSliderState() {
-    // setTimeout(function() {
     if (cldModalSlider.classList.contains('slick-initialized')) {
         if (cldModalSlider.slick.paused) {
             console.log('paused');
@@ -533,29 +509,7 @@ function cldSliderState() {
         };
     }
     cldVidPause();
-    // }, 250);
 };
-
-// Modal slide down ----- //
-// function cldModalAnimate() {
-
-//     cldModalContent.style.top = 0;
-
-//     var cldModalSlide = null,
-//         cldModalPos = 0;
-
-//     clearInterval(cldModalSlide);
-//     cldModalSlide = setInterval(modalFrame, 1);
-
-//     function modalFrame() {
-//         if (cldModalPos === 50) {
-//             clearInterval(cldModalSlide);
-//         } else {
-//             cldModalPos += 1;
-//             cldModalContent.style.top = cldModalPos + '%';
-//         };
-//     };
-// };
 
 // Modal projects open / close ----- //
 function cldModalOpenClose() {
@@ -569,10 +523,9 @@ function cldModalOpenClose() {
                 console.log('New Card Populating Modal');
             };
             // Show Modal
-            // cldModalAnimate();
             cldBody.classList.add('cld-modal-show');
             // Fix carousel loading issue
-            if (!cldModalSlider.querySelectorAll('iframe').length > 0) {
+            if (cldModalSlider.querySelectorAll('iframe').length < 0) {
                 $('.slick-slider').slick('refresh');
             }
         });
@@ -675,8 +628,6 @@ window.addEventListener('resize', function() {
         $('.slick-slider').slick('refresh');
         for (var d = 0; d < document.querySelectorAll('.cld-modal-vid-wrap iframe').length; d++) {
 
-            // console.log(document.querySelectorAll('.cld-modal-vid-wrap iframe')[0].attributes.style.value);
-            // console.log(cldVidWidth);
             if (document.querySelectorAll('.cld-modal-vid-wrap iframe')[0].attributes.style.value !== cldVidWidth) {
                 document.querySelectorAll('.cld-modal-vid-wrap iframe')[d].setAttribute('style', cldVidWidth);
                 console.log('DOESNT MATCH');
@@ -726,12 +677,6 @@ function cldModalPopulating() {
     } else {
         cldModalTitle.innerHTML = '';
     }
-
-    // if (typeof cldWebsiteInfo.portfolio[cldModalData].desc != "undefined") {
-    //     cldModalDesc.innerHTML = '<p>' + cldWebsiteInfo.portfolio[cldModalData].desc + '</p>'
-    // } else {
-    //     cldModalDesc.innerHTML = '';
-    // }
 
     if (typeof cldWebsiteInfo.portfolio[cldModalData].ctaLinkOne != "undefined") {
         cldModalLink1.innerHTML = '<span>' + cldWebsiteInfo.portfolio[cldModalData].ctaLinkOneText + '</span>';
