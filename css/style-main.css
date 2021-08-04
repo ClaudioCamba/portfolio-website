@@ -756,8 +756,8 @@
         
         .cld-box-inner:hover {
             transform: scale(1.04);
-            -webkit-box-shadow: 0 0 10px 0 #000;
-            -moz-box-shadow: 0 0 10px 0 #000;
+            -webkit-box-shadow: 0 0 10px 1px #000;
+            -moz-box-shadow: 0 0 10px 1px #000;
             box-shadow: 0 0 5px 1px #000;
         }
         /* Image */
@@ -1196,7 +1196,7 @@
         .cld-modal-disclaimer p {
             font-size: 10px;
             padding: 5px;
-            color: #808080;
+            color: #595959;
         }
         
         .cld-modal-content.cld-slider-playing .cld-play-pause .cld-slide-pause {
