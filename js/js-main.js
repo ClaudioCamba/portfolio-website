@@ -564,7 +564,7 @@ function cldSlickListner() {
         };
         cldModalList.querySelectorAll('li')[nextSlide].classList.add('cld-modal-active');
         console.log('Slide Change');
-        cldVidPause();
+        cldVidPausing();
     });
 
     //  On after slick initialised
