@@ -839,6 +839,11 @@
             padding-top: 5px;
         }
         
+        .cld-cta-wrap .btn-slide {
+            width: 47%;
+        }
+        /* Modal Section ----- */
+        
         .cld-modal-cta-wrap a:empty,
         .cld-modal-body ol:empty,
         .cld-modal-body-title:empty,
@@ -848,10 +853,15 @@
             display: none;
         }
         
-        .cld-cta-wrap .btn-slide {
-            width: 47%;
+        .cld-loading-img {
+            background-color: #e0e2e4;
+            border-radius: 10px;
         }
-        /* Modal Section ----- */
+        
+        .cld-loading-img .cld-modal-body-img {
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
         
         .cld-main-modal {
             visibility: hidden;

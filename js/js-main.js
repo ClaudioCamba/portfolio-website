@@ -655,11 +655,12 @@ window.addEventListener('resize', function() {
 
 // Refreshing Images after modal load
 function cldModalImgRefresh() {
-    if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1 && cldModalSlider.querySelectorAll('img').length >= cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].length) {
+    if (cldModalSlider.querySelectorAll('img').length >= cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].length) {
         if (cldModalSlider.classList.contains('slick-initialized')) {
             $(cldModalSlider).slick('refresh');
             clearInterval(cldImgRefresh);
-            console.log('CLEARED');
+            document.querySelector('.cld-modal-slider-wrap').classList.remove('cld-loading-img');
+            // console.log('CLEARED');
         }
         // console.log('test1');
     }
@@ -778,6 +779,7 @@ function cldModalPopulating() {
     // }, 250);
     // If the first slide is not a video run the refresh function
     if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
+        document.querySelector('.cld-modal-slider-wrap').classList.add('cld-loading-img');
         cldImgRefresh = setInterval(cldModalImgRefresh, 100);
     };
 
