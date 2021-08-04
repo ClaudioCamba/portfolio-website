@@ -1,3 +1,5 @@
+'use strict';
+
 // Website Content
 var cldWebsiteInfo = {
     'portfolio': {
@@ -673,7 +675,7 @@ function cldModalPopulating() {
 
     // Description and links
     if (typeof cldWebsiteInfo.portfolio[cldModalData].name != "undefined") {
-        cldModalTitle.innerHTML = '<h1>' + cldWebsiteInfo.portfolio[cldModalData].name + '</h1>';
+        cldModalTitle.innerHTML = '<h1 class="cld-modal-title">' + cldWebsiteInfo.portfolio[cldModalData].name + '</h1>';
     } else {
         cldModalTitle.innerHTML = '';
     }

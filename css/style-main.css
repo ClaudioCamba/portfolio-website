@@ -1068,7 +1068,7 @@
             text-align: center;
         }
         
-        .cld-modal-body-title h1 {
+        .cld-modal-body-title .cld-modal-title {
             font-size: 40px;
             font-weight: 600;
             text-transform: uppercase;
@@ -1228,7 +1228,7 @@
             color: #333c4a;
         }
         
-        .cld-modal-body-title h1 {
+        .cld-modal-body-title .cld-modal-title {
             margin-bottom: 15px;
         }
         
@@ -1748,11 +1748,70 @@
                 height: 100vh;
             }
         }
+        /* Animations */
+        /* Name slide down  30% */
+        
+        @keyframes cld-top-name-1600 {
+            0% {
+                top: 2px;
+                opacity: 0;
+                text-shadow: none;
+                color: #333c4a;
+            }
+            25% {
+                top: 2px;
+                color: #333c4a;
+                text-shadow: none;
+                opacity: 0;
+            }
+            26% {
+                opacity: 1;
+                top: 2px;
+            }
+            35% {
+                top: 3.25vw;
+                color: #333c4a;
+            }
+            40% {
+                text-shadow: none;
+                color: #333c4a;
+            }
+            55% {
+                text-shadow: 7.5px 7.5px #c3644c;
+                color: #ebb22e;
+            }
+        }
+        /* Text slide up 20% */
+        
+        @keyframes cld-top-text-1600 {
+            0% {
+                padding-top: 6.25vw;
+                text-shadow: 0 0 #c3644c;
+            }
+            10% {
+                padding-top: 6.25vw;
+            }
+            25% {
+                padding-top: 0.5625vw;
+            }
+            40% {
+                text-shadow: 0 0 #c3644c;
+            }
+            55% {
+                text-shadow: 5px 0 #c3644c;
+            }
+        }
         
         @media only screen and (max-width: 1600px) {
             /* Animations */
+            .cld-top-text {
+                animation: cld-top-text-1600 4s ease-out;
+            }
+            .cld-top-name {
+                animation: cld-top-name-1600 4s ease-out;
+            }
             /* Name slide down  30% */
-            @keyframes cld-top-name {
+            /* @keyframes cld-top-name {
                 0% {
                     top: 2px;
                     opacity: 0;
@@ -1781,9 +1840,9 @@
                     text-shadow: 7.5px 7.5px #c3644c;
                     color: #ebb22e;
                 }
-            }
+            } */
             /* Text slide up 20% */
-            @keyframes cld-top-text {
+            /* @keyframes cld-top-text {
                 0% {
                     padding-top: 6.25vw;
                     text-shadow: 0 0 #c3644c;
@@ -1800,7 +1859,7 @@
                 55% {
                     text-shadow: 5px 0 #c3644c;
                 }
-            }
+            } */
             /* Intro Section ----- */
             .cld-main-header-inner {
                 padding: 12.5vw 0 9.375vw;
@@ -1936,7 +1995,7 @@
                 padding: 4.0677vw 0.6779vw;
             }
             /* Modal Section */
-            .cld-modal-body-title h1 {
+            .cld-modal-body-title .cld-modal-title {
                 font-size: 2.7118vw;
                 margin-bottom: 1.0169vw;
             }
@@ -2402,7 +2461,8 @@
                 margin-top: 7.6923vw;
             }
             ul.cld-nav-wrap {
-                background: rgba(255, 255, 255, 0.75);
+                background-color: #FFFFFF;
+                background-color: rgba(255, 255, 255, 0.75);
                 border-radius: 50px;
                 padding: 5px;
             }
@@ -2496,7 +2556,7 @@
             .cld-modal-body-text .cld-modal-used-tech {
                 display: none;
             }
-            .cld-modal-body-title h1 {
+            .cld-modal-body-title .cld-modal-title {
                 font-size: 3.0769vw;
                 margin: 0.5384vw 0 1.5384vw;
             }
@@ -2663,10 +2723,70 @@
                 height: 100vh;
             }
         }
+        /* Animations */
+        /* Text slide up 20% */
+        
+        @keyframes cld-top-text-675 {
+            0% {
+                padding-top: 9.5625vw;
+                text-shadow: 0 0 #c3644c;
+            }
+            10% {
+                padding-top: 9.5625vw;
+            }
+            25% {
+                padding-top: 0.5625vw;
+            }
+            40% {
+                text-shadow: 0 0 #c3644c;
+            }
+            55% {
+                text-shadow: 0.7407vw 0 #c3644c;
+            }
+        }
+        /* Name slide down  30% */
+        
+        @keyframes cld-top-name-675 {
+            0% {
+                top: 2px;
+                opacity: 0;
+                text-shadow: none;
+                color: #333c4a;
+            }
+            25% {
+                top: 2px;
+                color: #333c4a;
+                text-shadow: none;
+                opacity: 0;
+            }
+            26% {
+                opacity: 1;
+                top: 2px;
+            }
+            35% {
+                top: 5.25vw;
+                color: #333c4a;
+            }
+            40% {
+                text-shadow: none;
+                color: #333c4a;
+            }
+            55% {
+                text-shadow: 1.1111vw 1.1111vw #c3644c;
+                color: #ebb22e;
+            }
+        }
         
         @media only screen and (max-width: 675px) {
+            /* Animations */
+            .cld-top-text {
+                animation: cld-top-text-675 4s ease-out;
+            }
+            .cld-top-name {
+                animation: cld-top-name-675 4s ease-out;
+            }
             /* Text slide up 20% */
-            @keyframes cld-top-text {
+            /* @keyframes cld-top-text {
                 0% {
                     padding-top: 9.5625vw;
                     text-shadow: 0 0 #c3644c;
@@ -2683,9 +2803,9 @@
                 55% {
                     text-shadow: 0.7407vw 0 #c3644c;
                 }
-            }
+            } */
             /* Name slide down  30% */
-            @keyframes cld-top-name {
+            /* @keyframes cld-top-name {
                 0% {
                     top: 2px;
                     opacity: 0;
@@ -2714,7 +2834,7 @@
                     text-shadow: 1.1111vw 1.1111vw #c3644c;
                     color: #ebb22e;
                 }
-            }
+            } */
             /* All */
             .title1-txt {
                 font-size: 14.8148vw;
@@ -2884,7 +3004,7 @@
             .cld-modal-top {
                 padding: 4.4444vw 3.7037vw 0 3.7037vw;
             }
-            .cld-modal-body-title h1 {
+            .cld-modal-body-title .cld-modal-title {
                 font-size: 3.7037vw;
                 margin: 1.4814vw 0 2.2222vw;
             }
@@ -3098,7 +3218,7 @@
             .cld-modal-top {
                 padding: 6.3157vw 4.2105vw 0 4.2105vw;
             }
-            .cld-modal-body-title h1 {
+            .cld-modal-body-title .cld-modal-title {
                 font-size: 4.2105vw;
                 margin: 2.1052vw 0 3.1578vw;
             }
