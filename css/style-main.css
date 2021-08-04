@@ -932,7 +932,7 @@
         
         .cld-modal-body {
             background: #fff;
-            padding: 30px 40px 40px;
+            padding: 30px 40px;
             display: block;
         }
         
@@ -1924,7 +1924,7 @@
                 padding: 3.2258vw 3.2258vw 0 3.2258vw;
             }
             .cld-modal-body {
-                padding: 1.9354vw 2.5806vw 2.5806vw;
+                padding: 1.9354vw 2.5806vw;
             }
             .cld-modal-used-tech>.tooltip {
                 margin-bottom: 1.2903vw;

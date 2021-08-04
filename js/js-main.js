@@ -1,5 +1,3 @@
-'use strict';
-
 // Website Content
 var cldWebsiteInfo = {
     'portfolio': {
@@ -343,8 +341,6 @@ function scrollToFormMsg() {
     });
 };
 
-cldBody.classList.add('cld-animation-setup');
-
 // Vimeo video control
 function cldiFrameVidControl() {
     if (document.querySelectorAll('.cld-modal-vid-wrap iframe').length > 0) {
@@ -381,19 +377,27 @@ function cldiFrameVidControl() {
     }
 };
 
-// Pausing video
+// Pausing video with conditions
 function cldVidPause() {
     // check if video has loaded
     if (document.querySelectorAll('.cld-modal-vid-wrap .cld-vid-loaded').length > 0) {
         player.getPaused().then(function(paused) {
-            if (!paused && !cldBody.classList.contains('cld-modal-show') || cldModalContent.classList.contains('cld-slider-playing')) {
+            if (paused === false && !cldBody.classList.contains('cld-modal-show') || cldModalContent.classList.contains('cld-slider-playing')) {
                 // `paused` indicates whether the player is paused
                 console.log('false', paused);
                 player.pause();
             };
-
         });
     };
+};
+
+// Pausing video
+function cldVidPausing() {
+    player.getPaused().then(function(paused) {
+        if (paused === false) {
+            player.pause();
+        }
+    });
 };
 
 // width detection & video sizes
@@ -560,6 +564,7 @@ function cldSlickListner() {
         };
         cldModalList.querySelectorAll('li')[nextSlide].classList.add('cld-modal-active');
         console.log('Slide Change');
+        cldVidPause();
     });
 
     //  On after slick initialised
@@ -583,6 +588,8 @@ function cldClosingModal() {
 
 // List control slider ----- //
 function cldListControl(index) {
+    cldVidPausing();
+
     cldIntervalCounter = 0;
 
     var gridCheckjQuery = setInterval(function() {
