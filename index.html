@@ -292,18 +292,18 @@
                     </div>
                     <form id="my-form" action="https://formspree.io/f/xjvjaboq" method="POST" class="cld-contact-form">
                         <label class="cld-fname" for="fname">
-                            <input id="fname" name="fname" placeholder="Your name?" type="text" required><span>Name</span>
+                            <span>Name</span><input onfocusout="this.parentNode.classList.remove('cld-active')" onfocusin="this.parentNode.classList.add('cld-active')" id="fname" name="fname" placeholder="Your name?" type="text" required>
                         </label>
                         <label class="cld-lemail" for="email">
-                                <input id="email" placeholder="Your email?" type="email" name="email" required><span>Email</span>
+                            <span>Email</span> <input onfocusout="this.parentNode.classList.remove('cld-active')" onfocusin="this.parentNode.classList.add('cld-active')" id="email" placeholder="Your email?" type="email" name="email" required>
                             </label>
                         <br>
-                        <label for="subject">
-                            <input id="subject" name="subject" placeholder="Email subject?" type="text" required><span>Subject</span>
+                        <label class="cld-lsubject" for="subject">
+                            <span>Subject</span> <input onfocusout="this.parentNode.classList.remove('cld-active')" onfocusin="this.parentNode.classList.add('cld-active')" id="subject" name="subject" placeholder="Email subject?" type="text" required>
                         </label>
                         <br>
-                        <label for="message">
-						<textarea id="message"  placeholder="Dont be shy, leave a message..." rows="5" name="message" required></textarea> <span>Message</span>
+                        <label class="cld-lmessage" for="message">
+                            <span>Message</span><textarea onfocusout="this.parentNode.classList.remove('cld-active')" onfocusin="this.parentNode.classList.add('cld-active')" id="message"  placeholder="Dont be shy, leave a message..." rows="5" name="message" required></textarea> 
                     </label>
                         <br>
                         <button class="btn-slide  btn-red" id="my-form-button"><span>Send</span></button>
