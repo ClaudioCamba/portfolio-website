@@ -771,12 +771,6 @@ function cldModalPopulating() {
 
     cldiFrameVidControl();
 
-    // setTimeout(function() {
-    //     if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
-    //         $(cldModalSlider).slick('refresh');
-    //         // console.log('REFRESH');
-    //     }
-    // }, 250);
     // If the first slide is not a video run the refresh function
     if (cldWebsiteInfo.portfolio[cldModalData].modalContent.imgsAndDesc[0].toString().indexOf('/video/') < 1) {
         document.querySelector('.cld-modal-slider-wrap').classList.add('cld-loading-img');

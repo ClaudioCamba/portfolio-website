@@ -1364,7 +1364,6 @@
     }
     
     .cld-contact-form label span {
-        /* position: absolute; */
         position: relative;
         padding: 5px;
         padding-bottom: 0;
@@ -1374,7 +1373,6 @@
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 2px;
-        /* left: 0; */
         transition: 0.2s;
         display: inline-block;
         margin-bottom: -6px;
@@ -1436,9 +1434,6 @@
     .cld-contact-form textarea:focus {
         outline: transparent;
     }
-    /* .cld-contact-form label:nth-child(1) input[type="text"] {
-            margin-right: 30px;
-        } */
     
     .cld-title-form-wrap {
         width: 670px;
@@ -1838,56 +1833,6 @@
         .cld-top-name {
             animation: cld-top-name-1600 4s ease-out;
         }
-        /* Name slide down  30% */
-        /* @keyframes cld-top-name {
-                0% {
-                    top: 2px;
-                    opacity: 0;
-                    text-shadow: none;
-                    color: #333c4a;
-                }
-                25% {
-                    top: 2px;
-                    color: #333c4a;
-                    text-shadow: none;
-                    opacity: 0;
-                }
-                26% {
-                    opacity: 1;
-                    top: 2px;
-                }
-                35% {
-                    top: 3.25vw;
-                    color: #333c4a;
-                }
-                40% {
-                    text-shadow: none;
-                    color: #333c4a;
-                }
-                55% {
-                    text-shadow: 7.5px 7.5px #c3644c;
-                    color: #ebb22e;
-                }
-            } */
-        /* Text slide up 20% */
-        /* @keyframes cld-top-text {
-                0% {
-                    padding-top: 6.25vw;
-                    text-shadow: 0 0 #c3644c;
-                }
-                10% {
-                    padding-top: 6.25vw;
-                }
-                25% {
-                    padding-top: 0.5625vw;
-                }
-                40% {
-                    text-shadow: 0 0 #c3644c;
-                }
-                55% {
-                    text-shadow: 5px 0 #c3644c;
-                }
-            } */
         /* Intro Section ----- */
         .cld-main-header-inner {
             padding: 12.5vw 0 9.375vw;
@@ -2117,9 +2062,6 @@
         .cld-contact-form label:nth-child(2) input[type="email"] {
             max-width: 19.7288vw;
         }
-        /* .cld-contact-form label:nth-child(1) input[type="text"] {
-                margin-right: 8%;
-            } */
         .cld-contact-form label span {
             padding-bottom: 0;
         }
