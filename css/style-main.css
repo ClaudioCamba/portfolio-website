@@ -2532,6 +2532,9 @@
         .cld-modal-body-img .slick-next {
             width: 4.4102vw;
             height: 4.1025vw;
+            top: unset;
+            bottom: -5vw;
+            z-index: 9;
         }
         .cld-modal-body-img .slick-prev:before,
         .cld-modal-body-img .slick-next:before {
@@ -2566,10 +2569,10 @@
             max-width: 3.0769vw;
         }
         .cld-modal-body-img .slick-next {
-            right: -1.0256vw;
+            right: 10vw;
         }
         .cld-modal-body-img .slick-prev {
-            left: -1.0256vw;
+            left: 10vw;
         }
         .cld-modal-body-list li:first-child {
             margin-top: 1.5384vw;
@@ -3282,15 +3285,16 @@
             font-size: 6.6153vw;
         }
         .cld-modal-body-img .slick-next {
-            right: 0;
+            right: 10vw;
         }
         .cld-modal-body-img .slick-prev {
-            left: 0;
+            left: 10vw;
         }
         .cld-modal-body-img .slick-prev,
         .cld-modal-body-img .slick-next {
             width: 6.7368vw;
             height: 5.8947vw;
+            bottom: -10vw;
         }
         .cld-modal-body {
             padding: 4.2105vw 0;
