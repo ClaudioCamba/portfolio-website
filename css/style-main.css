@@ -874,6 +874,7 @@
     body.cld-modal-show {
         height: 100vh;
         overflow-y: hidden;
+        overflow: hidden;
     }
     
     .cld-modal-bg {
@@ -1310,6 +1311,7 @@
     .cld-form-title {
         display: flex;
         align-items: center;
+        justify-content: space-around;
         margin-bottom: 30px;
         width: 100%;
     }

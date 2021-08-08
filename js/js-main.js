@@ -28,10 +28,10 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/580855196', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/comparison-tables/comparison-table-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/comparison-tables/comparison-table-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/comparison-tables/comparison-table-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['https://player.vimeo.com/video/580855196', 'As a key member of the Cheil UK personalisation team, I was responsible for the creation of the comparison table. The summarises the optimisation program and highlights how effective the comparison table was for Samsung globally.'],
+                    ['assets/projects/comparison-tables/comparison-table-slide-1.jpg', 'Samsung Comparison Table Slide', 'Comparison table V3: This update was for the S21 launch, I aimed to showcase various models and colours available. This was achieved by adding a dynamic slider that updates specifications and colours accordingly.'],
+                    ['assets/projects/comparison-tables/comparison-table-slide-2.jpg', 'Samsung Comparison Table Slide', 'Comparison table V2: Based on how well the previous comparison table performed, minimal updates were made which included adaptions to the style.'],
+                    ['assets/projects/comparison-tables/comparison-table-slide-3.jpg', 'Samsung Comparison Table Slide', 'Comparison table V1: The initial S10 comparison table performed extremely well and became a staple for future product launches. We then scaled this by creating a code generator assisting multiple Samsung markets globally.']
                 ]
             }
         },
@@ -62,11 +62,11 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/582152829', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/cart-abandonment/cart-abandonment-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/cart-abandonment/cart-abandonment-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['https://player.vimeo.com/video/582152829', 'This video showcases how Cart Abandonment works, this example was created for the S20 Launch which performed well and in turn became a staple for future launches.'],
+                    ['assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg', 'Samsung Cart Abandonment Slide', 'The Cart abandonment banner allowed us to showcase the unique selling propositions to the visitors and custom messages dependent on the product left in the Cart.'],
+                    ['assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg', 'Samsung Cart Abandonment Slide', 'Cart abandonment was initially used for mobile devices left in the cart and after its success, we expanded the functionality to other Samsung products such as televisions, watches, and home appliances.'],
+                    // ['assets/projects/cart-abandonment/cart-abandonment-slide-3.jpg', 'Samsung Cart Abandonment Slide', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
+                    ['assets/projects/cart-abandonment/cart-abandonment-slide-4.jpg', 'Samsung Cart Abandonment Slide', 'The cart abandonment functionality is activated once the visitor adds a product to the card and navigates away without completing their transaction. The banner can be placed on any page to remind the visitor of the product with a call to action which navigates them back.']
                 ]
             }
         },
@@ -97,12 +97,12 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/582157253', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/category-affinity/category-affinity-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/category-affinity/category-affinity-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/category-affinity/category-affinity-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/category-affinity/category-affinity-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/category-affinity/category-affinity-slide-5.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['https://player.vimeo.com/video/582157253', 'The video is showcasing how the category affinity optimisation functions. It was important to place the new key visual within the first position of the slider which required responsive javascript to locate particular variables before replacing the slide content.'],
+                    // ['assets/projects/category-affinity/category-affinity-slide-1.jpg', 'Samsung Category Affinity Slide', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
+                    ['assets/projects/category-affinity/category-affinity-slide-2.jpg', 'Samsung Category Affinity Slide', 'Due to how successful the optimisation performed it became a staple for Samsung launches and during promotional phases such as Black Friday and Cyber Monday.'],
+                    ['assets/projects/category-affinity/category-affinity-slide-3.jpg', 'Samsung Category Affinity Slide', 'This optimisation was initially used for television products, as it improved conversion we expanded the functionality to other Samsung products such as mobile phones, watches, and home appliances.'],
+                    ['assets/projects/category-affinity/category-affinity-slide-4.jpg', 'Samsung Category Affinity Slide', 'This optimisation was built to target all devices (desktop, tablets, and mobiles) and it was important for it to be responsive due to the high traffic number from mobile devices.'],
+                    ['assets/projects/category-affinity/category-affinity-slide-5.jpg', 'Samsung Category Affinity Slide', 'The purpose of this optimisation is to assist visitors to return to the buy page from the homepage, this would reduce the journey by several steps and decrease friction with the purchasing process.']
                 ]
             }
         },
@@ -133,12 +133,12 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/582147719', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/mmp-usp/usp-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/mmp-usp/usp-slide-5.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['https://player.vimeo.com/video/582147719', 'The video is showcasing how the code generators work, it allows markets to launch activities during launches even without developer resource available. the browser console is utilised to test the code generated as it behaves similarly to how Adobe Target injects the code on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'Samsung USP Slide', 'This is the S21 dedicated page (Highlight Page) and each product on the samsung page has one which allows the visitor to learn more about the product and its features.'],
+                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'Samsung USP Slide', 'USPs are normally positioned within a products dedicated page (Highlight Page), the data we have collected has shown majority of visitors scroll to that point on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'Samsung USP Slide', 'USPs have evolved through multiple experiments and have gone through various updates dependent on the data collected.'],
+                    ['assets/projects/mmp-usp/usp-slide-4.jpg', 'Samsung USP Slide', 'The Samsung Galaxy S21 has two dedicated pages (Ultra & Normal), In this case multiple variations with contrasting colours needed to be built for better visibility on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-5.jpg', 'Samsung USP Slide', 'The purpose of the USP is to incentivise the visitor to procced to the next stage of the journey which is the Buy Page.']
 
                 ]
             }
@@ -166,10 +166,10 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/targetav/targetav-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/targetav/targetav-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/targetav/targetav-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/targetav/targetav-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['assets/projects/targetav/targetav-slide-1.jpg', 'TargetAV Slide', 'The site opens with an owl carousel key visual which transitions through the various services they provide.'],
+                    ['assets/projects/targetav/targetav-slide-2.jpg', 'TargetAV Slide', 'The page then breakds up into "Our Services" section which further highlights what additional services they provide their clients.'],
+                    ['assets/projects/targetav/targetav-slide-3.jpg', 'TargetAV Slide', 'At this point on the page a gallery containing photographs from previous events and paragraphs detailing what type of an event and what they provide.'],
+                    ['assets/projects/targetav/targetav-slide-4.jpg', 'TargetAV Slide', 'This section we provides testimonials from previous clientel and also their up to date social feed of their instagram account which was added using a widget.']
                 ]
             }
         },
@@ -197,11 +197,11 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/gpmc/gpmc-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/gpmc/gpmc-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/gpmc/gpmc-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/gpmc/gpmc-slide-4.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/gpmc/gpmc-slide-5.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['assets/projects/gpmc/gpmc-slide-1.jpg', 'GPMC Slide', 'The key visual was created using owl caousel which allowed me to embbed videoand img as a backup incase of loading issue.'],
+                    ['assets/projects/gpmc/gpmc-slide-2.jpg', 'GPMC Slide', 'My CSS skills further improved by better understanding the positioning of elements on the page, I also utilised bootstrap to built it at faster pace and facilitated the responsiveness. '],
+                    ['assets/projects/gpmc/gpmc-slide-3.jpg', 'GPMC Slide', 'Owl Caoursel was further utilised down the page to allow more information to be presented within a single section.'],
+                    ['assets/projects/gpmc/gpmc-slide-4.jpg', 'GPMC Slide', 'The homepage was utilised to showcase more of the services the client is able to provide to its customers.'],
+                    ['assets/projects/gpmc/gpmc-slide-5.jpg', 'GPMC Slide', 'Some of the modules are similar and were duplicated e.g footer using php to allow me perform that.']
                 ]
             }
         },
@@ -231,9 +231,9 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/portfolio-v1/portfoliov1-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/portfolio-v1/portfoliov1-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/portfolio-v1/portfoliov1-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['assets/projects/portfolio-v1/portfoliov1-slide-1.jpg', 'Portfolio Slide', 'The page begins with an illustraion of my self and an introductory paragraph to highlight my personality and who I am.'],
+                    ['assets/projects/portfolio-v1/portfoliov1-slide-2.jpg', 'Portfolio Slide', 'These were the early personal projects I worked on as a self taught developer, they help me understand how to use code to create my ideas.'],
+                    ['assets/projects/portfolio-v1/portfoliov1-slide-3.jpg', 'Portfolio Slide', 'This section I wanted to allow the visitor to get in touch and also preview some of my work on various coding platforms.']
                 ]
             }
         },
@@ -264,9 +264,9 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/minagent/minagent-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/minagent/minagent-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/minagent/minagent-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['assets/projects/minagent/minagent-slide-1.jpg', 'Minagent Slide', 'The site begins with a key visual of the london city to represent the location the estate agency operates and the brand name in the center followed by the three main services provided by the business (Buying, Renting and Valuating properties).'],
+                    ['assets/projects/minagent/minagent-slide-2.jpg', 'Minagent Slide', 'This section of the page I wanted to focus more on the personality behind the the agency and where and when it operates.'],
+                    ['assets/projects/minagent/minagent-slide-3.jpg', 'Minagent Slide', 'The closing end of the page I wanted to ensure the visitor with confidence by providing services and governing bodies which are affilited with the agency and an illustration to once again highlight the location it operates in.']
                 ]
             }
         },
@@ -297,9 +297,9 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/faceman/faceman-slide-1.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/faceman/faceman-slide-2.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
-                    ['assets/projects/faceman/faceman-slide-3.jpg', 'face man slide 1 alt', 'A re-imagined version of the famous hangman game, this game is for two or more players']
+                    ['assets/projects/faceman/faceman-slide-1.jpg', 'Faceman Slide', 'The begins by player 1 entering a word within the input field and clicking the blue play button. After clicking the blue play button the next step is for player 2 to begin entering individual letters and clicking the guess button.'],
+                    ['assets/projects/faceman/faceman-slide-2.jpg', 'Faceman Slide', 'As player 2 makes the guessing attempts if the letters match it will be revealed or if it guessed incorrectly player 2 will lose a life bar and the face illustration will progressively appear more distraced.'],
+                    ['assets/projects/faceman/faceman-slide-3.jpg', 'Faceman Slide', 'If player 2 makes 8 incorrect attempts the game will end with a crying face illustration and a red replay button will appear. The alternative outcome is player 2 guessing all the letters in the word before losing all their health bars and have them winning the game.']
                 ]
             }
         }
@@ -432,7 +432,7 @@ function cldFormSubmit() {
             cldContactSec.classList.remove('cld-form-error');
             cldContactSec.classList.add('cld-form-submitted');
             cldContactSec.querySelector('.cld-kv-default').setAttribute('src', 'assets/other/claudio-camba-contact-kv-submitted.png');
-            cldContactSec.querySelector('.cld-intouch').innerText = 'Thanks for your submission!'
+            cldContactSec.querySelector('.cld-intouch').innerHTML = 'Thanks for your submission! I will get in touch soon!'
             scrollToFormMsg();
         }).catch(error => {
             if (!cldContactSec.classList.contains('cld-form-submitted')) {
