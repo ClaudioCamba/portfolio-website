@@ -872,7 +872,7 @@
     }
     
     body.cld-modal-show {
-        height: 100vh;
+        height: 100%;
         overflow-y: hidden;
         overflow: hidden;
     }
