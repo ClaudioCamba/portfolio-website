@@ -1,6 +1,43 @@
 // Website Content
 var cldWebsiteInfo = {
     'portfolio': {
+        'dishgo': {
+            'name': 'Samsung USP',
+            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
+            'ctaLinkOneText': 'Generator',
+            'ctaLinkOne': 'https://claudiocamba.github.io/uspgenerator/',
+            'learnCta': 'Learn More',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/uspgenerator',
+            'techUsed': [
+                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
+                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/javascript-icon.png', 'JavaScript'],
+                ['assets/icons/css3-icon.png', 'CSS3'],
+                ['assets/icons/html5-icon.png', 'HTML5']
+            ],
+            'modalContent': {
+                'slick': {
+                    'infinite': true,
+                    'speed': 1000,
+                    'fade': false,
+                    'vertical': true,
+                    'cssEase': 'ease',
+                    'verticalSwiping': true,
+                    'autoplay': false,
+                    'autoplaySpeed': 3000
+                },
+                'imgsAndDesc': [
+                    // ['https://player.vimeo.com/video/936390906', 'The video is showcasing how the code generators work, it allows markets to launch activities during launches even without developer resource available. the browser console is utilised to test the code generated as it behaves similarly to how Adobe Target injects the code on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'Samsung USP Slide', 'This is the S21 dedicated page (Highlight Page) and each product on the samsung page has one which allows the visitor to learn more about the product and its features.'],
+                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'Samsung USP Slide', 'USPs are normally positioned within a products dedicated page (Highlight Page), the data we have collected has shown majority of visitors scroll to that point on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'Samsung USP Slide', 'USPs have evolved through multiple experiments and have gone through various updates dependent on the data collected.'],
+                    ['assets/projects/mmp-usp/usp-slide-4.jpg', 'Samsung USP Slide', 'The Samsung Galaxy S21 has two dedicated pages (Ultra & Normal), In this case multiple variations with contrasting colours needed to be built for better visibility on the page.'],
+                    ['assets/projects/mmp-usp/usp-slide-5.jpg', 'Samsung USP Slide', 'The purpose of the USP is to incentivise the visitor to procced to the next stage of the journey which is the Buy Page.']
+
+                ]
+            }
+        },
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
@@ -98,7 +135,6 @@ var cldWebsiteInfo = {
                 },
                 'imgsAndDesc': [
                     ['https://player.vimeo.com/video/582157253', 'The video is showcasing how the category affinity optimisation functions. It was important to place the new key visual within the first position of the slider which required responsive javascript to locate particular variables before replacing the slide content.'],
-                    // ['assets/projects/category-affinity/category-affinity-slide-1.jpg', 'Samsung Category Affinity Slide', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/category-affinity/category-affinity-slide-2.jpg', 'Samsung Category Affinity Slide', 'Due to how successful the optimisation performed it became a staple for Samsung launches and during promotional phases such as Black Friday and Cyber Monday.'],
                     ['assets/projects/category-affinity/category-affinity-slide-3.jpg', 'Samsung Category Affinity Slide', 'This optimisation was initially used for television products, as it improved conversion we expanded the functionality to other Samsung products such as mobile phones, watches, and home appliances.'],
                     ['assets/projects/category-affinity/category-affinity-slide-4.jpg', 'Samsung Category Affinity Slide', 'This optimisation was built to target all devices (desktop, tablets, and mobiles) and it was important for it to be responsive due to the high traffic number from mobile devices.'],
@@ -133,7 +169,8 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/582147719', 'The video is showcasing how the code generators work, it allows markets to launch activities during launches even without developer resource available. the browser console is utilised to test the code generated as it behaves similarly to how Adobe Target injects the code on the page.'],
+                    ['https://player.vimeo.com/video/582147719', 
+                    'The video is showcasing how the code generators work, it allows markets to launch activities during launches even without developer resource available. the browser console is utilised to test the code generated as it behaves similarly to how Adobe Target injects the code on the page.'],
                     ['assets/projects/mmp-usp/usp-slide-1.jpg', 'Samsung USP Slide', 'This is the S21 dedicated page (Highlight Page) and each product on the samsung page has one which allows the visitor to learn more about the product and its features.'],
                     ['assets/projects/mmp-usp/usp-slide-2.jpg', 'Samsung USP Slide', 'USPs are normally positioned within a products dedicated page (Highlight Page), the data we have collected has shown majority of visitors scroll to that point on the page.'],
                     ['assets/projects/mmp-usp/usp-slide-3.jpg', 'Samsung USP Slide', 'USPs have evolved through multiple experiments and have gone through various updates dependent on the data collected.'],
