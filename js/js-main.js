@@ -2,39 +2,35 @@
 var cldWebsiteInfo = {
     'portfolio': {
         'dishgo': {
-            'name': 'Samsung USP',
-            'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
-            'ctaLinkOneText': 'Generator',
-            'ctaLinkOne': 'https://claudiocamba.github.io/uspgenerator/',
+            'name': 'dishGo Full-stack App',
+            'desc': 'DishGo came about because we realised that there was a lack of apps that allowed you to search for a specific dish in the area that you live in or that you\'re visiting. This app allows you to search and locate dish options near you so you can find the food that you\'re after.',
+            'ctaLinkOneText': 'Repository',
+            'ctaLinkOne': 'https://github.com/ClaudioCamba/dishGo',
             'learnCta': 'Learn More',
-            'ctaLinkTwo': 'Repository',
-            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/uspgenerator',
+            'ctaLinkTwo': 'dishGo Creators',
+            'ctaLinkTwoText': 'https://northcoders.com/project-phase/dishgo',
             'techUsed': [
-                ['assets/icons/adobe-target-icon.png', 'Adobe Target'],
-                ['assets/icons/jquery-icon.png', 'jQuery'],
+                ['assets/icons/react-logo.png', 'React Native'],
+                ['assets/icons/supabase-logo.png', 'Supabase'],
                 ['assets/icons/javascript-icon.png', 'JavaScript'],
-                ['assets/icons/css3-icon.png', 'CSS3'],
-                ['assets/icons/html5-icon.png', 'HTML5']
+                ['assets/icons/google-map-icon.png', 'Google API'],
             ],
             'modalContent': {
                 'slick': {
                     'infinite': true,
                     'speed': 1000,
-                    'fade': false,
-                    'vertical': true,
-                    'cssEase': 'ease',
-                    'verticalSwiping': true,
-                    'autoplay': false,
+                    'fade': true,
+                    'vertical': false,
+                    'cssEase': 'ease-in-out',
+                    'verticalSwiping': false,
+                    'autoplay': true,
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    // ['https://player.vimeo.com/video/936390906', 'The video is showcasing how the code generators work, it allows markets to launch activities during launches even without developer resource available. the browser console is utilised to test the code generated as it behaves similarly to how Adobe Target injects the code on the page.'],
-                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'Samsung USP Slide', 'This is the S21 dedicated page (Highlight Page) and each product on the samsung page has one which allows the visitor to learn more about the product and its features.'],
-                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'Samsung USP Slide', 'USPs are normally positioned within a products dedicated page (Highlight Page), the data we have collected has shown majority of visitors scroll to that point on the page.'],
-                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'Samsung USP Slide', 'USPs have evolved through multiple experiments and have gone through various updates dependent on the data collected.'],
-                    ['assets/projects/mmp-usp/usp-slide-4.jpg', 'Samsung USP Slide', 'The Samsung Galaxy S21 has two dedicated pages (Ultra & Normal), In this case multiple variations with contrasting colours needed to be built for better visibility on the page.'],
-                    ['assets/projects/mmp-usp/usp-slide-5.jpg', 'Samsung USP Slide', 'The purpose of the USP is to incentivise the visitor to procced to the next stage of the journey which is the Buy Page.']
-
+                    ['https://player.vimeo.com/video/936390906', 'Demo showcasing dishGo application and it\'s features'],
+                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'dishgo Slide', 'React Native was used to create the front facing aspects of our app due to its potential to build dynamic components and its capability to be utilized across multiple platforms, such as iOS or Android.'],
+                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'dishgo Slide', 'Supabase was used for the backend due to its relational database capabilities and additional features such as user authentication, image storage and real-time updates'],
+                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'dishgo Slide', 'Tools & libraries | Node, Expo, Expo Go, Android Studio, Google Places API, Figma, React Navigation, React Native Paper and Jest'],
                 ]
             }
         },
@@ -102,7 +98,6 @@ var cldWebsiteInfo = {
                     ['https://player.vimeo.com/video/582152829', 'This video showcases how Cart Abandonment works, this example was created for the S20 Launch which performed well and in turn became a staple for future launches.'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-2.jpg', 'Samsung Cart Abandonment Slide', 'The Cart abandonment banner allowed us to showcase the unique selling propositions to the visitors and custom messages dependent on the product left in the Cart.'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-1.jpg', 'Samsung Cart Abandonment Slide', 'Cart abandonment was initially used for mobile devices left in the cart and after its success, we expanded the functionality to other Samsung products such as televisions, watches, and home appliances.'],
-                    // ['assets/projects/cart-abandonment/cart-abandonment-slide-3.jpg', 'Samsung Cart Abandonment Slide', 'A re-imagined version of the famous hangman game, this game is for two or more players'],
                     ['assets/projects/cart-abandonment/cart-abandonment-slide-4.jpg', 'Samsung Cart Abandonment Slide', 'The cart abandonment functionality is activated once the visitor adds a product to the card and navigates away without completing their transaction. The banner can be placed on any page to remind the visitor of the product with a call to action which navigates them back.']
                 ]
             }
