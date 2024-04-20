@@ -27,10 +27,10 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['https://player.vimeo.com/video/936390906', 'Demo showcasing dishGo application and it\'s features'],
-                    ['assets/projects/mmp-usp/usp-slide-1.jpg', 'dishgo Slide', 'React Native was used to create the front facing aspects of our app due to its potential to build dynamic components and its capability to be utilized across multiple platforms, such as iOS or Android.'],
-                    ['assets/projects/mmp-usp/usp-slide-2.jpg', 'dishgo Slide', 'Supabase was used for the backend due to its relational database capabilities and additional features such as user authentication, image storage and real-time updates'],
-                    ['assets/projects/mmp-usp/usp-slide-3.jpg', 'dishgo Slide', 'Tools & libraries | Node, Expo, Expo Go, Android Studio, Google Places API, Figma, React Navigation, React Native Paper and Jest'],
+                    ['https://player.vimeo.com/video/936390906', 'Demo showcasing dishGo application'],
+                    ['assets/projects/dishGo/dishgo-slide-1.png', 'dishgo Slide', 'React Native was used to create the front facing aspects of our app due to its potential to build dynamic components and its capability to be utilized across multiple platforms, such as iOS or Android.'],
+                    ['assets/projects/dishGo/dishgo-slide-2.png', 'dishgo Slide', 'Supabase was used for the backend due to its relational database capabilities and additional features such as user authentication, image storage and real-time updates'],
+                    ['assets/projects/dishGo/dishgo-slide-3.jpg', 'dishgo Slide', 'Tools & libraries | Node, Git, GitHub, Expo, Expo Go, Android Studio, Google Places API, Figma, React Navigation, React Native Paper and Jest'],
                 ]
             }
         },
@@ -810,3 +810,4 @@ function cldModalPopulating() {
     };
 
 };
+
