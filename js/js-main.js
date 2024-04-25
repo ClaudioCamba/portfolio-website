@@ -34,6 +34,37 @@ var cldWebsiteInfo = {
                 ]
             }
         },
+        'bencnews': {
+            'name': 'NC News RESTful API (CRUD)',
+            'desc': 'DishGo came about because we realised that there was a lack of apps that allowed you to search for a specific dish in the area that you live in or that you\'re visiting. This app allows you to search and locate dish options near you so you can find the food that you\'re after.',
+            'ctaLinkOneText': 'Repository',
+            'ctaLinkOne': 'https://github.com/ClaudioCamba/dishGo',
+            'learnCta': 'Learn More',
+            'ctaLinkTwo': 'dishGo Creators',
+            'ctaLinkTwoText': 'https://northcoders.com/project-phase/dishgo',
+            'techUsed': [
+                ['assets/icons/react-logo.png', 'postgreSQL'],
+                ['assets/icons/supabase-logo.png', 'ExpressJS'],
+                ['assets/icons/javascript-icon.png', 'NodeJS'],
+            ],
+            'modalContent': {
+                'slick': {
+                    'infinite': true,
+                    'speed': 1000,
+                    'fade': true,
+                    'vertical': false,
+                    'cssEase': 'ease-in-out',
+                    'verticalSwiping': false,
+                    'autoplay': true,
+                    'autoplaySpeed': 3000
+                },
+                'imgsAndDesc': [
+                    ['assets/projects/dishGo/dishgo-slide-1.png', 'dishgo Slide', 'React Native was used to create the front facing aspects of our app due to its potential to build dynamic components and its capability to be utilized across multiple platforms, such as iOS or Android.'],
+                    ['assets/projects/dishGo/dishgo-slide-2.png', 'dishgo Slide', 'Supabase was used for the backend due to its relational database capabilities and additional features such as user authentication, image storage and real-time updates'],
+                    ['assets/projects/dishGo/dishgo-slide-3.jpg', 'dishgo Slide', 'Tools & libraries | Node, Git, GitHub, Expo, Expo Go, Android Studio, Google Places API, Figma, React Navigation, React Native Paper and Jest'],
+                ]
+            }
+        },
         'samsungcomparisontable': {
             'name': 'Samsung Comparison Table',
             'desc': 'A re-imagined version of the famous hangman game, this game is for two or more players, one player submits a word and the other player(s) must try to guess by suggesting letters, with a limited number of attempts.',
