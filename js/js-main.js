@@ -59,9 +59,9 @@ var cldWebsiteInfo = {
                     'autoplaySpeed': 3000
                 },
                 'imgsAndDesc': [
-                    ['assets/projects/be-nc-news/nc-news-slide-1.png', 'CRUD Operations Slide', 'CRUD Operations Slide '],
-                    ['assets/projects/be-nc-news/nc-news-slide-2.png', 'Relational Database Slide', 'Relational Database Slide'],
-                    ['assets/projects/be-nc-news/nc-news-slide-1.png', 'Error Handling Slide', 'Error Handling Slide'],
+                    ['assets/projects/be-nc-news/nc-news-slide-0.png', 'Backend NC News Intro Slide', 'This project allows the client to perform CRUD (Create, Read, Update, Delete) operations by making HTTP requests to a relational database.'],
+                    ['assets/projects/be-nc-news/nc-news-slide-1.png', 'CRUD Operations Slide', 'The project has been thoroughly tested using Jest framework and Supertest library to ensure the endpoints respond as expected.'],
+                    ['assets/projects/be-nc-news/nc-news-slide-2.png', 'Relational Database Slide', 'By using relational database structure it facilitated data verification from related tables and reduced repeated database requests.'],
                 ]
             }
         },
