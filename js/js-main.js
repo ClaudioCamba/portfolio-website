@@ -37,15 +37,16 @@ var cldWebsiteInfo = {
         'bencnews': {
             'name': 'NC News RESTful API (CRUD)',
             'desc': 'DishGo came about because we realised that there was a lack of apps that allowed you to search for a specific dish in the area that you live in or that you\'re visiting. This app allows you to search and locate dish options near you so you can find the food that you\'re after.',
-            'ctaLinkOneText': 'Repository',
-            'ctaLinkOne': 'https://github.com/ClaudioCamba/dishGo',
+            'ctaLinkOneText': 'Live RESTful API',
+            'ctaLinkOne': 'https://nc-news-qvgz.onrender.com/api',
             'learnCta': 'Learn More',
-            'ctaLinkTwo': 'dishGo Creators',
-            'ctaLinkTwoText': 'https://northcoders.com/project-phase/dishgo',
+            'ctaLinkTwo': 'Repository',
+            'ctaLinkTwoText': 'https://github.com/ClaudioCamba/be-nc-news?tab=readme-ov-file#new-city-news-restful-api',
             'techUsed': [
                 ['assets/icons/psql-logo.png', 'postgreSQL'],
                 ['assets/icons/expressjs-logo.png', 'ExpressJS'],
                 ['assets/icons/node-logo.png', 'NodeJS'],
+                ['assets/icons/jest-logo.png', 'Jest'],
             ],
             'modalContent': {
                 'slick': {
